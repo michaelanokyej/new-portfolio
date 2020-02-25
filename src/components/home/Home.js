@@ -22,9 +22,7 @@ class Home extends React.Component {
                 Multi-faceted software engineer who is knowledgeable in
                 JavaScript, Python, MySQL, HTML, etc. A true team player
                 offering multiple years of experience in the software industry.
-                Proficient in working with diverse languages. Motivated to stay
-                informed of latest industry innovations to provide
-                customers/users with most up-to-date solutions.
+                Proficient in working with diverse languages. 
               </p>
             </div>
             <div className="jumboButtons">
@@ -117,9 +115,108 @@ class Home extends React.Component {
         <div className="projectsDiv">
           <h4>Latest Projects</h4>
           <div className="projects">
-          <div className="project">HELLO</div>
-          <div className="project">HELLO</div>
-          <div className="project">HELLO</div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="wander.png" alt="parkFinder" />
+                  </div>
+                  <div className="content">
+                    <h3>Wander WebApp</h3>
+                    <p>
+                      Multi-faceted software engineer who is knowledgeable in
+                      JavaScript, Python, MySQL, HTML, etc. A true team player
+                      offering multiple years of experience in the software
+                      industry. Seeking the opportunity to provide outstanding,
+                      clean code in a collaborative environment. Proficient in
+                      working with diverse languages. Motivated to stay informed
+                      of the latest industry innovations to provide
+                      customers/users with the most up-to-date solutions.
+                    </p>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://wander-client.michaelanokyej.now.sh/home"
+                          target="_blank"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/wander-client"
+                          target="_blank"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="parkfinder.png" alt="parkFinder" />
+                  </div>
+                  <div className="content">
+                    <h3>Park Finder WebApp</h3>
+                    <p>
+                      Multi-faceted software engineer who is knowledgeable in
+                      JavaScript, Python, MySQL, HTML, etc. A true team player
+                      offering multiple years of experience in the software
+                      industry. Seeking the opportunity to provide outstanding,
+                      clean code in a collaborative environment. Proficient in
+                      working with diverse languages. Motivated to stay informed
+                      of the latest industry innovations to provide
+                      customers/users with the most up-to-date solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="parkfinder.png" alt="parkFinder" />
+                  </div>
+                  <div className="content">
+                    <h3>Park Finder WebApp</h3>
+                    <p>
+                      Multi-faceted software engineer who is knowledgeable in
+                      JavaScript, Python, MySQL, HTML, etc. A true team player
+                      offering multiple years of experience in the software
+                      industry. Seeking the opportunity to provide outstanding,
+                      clean code in a collaborative environment. Proficient in
+                      working with diverse languages. Motivated to stay informed
+                      of the latest industry innovations to provide
+                      customers/users with the most up-to-date solutions.
+                    </p>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://michaelanokyej.github.io/parkfinder/"
+                          target="_blank"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/parkfinder"
+                          target="_blank"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
