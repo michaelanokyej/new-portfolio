@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRoad, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
 
 class Home extends React.Component {
@@ -22,7 +24,7 @@ class Home extends React.Component {
                 Multi-faceted software engineer who is knowledgeable in
                 JavaScript, Python, MySQL, HTML, etc. A true team player
                 offering multiple years of experience in the software industry.
-                Proficient in working with diverse languages. 
+                Proficient in working with diverse languages.
               </p>
             </div>
             <div className="jumboButtons">
@@ -216,6 +218,50 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div id="contact">
+          <h4 className="center contactMessage">Get in touch</h4>
+          <div className="contactWrapper animated bounceInLeft">
+            <div class="myInfo">
+              <h5>Michael Anokye</h5>
+              <ul>
+                <li>
+                  <FontAwesomeIcon icon={faRoad} /> Rockville, MD
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  michaelanokyej@yahoo.com
+                </li>
+              </ul>
+            </div>
+            <div class="contactForm">
+              <form action="mailto:michaelanokyej@yahoo.com">
+                <p>
+                  <label>Name</label>
+                  <input type="text" name="name" />
+                </p>
+                <p>
+                  <label>Company</label>
+                  <input type="email" name="company" />
+                </p>
+                <p>
+                  <label>Email Address</label>
+                  <input type="email" name="email" />
+                </p>
+                <p>
+                  <label>Phone Number</label>
+                  <input type="Number" name="phone" />
+                </p>
+                <p class="full">
+                  <label>Message</label>
+                  <textarea name="message" rows="4"></textarea>
+                </p>
+                <p class="full">
+                  <button>Submit</button>
+                </p>
+              </form>
             </div>
           </div>
         </div>
