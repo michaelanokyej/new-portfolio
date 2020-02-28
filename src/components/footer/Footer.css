@@ -6,3 +6,11 @@ footer {
 footer > a {
   color: #69779b;
 }
+
+footer ul.socials {
+  background-color: yellow;
+  color: black;
+}
+footer ul.socials li.center {
+  list-style: none;
+}

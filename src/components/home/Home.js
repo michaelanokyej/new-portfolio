@@ -188,15 +188,30 @@ class Home extends React.Component {
                   <div className="content">
                     <h3>Park Finder WebApp</h3>
                     <p>
-                      Multi-faceted software engineer who is knowledgeable in
-                      JavaScript, Python, MySQL, HTML, etc. A true team player
-                      offering multiple years of experience in the software
-                      industry. Seeking the opportunity to provide outstanding,
-                      clean code in a collaborative environment. Proficient in
-                      working with diverse languages. Motivated to stay informed
-                      of the latest industry innovations to provide
-                      customers/users with the most up-to-date solutions.
+                      An andventure driven web-app that searches for parks.
+                      Users can search for national parks in and out of their
+                      states. Parks are always shown with the current weather
+                      and the weather throughout the day for the location.
                     </p>
+                    <div className="app-features">
+                      <p>Features:</p>
+                      <ul>
+                        <li>Gets weather at the current location</li>
+                        <li>Gets parks near user current location</li>
+                        <li>User can search for parks anywhere</li>
+                        <li>
+                          Results of user search is displayed with the weather
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Jquery</li>
+                      </ul>
+                    </div>
                     <div className="jumboButtons">
                       <span className="spanButton">
                         <a
