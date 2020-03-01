@@ -222,6 +222,98 @@ ul.skills-qualif-list li:active {
   transition-delay: 0.5s;
 }
 
+/* .app-features {
+  display: flex;
+  align-items: center;
+} */
+
+div.app-features h6 {
+  text-align: center;
+  background: #e09d86;
+  color: #f0ece2;
+  margin: 4px;
+  padding: 4px;
+  box-shadow: inset 0 0 15px rgba(173, 96, 44, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+ul.app-features-list {
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+ul.app-features-list li {
+  display: flex;
+  background: #e0896c;
+  color: #f0ece2;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin: 2px 0;
+  transition: 5s;
+}
+
+ul.skills-qualif-list li:nth-child(1) {
+  background: #df7f5f;
+}
+ul.skills-qualif-list li:nth-child(2) {
+  background: #db7350;
+}
+ul.skills-qualif-list li:nth-child(3) {
+  background: #dd6943;
+}
+ul.skills-qualif-list li:nth-child(4) {
+  background: #da5b31;
+}
+ul.skills-qualif-list li:nth-child(5) {
+  background: #d65428;
+}
+
+div.tech-used {
+  display: flex;
+}
+
+
+div.tech-used ul {
+  list-style: none;
+}
+
+div.tech-used ul li {
+  /* margin: 4px; */
+  padding: 4px;
+  display: inline;
+  font-size: 20px;
+  background: #f0ece2;
+}
+
+div.tech-used ul li:nth-child(1) {
+  background: #e9a892;
+  color: #f0ece2;
+}
+div.tech-used ul li:nth-child(2) {
+  background: #db7350;
+  color: #f0ece2;
+}
+div.tech-used ul li:nth-child(3) {
+  background: #dd6943;
+  color: #f0ece2;
+}
+div.tech-used ul li:nth-child(4) {
+  background: #da5b31;
+  color: #f0ece2;
+}
+div.tech-used ul li:nth-child(5) {
+  background: #d65428;
+  color: #f0ece2;
+}
+
+
+
+
 .projects {
   width: 95%;
   margin: 5px auto;
@@ -254,7 +346,8 @@ ul.skills-qualif-list li:active {
   /* display: flex;
   justify-content: center; */
   box-sizing: border-box;
-  background: #f0ece2;
+  /* background: #f0ece2; */
+  background: #393e46;
   color: #393e46;
   line-height: 1.6;
   padding: 1em;
@@ -292,7 +385,7 @@ div.myInfo ul {
 }
 
 div.contactForm {
-  background: #f9feff;
+  background: #f0ece2;
 }
 
 div.contactForm form {

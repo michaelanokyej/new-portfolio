@@ -10,7 +10,7 @@ class Footer extends React.Component {
       <footer>
         © Michael Anokye - Connect with me: {" "}
         <a
-          href="https://www.linkedin.com/in/michael-anokye-7125ba175/"
+          href="https://www.linkedin.com/in/michael-anokye/"
         >
         <FontAwesomeIcon icon={faLinkedin} />
         </a>{"  "}

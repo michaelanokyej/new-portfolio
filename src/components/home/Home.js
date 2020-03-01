@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoad, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faHtml5, faCss3, faJsSquare } from '@fortawesome/free-brands-svg-icons'
+
 import "./Home.css";
 
 class Home extends React.Component {
@@ -187,15 +189,10 @@ class Home extends React.Component {
                   </div>
                   <div className="content">
                     <h3>Park Finder WebApp</h3>
-                    <p>
-                      An andventure driven web-app that searches for parks.
-                      Users can search for national parks in and out of their
-                      states. Parks are always shown with the current weather
-                      and the weather throughout the day for the location.
-                    </p>
+                    <p>An adventure driven web-app that searches for parks.</p>
                     <div className="app-features">
-                      <p>Features:</p>
-                      <ul>
+                    <h6>FEATURES</h6>
+                      <ul className="app-features-list">
                         <li>Gets weather at the current location</li>
                         <li>Gets parks near user current location</li>
                         <li>User can search for parks anywhere</li>
@@ -206,10 +203,10 @@ class Home extends React.Component {
                     </div>
                     <div className="tech-used">
                       <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Jquery</li>
+                        <li>STACK</li>
+                        <li><FontAwesomeIcon icon={faHtml5} /></li>
+                        <li><FontAwesomeIcon icon={faCss3} /></li>
+                        <li><FontAwesomeIcon icon={faJsSquare} /></li>
                       </ul>
                     </div>
                     <div className="jumboButtons">
