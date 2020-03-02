@@ -352,10 +352,8 @@ class Home extends React.Component {
                 <p>
                   <input
                     type="file"
-                    name="myfile"
-                    id="myfile"
-                    placeholder="Upload File"
-                    rows="7"
+                    name="Uploaded File"
+                    // id="myfile"
                   />
                 </p>
                 <p>
