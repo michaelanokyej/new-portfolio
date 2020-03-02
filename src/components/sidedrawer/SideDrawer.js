@@ -22,13 +22,13 @@ class SideDrawer extends React.Component {
           >
             <Link to="/">Home</Link>
           </li>
-          <li
+          {/* <li
             onClick={() => {
               this.context.backDropClickHandler();
             }}
           >
             <Link to="/projects">Projects</Link>
-          </li>
+          </li> */}
           <li
             onClick={() => {
               this.context.backDropClickHandler();
