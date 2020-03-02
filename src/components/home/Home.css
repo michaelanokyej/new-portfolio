@@ -310,6 +310,10 @@ div.tech-used ul li:nth-child(5) {
   background: #d65428;
   color: #f0ece2;
 }
+div.tech-used ul li:nth-child(6) {
+  background: #d34c1f;
+  color: #f0ece2;
+}
 
 
 

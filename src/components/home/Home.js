@@ -2,8 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRoad, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faHtml5, faCss3, faJsSquare } from '@fortawesome/free-brands-svg-icons'
+import {
+  faRoad,
+  faEnvelope,
+  faDatabase
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faHtml5,
+  faCss3,
+  faJsSquare,
+  faReact,
+  faNode
+} from "@fortawesome/free-brands-svg-icons";
 
 import "./Home.css";
 
@@ -117,30 +127,55 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="projectsDiv">
-          <h4>Latest Projects</h4>
+          <h4>A Few Projects</h4>
           <div className="projects">
             <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
-                    <img src="wander.png" alt="parkFinder" />
+                    <img src="wander.png" alt="wander" />
                   </div>
                   <div className="content">
                     <h3>Wander WebApp</h3>
-                    <p>
-                      Multi-faceted software engineer who is knowledgeable in
-                      JavaScript, Python, MySQL, HTML, etc. A true team player
-                      offering multiple years of experience in the software
-                      industry. Seeking the opportunity to provide outstanding,
-                      clean code in a collaborative environment. Proficient in
-                      working with diverse languages. Motivated to stay informed
-                      of the latest industry innovations to provide
-                      customers/users with the most up-to-date solutions.
-                    </p>
+                    <p>A webapp for users that wander and find new places.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>
+                          Users can search for tours in every state in the USA
+                        </li>
+                        <li>New users can sign up to book tours.</li>
+                        <li>Old users can sign in too book tours.</li>
+                        <li>
+                          A registered user can become a guide by posting a
+                          tour.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faDatabase} />
+                        </li>
+                      </ul>
+                    </div>
                     <div className="jumboButtons">
                       <span className="spanButton">
                         <a
-                          href="https://wander-client.michaelanokyej.now.sh/home"
+                          href="https://michaelanokyej.github.io/colorGame/"
                           target="_blank"
                         >
                           View Project
@@ -148,7 +183,61 @@ class Home extends React.Component {
                       </span>
                       <span className="spanButton">
                         <a
-                          href="https://github.com/michaelanokyej/wander-client"
+                          href="https://github.com/michaelanokyej/colorGame"
+                          target="_blank"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="rgb.png" alt="rgb-game" />
+                  </div>
+                  <div className="content">
+                    <h3>RGB Game</h3>
+                    <p>A game for users to better understand RGB.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Displays a color in RGB</li>
+                        <li>User clicks on a color to choose</li>
+                        <li>User is prompted with results after each click</li>
+                        <li>Game can be restarted by user when ended.</li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faJsSquare} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://michaelanokyej.github.io/colorGame/"
+                          target="_blank"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/colorGame"
                           target="_blank"
                         >
                           View Code
@@ -167,31 +256,9 @@ class Home extends React.Component {
                   </div>
                   <div className="content">
                     <h3>Park Finder WebApp</h3>
-                    <p>
-                      Multi-faceted software engineer who is knowledgeable in
-                      JavaScript, Python, MySQL, HTML, etc. A true team player
-                      offering multiple years of experience in the software
-                      industry. Seeking the opportunity to provide outstanding,
-                      clean code in a collaborative environment. Proficient in
-                      working with diverse languages. Motivated to stay informed
-                      of the latest industry innovations to provide
-                      customers/users with the most up-to-date solutions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
-                    <img src="parkfinder.png" alt="parkFinder" />
-                  </div>
-                  <div className="content">
-                    <h3>Park Finder WebApp</h3>
                     <p>An adventure driven web-app that searches for parks.</p>
                     <div className="app-features">
-                    <h6>FEATURES</h6>
+                      <h6>FEATURES</h6>
                       <ul className="app-features-list">
                         <li>Gets weather at the current location</li>
                         <li>Gets parks near user current location</li>
@@ -204,9 +271,15 @@ class Home extends React.Component {
                     <div className="tech-used">
                       <ul>
                         <li>STACK</li>
-                        <li><FontAwesomeIcon icon={faHtml5} /></li>
-                        <li><FontAwesomeIcon icon={faCss3} /></li>
-                        <li><FontAwesomeIcon icon={faJsSquare} /></li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faJsSquare} />
+                        </li>
                       </ul>
                     </div>
                     <div className="jumboButtons">
@@ -240,16 +313,17 @@ class Home extends React.Component {
               <h5>Michael Anokye</h5>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faRoad} /> Rockville, MD
+                  <FontAwesomeIcon icon={faRoad} />{" "} Rockville, MD
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faEnvelope} />
+                  {" "}
                   michaelanokyej@yahoo.com
                 </li>
               </ul>
             </div>
             <div class="contactForm">
-              <form action="mailto:michaelanokyej@yahoo.com">
+              <form name="contact" action="POST" data-netlify="true">
                 <p>
                   <label>Name</label>
                   <input type="text" name="name" />
@@ -270,6 +344,11 @@ class Home extends React.Component {
                   <label>Message</label>
                   <textarea name="message" rows="4"></textarea>
                 </p>
+                <p>
+                  <div data-netlift-recaptcha="true">
+                    
+                  </div>
+                </p> 
                 <p class="full">
                   <button>Submit</button>
                 </p>
