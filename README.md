@@ -9,7 +9,7 @@
 #### Technology Used
 
 > React, JavaScript, CSS, NPM
-> [Check out my Portfolio](https://wander-client.michaelanokyej.now.sh/ "Link to Wander App Landing page").
+> [Check out my Portfolio](https://michaelanokye.com/ "Link to Wander App Landing page").
 
 ## Home Screen
 
