@@ -119,7 +119,7 @@ class Home extends React.Component {
               </li>
               <li>
                 <span className="framework">
-                  Thinkful Web Developer Bootcamp
+                  Thinkful Engineering Bootcamp
                 </span>
                 <span className="framework-skills">March, 2020</span>
               </li>
