@@ -18,7 +18,7 @@
 
 ### Contact Form
 
-> You can reach out to me by fsubmitting this form.
+> You can reach out to me by submitting this form.
 > ![Contact Form Screen](public/contact-form.png "Contact Form screenshot")
 
 ### Resume
