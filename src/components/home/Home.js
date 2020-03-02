@@ -358,9 +358,7 @@ class Home extends React.Component {
                     rows="7"
                   />
                 </p>
-                <p>
                   <div data-netlify-recaptcha="true"></div>
-                </p>
                 <p class="full">
                   <button type="submit">Submit</button>
                 </p>
