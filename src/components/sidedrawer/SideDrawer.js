@@ -45,13 +45,6 @@ class SideDrawer extends React.Component {
               Github
             </a>
           </li>
-          <li
-            onClick={() => {
-              this.context.backDropClickHandler();
-            }}
-          >
-            <Link to="/contact-form">Contact Me</Link>
-          </li>
         </ul>
       </nav>
     );

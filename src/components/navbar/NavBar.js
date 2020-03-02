@@ -31,9 +31,6 @@ class NavBar extends React.Component {
               <li>
                 <a href="https://github.com/michaelanokyej" target="_blank">Github</a>
               </li>
-              {/* <li>
-                <Link to="#contact">Contact Me</Link>
-              </li> */}
             </ul>
           </div>
           <div className="toolbar__toggle-button">
