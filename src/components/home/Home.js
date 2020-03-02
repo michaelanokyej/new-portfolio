@@ -313,12 +313,10 @@ class Home extends React.Component {
               <h5>Michael Anokye</h5>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faRoad} />{" "} Rockville, MD
+                  <FontAwesomeIcon icon={faRoad} /> Rockville, MD
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  {" "}
-                  michaelanokyej@yahoo.com
+                  <FontAwesomeIcon icon={faEnvelope} /> michaelanokyej@yahoo.com
                 </li>
               </ul>
             </div>
@@ -330,7 +328,7 @@ class Home extends React.Component {
                 </p>
                 <p>
                   <label>Company</label>
-                  <input type="email" name="company" />
+                  <input type="text" name="company" />
                 </p>
                 <p>
                   <label>Email Address</label>
@@ -345,10 +343,17 @@ class Home extends React.Component {
                   <textarea name="message" rows="4"></textarea>
                 </p>
                 <p>
-                  <div data-netlift-recaptcha="true">
-                    
-                  </div>
-                </p> 
+                  <input
+                    type="file"
+                    name="myfile"
+                    id="myfile"
+                    placeholder="Upload File"
+                    rows="7"
+                  />
+                </p>
+                <p>
+                  <div data-netlify-recaptcha="true"></div>
+                </p>
                 <p class="full">
                   <button>Submit</button>
                 </p>
