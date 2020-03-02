@@ -321,7 +321,7 @@ class Home extends React.Component {
               </ul>
             </div>
             <div class="contactForm">
-              <form name="contact" action="POST" data-netlify="true">
+              <form name="contact" method="POST" data-netlify="true">
                 <p>
                   <label>Name</label>
                   <input type="text" name="name" />
@@ -355,7 +355,7 @@ class Home extends React.Component {
                   <div data-netlify-recaptcha="true"></div>
                 </p>
                 <p class="full">
-                  <button>Submit</button>
+                  <button type="submit">Submit</button>
                 </p>
               </form>
             </div>
