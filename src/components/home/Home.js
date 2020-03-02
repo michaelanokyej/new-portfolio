@@ -34,8 +34,8 @@ class Home extends React.Component {
               <h1 className="jumboHeader">Hi, I'm Michael Anokye</h1>
               <p>
                 Multi-faceted software engineer who is knowledgeable in
-                JavaScript, Python, MySQL, HTML, etc. A true team player
-                offering multiple years of experience in the software industry.
+                JavaScript, Python, SQL, HTML, etc. A true team player offering
+                multiple years of experience in the software industry.
                 Proficient in working with diverse languages.
               </p>
             </div>
@@ -321,7 +321,14 @@ class Home extends React.Component {
               </ul>
             </div>
             <div class="contactForm">
-              <form name="contact" method="POST" data-netlify="true">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-recaptcha="true"
+                data-netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <p>
                   <label>Name</label>
                   <input type="text" name="name" />
