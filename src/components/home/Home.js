@@ -175,7 +175,7 @@ class Home extends React.Component {
                     <div className="jumboButtons">
                       <span className="spanButton">
                         <a
-                          href="https://michaelanokyej.github.io/colorGame/"
+                          href="https://wander-client.michaelanokyej.now.sh/"
                           target="_blank"
                         >
                           View Project
@@ -183,7 +183,7 @@ class Home extends React.Component {
                       </span>
                       <span className="spanButton">
                         <a
-                          href="https://github.com/michaelanokyej/colorGame"
+                          href="https://github.com/michaelanokyej/wander-client"
                           target="_blank"
                         >
                           View Code
