@@ -40,20 +40,20 @@ class Home extends React.Component {
               </p>
             </div>
             <div className="jumboButtons">
-              <span className="spanButton">
+              <button className="spanButton">
                 <Link to="/resume">About Me</Link>{" "}
-              </span>
-              <span className="spanButton">
+              </button>
+              <button className="spanButton">
                 <a href="resume-Jan2020(pdf).docx" download="myResume">
                   Download Resume
                 </a>
-              </span>
+              </button>
             </div>
           </div>
         </div>
         <div className="skillsDiv">
           <div className="skillsItem skills">
-            <h4>Skills</h4>
+            <h4 className="home-section-header">Skills</h4>
             <ul className="skills-qualif-list">
               <li>
                 <span className="framework">JavaScript Frameworks:</span>{" "}
@@ -89,13 +89,13 @@ class Home extends React.Component {
               </li>
             </ul>
             <div className="jumboButtons">
-              <span className="spanButton">
+              <button className="spanButton">
                 <Link to="/resume">Learn More</Link>
-              </span>
+              </button>
             </div>
           </div>
           <div className="skillsItem qualifications">
-            <h4>Qualifications</h4>
+            <h4 className="home-section-header">Qualifications</h4>
             <ul className="skills-qualif-list">
               <li>
                 <span className="framework">
@@ -127,7 +127,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="projectsDiv">
-          <h4>A Few Projects</h4>
+          <h4 className="home-section-header">A Few Projects</h4>
           <div className="projects">
             <div className="project">
               <div className="container">
@@ -329,39 +329,39 @@ class Home extends React.Component {
                 data-netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="contact" />
-                <p>
+                <div>
                   <label>Name</label>
                   <input type="text" name="name" />
-                </p>
-                <p>
+                </div>
+                <div>
                   <label>Company</label>
                   <input type="text" name="company" />
-                </p>
-                <p>
+                </div>
+                <div>
                   <label>Email Address</label>
                   <input type="email" name="email" />
-                </p>
-                <p>
+                </div>
+                <div>
                   <label>Phone Number</label>
                   <input type="Number" name="phone" />
-                </p>
-                <p class="full">
+                </div>
+                <div class="full">
                   <label>Message</label>
                   <textarea name="message" rows="4"></textarea>
-                </p>
-                <p>
+                </div>
+                <div>
                   <input
                     type="file"
                     name="Uploaded File"
                     // id="myfile"
                   />
-                </p>
-                <p>
+                </div>
+                <div>
                   <div data-netlify-recaptcha="true"></div>
-                </p>
-                <p class="full">
+                </div>
+                <div class="full">
                   <button type="submit">Submit</button>
-                </p>
+                </div>
               </form>
             </div>
           </div>

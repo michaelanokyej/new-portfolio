@@ -39,10 +39,10 @@
 .spanButton {
   list-style: none;
   background-color: #69779b;
-  padding: 5px;
+  padding: 8px 16px;
   margin: 5px;
   border: 0.5 solid #010101;
-  /* border-radius: 25%; */
+  border-radius: 6px;
 }
 
 a {
@@ -64,6 +64,14 @@ a:active {
 .jumboHeader {
   color: #d65a31;
   font-weight: bold;
+}
+
+.home-section-header {
+  padding: 8px;
+}
+
+.contactMessage {
+  color: #f0ece2;
 }
 
 .skillsDiv {
@@ -91,10 +99,11 @@ ul.skills-qualif-list {
 ul.skills-qualif-list li {
   display: flex;
   background: #e0896c;
+  border-radius: 6px;
   color: #f0ece2;
   padding: 10px 20px;
   margin: 5px 0;
-  transition: 5s;
+  transition: 2s;
 }
 
 ul.skills-qualif-list li:nth-child(1) {
@@ -250,6 +259,7 @@ ul.app-features-list {
 ul.app-features-list li {
   display: flex;
   background: #e0896c;
+  border-radius: 6px;
   color: #f0ece2;
   font-size: 12px;
   padding: 4px 8px;
@@ -411,9 +421,14 @@ div.contactForm form .full {
 }
 
 div.contactForm form button,
-div.contactForm form input,
-div.contactForm form textarea {
+div.contactForm form input {
   width: 80%;
+  padding: 1em;
+  border: 1px solid #69779b;
+}
+
+div.contactForm form textarea {
+  width: 90%;
   padding: 1em;
   border: 1px solid #69779b;
 }
@@ -423,6 +438,7 @@ div.contactForm form button {
   color: #f0ece2;
   border: 0;
   text-transform: uppercase;
+  border-radius: 6px;
 }
 
 div.contactForm form button:hover,
@@ -433,9 +449,25 @@ div.contactForm form button:focus {
   transition: background-color 2s ease-out;
 }
 
-
-@media (max-width: 960px) {
+@media (max-width: 950px) {
   .skillsDiv {
     grid-template-rows: 550px;
+  }
+}
+
+@media (max-width: 850px) {
+  .skillsDiv {
+    grid-template-rows: 550px;
+  }
+  .projects {
+    /* width: 95%;
+    margin: 5px auto;
+    display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 480px;
+    background: #f0ece2;
+    justify-content: center;
+    /* grid-auto-rows: 420px;
+    color: #393e46; */
   }
 }

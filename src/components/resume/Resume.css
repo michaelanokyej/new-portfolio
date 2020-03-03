@@ -1,9 +1,11 @@
 .resumeDiv {
-  padding: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
   color: #f0ece2;
 }
 
-hr {
+hr.section {
   height: 30px;
   border-style: solid;
   border-color: #8c8b8b;
@@ -11,7 +13,7 @@ hr {
   border-radius: 20px;
 }
 
-hr:before {
+hr.section:before {
   display: block;
   content: "";
   height: 30px;
@@ -21,3 +23,48 @@ hr:before {
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
+
+/* hr.experience-separator {
+
+} */
+
+hr.experience-separator {
+  border: 0;
+  height: 0; /* Firefox... */
+  box-shadow: 0 0 10px 1px #f0ece2;
+}
+hr.experience-separator:after {  /* Not really supposed to work, but does */
+  content: "\00a0";  /* Prevent margin collapse */
+}
+
+span#address {
+  margin: 8px;
+}
+
+.resumeHeader {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid #f0ece2;
+  border-radius: 6px;
+}
+
+
+.summaryPara {
+  padding: 16px;
+  margin: 8px;
+  line-height: 2rem;
+}
+
+
+/* p {
+  line-height: 2rem;
+} */
+
+li {
+  margin: 8px;
+  padding: 8px;
+  list-style: lower-roman;
+}
+/* p {
+  line-height: 2px;
+} */

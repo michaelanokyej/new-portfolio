@@ -49,8 +49,8 @@ class Resume extends React.Component {
             </span>
           </address>
         </header>
-        <h2>Summary</h2>
-        <p>
+        <h2 className="resumeHeader">Summary</h2>
+        <p className="summaryPara">
           Multi-faceted software engineer who is knowledgeable in JavaScript,
           Python, MySQL, HTML, etc. A true team player offering multiple years
           of experience in the software industry. Seeking the opportunity to
@@ -60,11 +60,11 @@ class Resume extends React.Component {
           with most up-to-date solutions. Capable of working in high-pressure
           environments while meeting business needs and project expectations​.{" "}
         </p>
-        <hr />
-        <h2>SKILLS</h2>
+        <hr className="section" />
+        <h2 className="resumeHeader">SKILLS</h2>
         <div class="row">
           <div class="col-6 col-12-small">
-            <ul>
+            <ul className="resumeSkills">
               <li>
                 Extensive knowledge in HTML, CSS, JavaScript, React.js,
                 Express.js, Node.js and others
@@ -77,7 +77,7 @@ class Resume extends React.Component {
             </ul>
           </div>
           <div class="col-6 col-12-small">
-            <ul>
+            <ul className="resumeSkills">
               <li>Experience working with Git and Github</li>
               <li>
                 Experience with testing technologies such as Mocha, Chai,
@@ -88,9 +88,9 @@ class Resume extends React.Component {
           </div>
         </div>
 
-        <hr />
+        <hr className="section" />
 
-        <h2>Experience</h2>
+        <h2 className="resumeHeader">Experience</h2>
         <h5>
           Operations Analyst / Software Analyst | Legal General America |
           October, 2019 TO PRESENT
@@ -107,6 +107,9 @@ class Resume extends React.Component {
           <li>Updating and maintaining an SQL database.</li>
           <li>Create and troubleshoot scripts to automate redundant tasks.</li>
         </ul>
+
+        <hr className="experience-separator" />
+
         <h5>
           Full Stack Developer - REMOTE | RingoCars & Autoparts | April, 2019
           –Present
@@ -126,6 +129,9 @@ class Resume extends React.Component {
             design and launch new features.
           </li>
         </ul>
+
+        <hr className="experience-separator" />
+
         <h5>
           Remote Hands Technician - LEAD | Digital Realty | July,2017 –
           October,2019
@@ -152,9 +158,9 @@ class Resume extends React.Component {
           </li>
         </ul>
 
-        <hr />
+        <hr className="section" />
 
-        <h2>Certifications</h2>
+        <h2 className="resumeHeader">Certifications</h2>
         <h5>CISCO CCNA</h5>
         <ul>
           <li>
@@ -163,6 +169,8 @@ class Resume extends React.Component {
             </a>
           </li>
         </ul>
+
+        <hr className="experience-separator" />
 
         <h5>AMAZON WEB SERVICES</h5>
         <ul>
@@ -173,9 +181,9 @@ class Resume extends React.Component {
           </li>
         </ul>
 
-        <hr />
+        <hr className="section" />
 
-        <h2>EDUCATION</h2>
+        <h2 className="resumeHeader">EDUCATION</h2>
         <h5>
           GEOGRAPHY | JUNE 2013 | KWAME NKRUMAH UNIVERSITY OF SCIENCE AND
           TECHNOLOGY
@@ -184,6 +192,9 @@ class Resume extends React.Component {
           <li>Major: Geographic Information Systems</li>
           <li>Minor: Economics</li>
         </ul>
+
+        <hr className="experience-separator" />
+        
         <h5>THINKFUL | Engineering: Nights and Weekends</h5>
         <ul>
           <li>Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)</li>
@@ -192,9 +203,9 @@ class Resume extends React.Component {
           <li>Data Structures and Algorithms</li>
         </ul>
 
-        <hr />
+        <hr className="section" />
 
-        <h2>Volunteering / Community Service</h2>
+        <h2 className="resumeHeader">Volunteering / Community Service</h2>
         <ul>
           <li>
             Vice President of the Groove phi Groove SFI (Garden City Chapter.),
