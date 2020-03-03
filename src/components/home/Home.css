@@ -294,7 +294,7 @@ div.tech-used ul {
 }
 
 div.tech-used ul li {
-  /* margin: 4px; */
+  margin: 0;
   padding: 4px;
   display: inline;
   font-size: 20px;
