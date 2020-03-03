@@ -53,6 +53,7 @@ a {
 .spanButton:hover,
 .spanButton:active {
   background: #f0ece2;
+  color: #d65a31;
 }
 
 a:hover,

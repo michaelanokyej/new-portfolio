@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         <nav className="toolbar__navigation">
           <div className="toolbar__logo">
             <Link to="/">
-              <img src="favicon-16x16.png" alt="logo" />
+              <img src="nav-logo.png" alt="logo" />
             </Link>
           </div>
           <div className="spacer" />
