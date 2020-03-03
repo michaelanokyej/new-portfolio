@@ -452,23 +452,14 @@ div.contactForm form button:focus {
 
 @media (max-width: 950px) {
   .skillsDiv {
-    grid-template-rows: 550px;
+    grid-template-rows: 600px;
   }
 }
 
 @media (max-width: 850px) {
-  .skillsDiv {
-    grid-template-rows: 550px;
-  }
   .projects {
-    /* width: 95%;
-    margin: 5px auto;
-    display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     grid-template-columns: 480px;
     background: #f0ece2;
     justify-content: center;
-    /* grid-auto-rows: 420px;
-    color: #393e46; */
   }
 }
