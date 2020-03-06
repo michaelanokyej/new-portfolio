@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import Resume from "../resume/Resume";
 import Projects from "../projects/Projects";
 import Home from "../home/Home";
-
+import "./MainPage.css";
 class MainPage extends React.Component {
   render() {
     return (

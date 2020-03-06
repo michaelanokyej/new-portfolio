@@ -8,7 +8,7 @@
 hr.section {
   height: 30px;
   border-style: solid;
-  border-color: #8c8b8b;
+  border-color: #c83232;
   border-width: 1px 0 0 0;
   border-radius: 20px;
 }
@@ -19,7 +19,7 @@ hr.section:before {
   height: 30px;
   margin-top: -31px;
   border-style: solid;
-  border-color: #8c8b8b;
+  border-color: #c83232;
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
@@ -31,7 +31,7 @@ hr.section:before {
 hr.experience-separator {
   border: 0;
   height: 0; /* Firefox... */
-  box-shadow: 0 0 10px 1px #f0ece2;
+  box-shadow: 0 0 10px 1px #c83232;
 }
 hr.experience-separator:after {  /* Not really supposed to work, but does */
   content: "\00a0";  /* Prevent margin collapse */
@@ -44,7 +44,8 @@ span#address {
 .resumeHeader {
   margin: 8px;
   padding: 8px;
-  border: 1px solid #f0ece2;
+  /* border: 1px solid #f0ece2; */
+  border: 1px inset #c83232;
   border-radius: 6px;
 }
 

@@ -309,7 +309,7 @@ class Home extends React.Component {
         <div id="contact">
           <h4 className="center contactMessage">Get in touch</h4>
           <div className="contactWrapper animated bounceInLeft">
-            <div class="myInfo">
+            <div className="myInfo">
               <h5>Michael Anokye</h5>
               <ul>
                 <li>
@@ -320,7 +320,7 @@ class Home extends React.Component {
                 </li>
               </ul>
             </div>
-            <div class="contactForm">
+            <div className="contactForm">
               <form
                 name="contact"
                 method="POST"
@@ -345,7 +345,7 @@ class Home extends React.Component {
                   <label>Phone Number</label>
                   <input type="Number" name="phone" />
                 </div>
-                <div class="full">
+                <div className="full">
                   <label>Message</label>
                   <textarea name="message" rows="4"></textarea>
                 </div>
@@ -359,7 +359,7 @@ class Home extends React.Component {
                 <div>
                   <div data-netlify-recaptcha="true"></div>
                 </div>
-                <div class="full">
+                <div className="full">
                   <button type="submit">Submit</button>
                 </div>
               </form>

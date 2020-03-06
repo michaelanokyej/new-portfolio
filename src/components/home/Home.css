@@ -18,12 +18,14 @@
 .profileImgContainer {
   width: 100%;
   overflow: hidden;
+  padding: 8px;
 }
 
 .profilePic {
-  /* height: 70%; */
-  width: 90%;
+  height: 280px;
+  width: 280px;
   border: none;
+  border-radius: 50%;
 }
 
 /* .jumbo-aboutme {
@@ -53,26 +55,19 @@ a {
 .spanButton:hover,
 .spanButton:active {
   background: #f0ece2;
-  color: #d65a31;
+  color: #c83232;
 }
 
 a:hover,
 a:active {
-  color: #d65a31;
+  color: #c83232;
   text-decoration: none;
 }
 
-.jumboHeader {
-  color: #d65a31;
-  font-weight: bold;
-}
-
-.home-section-header {
+.home-section-header, .contactMessage, .jumboHeader {
   padding: 8px;
-}
-
-.contactMessage {
-  color: #f0ece2;
+  font-weight: 800;
+  color: #c83232;
 }
 
 .skillsDiv {
@@ -80,7 +75,7 @@ a:active {
   margin: 5px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 450px;
+  grid-auto-rows: 500px;
 }
 
 .skills {
@@ -239,7 +234,7 @@ ul.skills-qualif-list li:active {
 
 div.app-features h6 {
   text-align: center;
-  background: #e09d86;
+  background: #d48e8e;
   color: #f0ece2;
   margin: 4px;
   padding: 4px;
@@ -259,7 +254,7 @@ ul.app-features-list {
 
 ul.app-features-list li {
   display: flex;
-  background: #e0896c;
+  background: #b85656;
   border-radius: 6px;
   color: #f0ece2;
   font-size: 12px;
@@ -269,19 +264,22 @@ ul.app-features-list li {
 }
 
 ul.skills-qualif-list li:nth-child(1) {
-  background: #df7f5f;
+  background: #d48787;
 }
 ul.skills-qualif-list li:nth-child(2) {
-  background: #db7350;
+  background: #cf6f6f;
 }
 ul.skills-qualif-list li:nth-child(3) {
-  background: #dd6943;
+  background: #b85656;
 }
 ul.skills-qualif-list li:nth-child(4) {
-  background: #da5b31;
+  background: #c45757;
 }
 ul.skills-qualif-list li:nth-child(5) {
-  background: #d65428;
+  background: #c44444;
+}
+ul.skills-qualif-list li:nth-child(6) {
+  background: #c83232;
 }
 
 div.tech-used {
@@ -302,27 +300,27 @@ div.tech-used ul li {
 }
 
 div.tech-used ul li:nth-child(1) {
-  background: #e9a892;
+  background: #d48787;
   color: #f0ece2;
 }
 div.tech-used ul li:nth-child(2) {
-  background: #db7350;
+  background: #cf7979;
   color: #f0ece2;
 }
 div.tech-used ul li:nth-child(3) {
-  background: #dd6943;
+  background: #c06464;
   color: #f0ece2;
 }
 div.tech-used ul li:nth-child(4) {
-  background: #da5b31;
+  background: #c45757;
   color: #f0ece2;
 }
 div.tech-used ul li:nth-child(5) {
-  background: #d65428;
+  background: #c44444;
   color: #f0ece2;
 }
 div.tech-used ul li:nth-child(6) {
-  background: #d34c1f;
+  background: #c83232;
   color: #f0ece2;
 }
 
@@ -445,11 +443,16 @@ div.contactForm form button {
 div.contactForm form button:hover,
 div.contactForm form button:focus {
   background: #f0ece2;
-  color: #d65a31;
+  color: #c83232;
   outline: 0;
   transition: background-color 2s ease-out;
 }
 
+@media (max-width: 1000px) {
+  .myJumbotron {
+    grid-auto-rows: 340px;
+  }
+}
 @media (max-width: 950px) {
   .skillsDiv {
     grid-template-rows: 600px;
@@ -461,5 +464,10 @@ div.contactForm form button:focus {
     grid-template-columns: 480px;
     background: #f0ece2;
     justify-content: center;
+  }
+
+  .myJumbotron {
+    grid-auto-rows: 340px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
