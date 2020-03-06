@@ -350,13 +350,6 @@ class Home extends React.Component {
                   <textarea name="message" rows="4"></textarea>
                 </div>
                 <div>
-                  <input
-                    type="file"
-                    name="Uploaded File"
-                    // id="myfile"
-                  />
-                </div>
-                <div>
                   <div data-netlify-recaptcha="true"></div>
                 </div>
                 <div className="full">
