@@ -24,7 +24,7 @@ class Home extends React.Component {
         <div className="myJumbotron">
           <div className="jumbotronItem profileImgContainer">
             <img
-              src="profilePic.jpeg"
+              src="profilePic.jpg"
               alt="profilePic"
               className="profilePic"
             />
