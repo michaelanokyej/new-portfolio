@@ -461,7 +461,7 @@ div.contactForm form button:focus {
 
 @media (max-width: 850px) {
   .projects {
-    grid-template-columns: 480px;
+    grid-template-columns: 350px;
     background: #f0ece2;
     justify-content: center;
   }
@@ -469,5 +469,18 @@ div.contactForm form button:focus {
   .myJumbotron {
     grid-auto-rows: 340px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 340px) {
+  .projects {
+    grid-template-columns: 300px;
+    background: #f0ece2;
+    justify-content: center;
+  }
+
+  .myJumbotron {
+    grid-auto-rows: 480px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   }
 }
