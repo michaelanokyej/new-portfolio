@@ -41,7 +41,7 @@ class SideDrawer extends React.Component {
               this.context.backDropClickHandler();
             }}
           >
-            <a href="https://github.com/michaelanokyej" target="_blank">
+            <a href="https://github.com/michaelanokyej" target="_blank" rel="noopener noreferrer">
               Github
             </a>
           </li>

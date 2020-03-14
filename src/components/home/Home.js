@@ -176,7 +176,7 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://wander-client.michaelanokyej.now.sh/"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           View Project
                         </a>{" "}
@@ -184,7 +184,7 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/wander-client"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           View Code
                         </a>
@@ -230,7 +230,7 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://michaelanokyej.github.io/colorGame/"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           View Project
                         </a>{" "}
@@ -238,7 +238,7 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/colorGame"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           View Code
                         </a>
@@ -286,7 +286,7 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://michaelanokyej.github.io/parkfinder/"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           View Project
                         </a>{" "}
@@ -294,7 +294,7 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/parkfinder"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           View Code
                         </a>

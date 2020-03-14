@@ -5,7 +5,6 @@ import {
   faMobileAlt,
   faMapMarkerAlt,
   faEnvelope,
-  faFileDownload,
   faDownload
 } from "@fortawesome/free-solid-svg-icons";
 // import {
@@ -20,7 +19,7 @@ class Resume extends React.Component {
   render() {
     return (
       <div className="resumeDiv">
-        <header class="major">
+        <header className="major">
           <h1>MICHAEL ANOKYE</h1>
           <address>
             {" "}
@@ -62,8 +61,8 @@ class Resume extends React.Component {
         </p>
         <hr className="section" />
         <h2 className="resumeHeader">SKILLS</h2>
-        <div class="row">
-          <div class="col-6 col-12-small">
+        <div className="row">
+          <div className="col-6 col-12-small">
             <ul className="resumeSkills">
               <li>
                 Extensive knowledge in HTML, CSS, JavaScript, React.js,
@@ -76,7 +75,7 @@ class Resume extends React.Component {
               <li>Experience scripting in python, batch and bash</li>
             </ul>
           </div>
-          <div class="col-6 col-12-small">
+          <div className="col-6 col-12-small">
             <ul className="resumeSkills">
               <li>Experience working with Git and Github</li>
               <li>

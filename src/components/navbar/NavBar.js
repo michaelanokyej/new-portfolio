@@ -29,7 +29,13 @@ class NavBar extends React.Component {
                 <Link to="/resume">Resume</Link>
               </li>
               <li>
-                <a href="https://github.com/michaelanokyej" target="_blank">Github</a>
+                <a
+                  href="https://github.com/michaelanokyej"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
               </li>
             </ul>
           </div>
