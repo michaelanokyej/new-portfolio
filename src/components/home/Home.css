@@ -64,7 +64,9 @@ a:active {
   text-decoration: none;
 }
 
-.home-section-header, .contactMessage, .jumboHeader {
+.home-section-header,
+.contactMessage,
+.jumboHeader {
   padding: 8px;
   font-weight: 800;
   color: #c83232;
@@ -243,7 +245,6 @@ div.app-features h6 {
   overflow: hidden;
 }
 
-
 ul.app-features-list {
   padding: 4px;
   background: rgba(0, 0, 0, 0.1);
@@ -286,7 +287,6 @@ div.tech-used {
   display: flex;
 }
 
-
 div.tech-used ul {
   list-style: none;
 }
@@ -323,9 +323,6 @@ div.tech-used ul li:nth-child(6) {
   background: #c83232;
   color: #f0ece2;
 }
-
-
-
 
 .projects {
   width: 95%;
@@ -446,6 +443,12 @@ div.contactForm form button:focus {
   color: #c83232;
   outline: 0;
   transition: background-color 2s ease-out;
+}
+
+.PSA {
+  border: 1px inset #c83232;
+  padding: 4px;
+  font-weight: bold;
 }
 
 @media (max-width: 1000px) {

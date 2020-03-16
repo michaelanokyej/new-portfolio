@@ -23,11 +23,7 @@ class Home extends React.Component {
       <div>
         <div className="myJumbotron">
           <div className="jumbotronItem profileImgContainer">
-            <img
-              src="profilePic.jpg"
-              alt="profilePic"
-              className="profilePic"
-            />
+            <img src="profilePic.jpg" alt="profilePic" className="profilePic" />
           </div>
           <div className="jumbotronItem">
             <div>
@@ -118,9 +114,7 @@ class Home extends React.Component {
                 </span>
               </li>
               <li>
-                <span className="framework">
-                  Thinkful Engineering Bootcamp
-                </span>
+                <span className="framework">Thinkful Engineering Bootcamp</span>
                 <span className="framework-skills">March, 2020</span>
               </li>
             </ul>
@@ -128,6 +122,7 @@ class Home extends React.Component {
         </div>
         <div className="projectsDiv">
           <h4 className="home-section-header">A Few Projects</h4>
+          <h6 ><span className="PSA">Hover Or Click On A Project For More Info</span></h6>
           <div className="projects">
             <div className="project">
               <div className="container">
@@ -176,7 +171,8 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://wander-client.michaelanokyej.now.sh/"
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           View Project
                         </a>{" "}
@@ -184,7 +180,8 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/wander-client"
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           View Code
                         </a>
@@ -230,7 +227,8 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://michaelanokyej.github.io/colorGame/"
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           View Project
                         </a>{" "}
@@ -238,7 +236,8 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/colorGame"
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           View Code
                         </a>
@@ -286,7 +285,8 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://michaelanokyej.github.io/parkfinder/"
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           View Project
                         </a>{" "}
@@ -294,7 +294,8 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/parkfinder"
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           View Code
                         </a>
