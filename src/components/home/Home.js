@@ -122,7 +122,7 @@ class Home extends React.Component {
         </div>
         <div className="projectsDiv">
           <h4 className="home-section-header">A Few Projects</h4>
-          <h6 ><span className="PSA">Hover Or Click On A Project For More Info</span></h6>
+          <h6 ><span className="PSA">Hover/Click On A Project For More</span></h6>
           <div className="projects">
             <div className="project">
               <div className="container">
