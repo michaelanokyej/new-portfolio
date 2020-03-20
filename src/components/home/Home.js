@@ -196,7 +196,7 @@ class Home extends React.Component {
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
-                    <img src="upLift.png" alt="upLift.png" />
+                    <img src="upLift.png" alt="upLift" />
                   </div>
                   <div className="content">
                     <h3>UpLift WebApp</h3>
