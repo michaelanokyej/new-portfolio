@@ -32,7 +32,8 @@ class Home extends React.Component {
                 Multi-faceted software engineer who is knowledgeable in
                 JavaScript, Python, SQL, HTML, etc. A true team player offering
                 multiple years of experience in the software industry.
-                Proficient in working with diverse languages.
+                Proficient in working with diverse languages. When I'm not coding,
+                I enjoy doing something creative like painting or being physically active in the gym.
               </p>
             </div>
             <div className="jumboButtons">
@@ -180,6 +181,72 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/wander-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="upLift.png" alt="upLift.png" />
+                  </div>
+                  <div className="content">
+                    <h3>UpLift WebApp</h3>
+                    <p>A webapp to make mentorship accessible to users.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>
+                          Users can sign up/sign in.
+                        </li>
+                        <li>Users can post something.</li>
+                        <li>Users can comment on posts</li>
+                        <li>
+                          Users can send messages
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faDatabase} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://uplift-olive.now.sh/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/irodriguez20/team-mike-india-client"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
