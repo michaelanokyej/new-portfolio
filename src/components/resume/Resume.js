@@ -5,20 +5,26 @@ import {
   faMobileAlt,
   faMapMarkerAlt,
   faEnvelope,
-  faDownload
+  faDownload,
 } from "@fortawesome/free-solid-svg-icons";
-// import {
-//   faHtml5,
-//   faCss3,
-//   faJsSquare,
-//   faReact,
-//   faNode
-// } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
+import myContext from "../context/myContext.js";
 
 class Resume extends React.Component {
+  static contextType = myContext;
+
   render() {
+    const pageVariants = this.context.pageVariants;
+    const pageTransition = this.context.pageTransition;
     return (
-      <div className="resumeDiv">
+      <motion.div
+        exit="out"
+        animate="in"
+        initial="initial"
+        variants={pageVariants}
+        transition={pageTransition}
+        className="resumeDiv"
+      >
         <header className="major">
           <h1>MICHAEL ANOKYE</h1>
           <address>
@@ -193,7 +199,7 @@ class Resume extends React.Component {
         </ul>
 
         <hr className="experience-separator" />
-        
+
         <h5>THINKFUL | Engineering: Nights and Weekends</h5>
         <ul>
           <li>Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)</li>
@@ -221,7 +227,7 @@ class Resume extends React.Component {
             Community work; environmental sanitation and public education.
           </li>
         </ul>
-      </div>
+      </motion.div>
     );
   }
 }

@@ -31,9 +31,35 @@ class App extends React.Component {
       backDrop = <BackDrop />;
     }
 
+    const pageVariants = {
+      initial: {
+        opacity: 0,
+        x: "-100vw",
+        scale: 0.8
+      },
+      in: {
+        opacity: 1,
+        x: 0,
+        scale: 1
+      },
+      out: {
+        opacity: 0,
+        x: "100vw",
+        scale: 1.2
+      }
+    }
+
+    const pageTransition = {
+      type: "tween",
+      ease: "anticipate",
+      duration: 1.2
+    }
+
     const contextValue = {
       drawerToggleClickHandler: this.drawerToggleClickHandler,
       backDropClickHandler: this.backDropClickHandler,
+      pageVariants: pageVariants,
+      pageTransition: pageTransition,
     };
     return (
       <div className="App">

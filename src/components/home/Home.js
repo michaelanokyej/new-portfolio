@@ -5,22 +5,35 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRoad,
   faEnvelope,
-  faDatabase
+  faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHtml5,
   faCss3,
   faJsSquare,
   faReact,
-  faNode
+  faNode,
 } from "@fortawesome/free-brands-svg-icons";
-
+import myContext from "../context/myContext.js";
 import "./Home.css";
+import { motion } from "framer-motion";
 
 class Home extends React.Component {
+  static contextType = myContext;
+
   render() {
+    const pageVariants = this.context.pageVariants;
+    const pageTransition = this.context.pageTransition;
+
     return (
-      <div>
+      <motion.div
+        exit="out"
+        animate="in"
+        initial="initial"
+        variants={pageVariants}
+        transition={pageTransition}
+
+      >
         <div className="myJumbotron">
           <div className="jumbotronItem profileImgContainer">
             <img src="profilePic.jpg" alt="profilePic" className="profilePic" />
@@ -32,8 +45,9 @@ class Home extends React.Component {
                 Multi-faceted software engineer who is knowledgeable in
                 JavaScript, Python, SQL, HTML, etc. A true team player offering
                 multiple years of experience in the software industry.
-                Proficient in working with diverse languages. When I'm not coding,
-                I enjoy doing something creative like painting or being physically active in the gym.
+                Proficient in working with diverse languages. When I'm not
+                coding, I enjoy doing something creative like painting or being
+                physically active in the gym.
               </p>
             </div>
             <div className="jumboButtons">
@@ -41,7 +55,10 @@ class Home extends React.Component {
                 <Link to="/resume">About Me</Link>{" "}
               </button>
               <button className="spanButton">
-                <a href="resume-Jan2020(pdf).docx" download="myResume">
+                <a
+                  href="Michael-Anokye-Resume-Apr-2020.docx"
+                  download="myResume"
+                >
                   Download Resume
                 </a>
               </button>
@@ -70,7 +87,9 @@ class Home extends React.Component {
               </li>
               <li>
                 <span className="framework">Database:</span>{" "}
-                <span className="framework-skills">MySQL, PostgreSQL</span>
+                <span className="framework-skills">
+                  MySQL, PostgreSQL, MongoDB
+                </span>
               </li>
               <li>
                 <span className="framework">Amazon Web Services:</span>{" "}
@@ -81,7 +100,7 @@ class Home extends React.Component {
               <li>
                 <span className="framework">Additional Skills:</span>{" "}
                 <span className="framework-skills">
-                  API development skills (REST)
+                  API development skills (REST) etc
                 </span>
               </li>
             </ul>
@@ -115,7 +134,9 @@ class Home extends React.Component {
                 </span>
               </li>
               <li>
-                <span className="framework">Thinkful Engineering Bootcamp</span>
+                <span className="framework">
+                  Thinkful Engineering Immersion Program
+                </span>
                 <span className="framework-skills">March, 2020</span>
               </li>
             </ul>
@@ -123,7 +144,9 @@ class Home extends React.Component {
         </div>
         <div className="projectsDiv">
           <h4 className="home-section-header">A Few Projects</h4>
-          <h6 ><span className="PSA">Hover/Tap On A Project For More</span></h6>
+          <h6>
+            <span className="PSA">Hover/Tap On A Project For More</span>
+          </h6>
           <div className="projects">
             <div className="project">
               <div className="container">
@@ -204,14 +227,10 @@ class Home extends React.Component {
                     <div className="app-features">
                       <h6>FEATURES</h6>
                       <ul className="app-features-list">
-                        <li>
-                          Users can sign up/sign in.
-                        </li>
+                        <li>Users can sign up/sign in.</li>
                         <li>Users can post something.</li>
                         <li>Users can comment on posts</li>
-                        <li>
-                          Users can send messages
-                        </li>
+                        <li>Users can send messages</li>
                       </ul>
                     </div>
                     <div className="tech-used">
@@ -427,7 +446,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
 }
