@@ -20,11 +20,14 @@ class NavBar extends React.Component {
           <div className="toolbar_navigation_items">
             <ul>
               <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
                 <Link to="/">Home</Link>
               </li>
-              {/* <li>
-                <Link to="/projects">Projects</Link>
-              </li> */}
               <li>
                 <Link to="/resume">Resume</Link>
               </li>

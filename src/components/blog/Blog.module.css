@@ -1,0 +1,28 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+}
+
+.workInProgress {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  align-self: center;
+
+  /* display: flex;
+  align-self: center; */
+}
+
+@media (max-width: 500px) {
+  .workInProgress {
+    width: 350px;
+    height: 200px;
+  }
+}
