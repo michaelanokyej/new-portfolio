@@ -341,29 +341,19 @@ div.tech-used ul li:nth-child(6) {
   align-items: center;
   min-height: 100%;
   font-family: "Poppons", sans-serif;
-  /* background: #393e46; */
-  /* color: #f0ece2; */
+  cursor: pointer;
   background: #f0ece2;
   color: #393e46;
 }
 
-/* .project:nth-child(even) {
-  background: #f0ece2;
-  color: #393e46;
-} */
-
 #contact {
-  /* display: flex;
-  justify-content: center; */
   box-sizing: border-box;
-  /* background: #f0ece2; */
   background: #393e46;
   color: #393e46;
   line-height: 1.6;
   padding: 1em;
   max-width: 95%;
   margin: 5px auto;
-  /* margin-right: auto; */
 }
 
 div.contactWrapper {
