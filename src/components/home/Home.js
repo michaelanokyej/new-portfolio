@@ -218,6 +218,135 @@ class Home extends React.Component {
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
+                    <img src="upLift-home.png" alt="upLift" />
+                  </div>
+                  <div className="content">
+                    <h3>UpLift WebApp</h3>
+                    <p>A webapp to make mentorship accessible to users.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Users can sign up/sign in.</li>
+                        <li>Users can post something.</li>
+                        <li>Users can comment on posts</li>
+                        <li>Users can send messages</li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faDatabase} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://uplift-olive.now.sh/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/irodriguez20/team-mike-india-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img
+                      src="./project-gifs/private-chat-demo.gif"
+                      alt="Private Chat"
+                    />
+                  </div>
+                  <div className="content">
+                    <h3>Private Chat App</h3>
+                    <p>A webapp for users to instantly chat, privately.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>
+                          Users can register.
+                        </li>
+                        <li>Users can create a room.</li>
+                        <li>Any user with a room name can join room.</li>
+                        <li>
+                         Users are alerted when others join and/or leave.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://private-chat-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/instantMessaging-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
                     <img src="covid-19-tracker.png" alt="covid-19-tracker" />
                   </div>
                   <div className="content">
@@ -333,124 +462,6 @@ class Home extends React.Component {
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
-                    <img src="upLift-home.png" alt="upLift" />
-                  </div>
-                  <div className="content">
-                    <h3>UpLift WebApp</h3>
-                    <p>A webapp to make mentorship accessible to users.</p>
-                    <div className="app-features">
-                      <h6>FEATURES</h6>
-                      <ul className="app-features-list">
-                        <li>Users can sign up/sign in.</li>
-                        <li>Users can post something.</li>
-                        <li>Users can comment on posts</li>
-                        <li>Users can send messages</li>
-                      </ul>
-                    </div>
-                    <div className="tech-used">
-                      <ul>
-                        <li>STACK</li>
-                        <li>
-                          <FontAwesomeIcon icon={faHtml5} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCss3} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faNode} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faReact} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faDatabase} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="jumboButtons">
-                      <span className="spanButton">
-                        <a
-                          href="https://uplift-olive.now.sh/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Project
-                        </a>{" "}
-                      </span>
-                      <span className="spanButton">
-                        <a
-                          href="https://github.com/irodriguez20/team-mike-india-client"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Code
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
-                    <img src="rgb.png" alt="rgb-game" />
-                  </div>
-                  <div className="content">
-                    <h3>RGB Game</h3>
-                    <p>A game for users to better understand RGB.</p>
-                    <div className="app-features">
-                      <h6>FEATURES</h6>
-                      <ul className="app-features-list">
-                        <li>Displays a color in RGB</li>
-                        <li>User clicks on a color to choose</li>
-                        <li>User is prompted with results after each click</li>
-                        <li>Game can be restarted by user when ended.</li>
-                      </ul>
-                    </div>
-                    <div className="tech-used">
-                      <ul>
-                        <li>STACK</li>
-                        <li>
-                          <FontAwesomeIcon icon={faHtml5} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCss3} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faJsSquare} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="jumboButtons">
-                      <span className="spanButton">
-                        <a
-                          href="https://michaelanokyej.github.io/colorGame/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Project
-                        </a>{" "}
-                      </span>
-                      <span className="spanButton">
-                        <a
-                          href="https://github.com/michaelanokyej/colorGame"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Code
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
                     <img src="parkfinder.png" alt="parkFinder" />
                   </div>
                   <div className="content">
@@ -505,6 +516,11 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="jumboButtons">
+            <button className="spanButton">
+              <Link to="/projects">More Projects</Link>
+            </button>
           </div>
         </div>
         <div id="contact">
