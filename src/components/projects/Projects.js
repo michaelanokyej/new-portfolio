@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import myContext from "../context/myContext.js";
 import { motion } from "framer-motion";
-import "./Projects.css"
+import "./Projects.css";
 
 class Projects extends React.Component {
   static contextType = myContext;
@@ -32,7 +32,7 @@ class Projects extends React.Component {
             <h1 className="jumboHeader">More Projects</h1>
           </div>
           <div className="projects">
-          <div className="project">
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
@@ -253,6 +253,67 @@ class Projects extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/colorGame"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img
+                      src="/project-gifs/react-unit-converter-video-demo.gif"
+                      alt="unit converter"
+                    />
+                  </div>
+                  <div className="content">
+                    <h3>Unit Converter</h3>
+                    <p>
+                      A react converter that converts temperatures and volumes.
+                    </p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Users can choose unit to convert.</li>
+                        <li>User is provided with options to convert.</li>
+                        <li>User is provided with the correct answer.</li>
+                        <li>Student input is verified.</li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faJsSquare} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://react-unit-converter-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/react-unit-converter"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
