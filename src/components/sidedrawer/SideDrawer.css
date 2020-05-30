@@ -31,12 +31,17 @@
   color: #f0ece2;
   text-decoration: none;
   font-size: 1.2rem;
+  font: inherit;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active,
 .side-drawer a.active {
-  color: #acdbdf;
+  background-color: #69779b;
+  padding: 8px 16px;
+  border: 0.5 solid #010101;
+  border-radius: 6px;
+  font: inherit;
 }
 
 @media (min-width: 769px) {
