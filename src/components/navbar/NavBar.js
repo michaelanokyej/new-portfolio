@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import DrawerToggleButton from "../sidedrawer/DrawerToggleButton";
 import myContext from "../context/myContext.js";
 
@@ -20,16 +20,16 @@ class NavBar extends React.Component {
           <div className="toolbar_navigation_items">
             <ul>
               <li>
-                <Link to="/blog">Blog</Link>
+                <NavLink to="/blog">Blog</NavLink>
               </li>
               <li>
-                <Link to="/projects">Projects</Link>
+                <NavLink to="/projects">Projects</NavLink>
               </li>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink exact to="/" >Home</NavLink>
               </li>
               <li>
-                <Link to="/resume">Resume</Link>
+                <NavLink to="/resume">Resume</NavLink>
               </li>
               <li>
                 <a

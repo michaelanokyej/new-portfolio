@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./SideDrawer.css";
 import myContext from "../context/myContext.js";
 
@@ -20,35 +20,41 @@ class SideDrawer extends React.Component {
               this.context.backDropClickHandler();
             }}
           >
-            <Link to="/blog">Blog</Link>
+            <NavLink to="/blog">Blog</NavLink>
           </li>
           <li
             onClick={() => {
               this.context.backDropClickHandler();
             }}
           >
-            <Link to="/projects">Projects</Link>
+            <NavLink to="/projects">Projects</NavLink>
           </li>
           <li
             onClick={() => {
               this.context.backDropClickHandler();
             }}
           >
-            <Link to="/">Home</Link>
+            <NavLink exact to="/">
+              Home
+            </NavLink>
           </li>
           <li
             onClick={() => {
               this.context.backDropClickHandler();
             }}
           >
-            <Link to="/resume">Resume</Link>
+            <NavLink to="/resume">Resume</NavLink>
           </li>
           <li
             onClick={() => {
               this.context.backDropClickHandler();
             }}
           >
-            <a href="https://github.com/michaelanokyej" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/michaelanokyej"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Github
             </a>
           </li>

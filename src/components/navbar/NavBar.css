@@ -36,7 +36,8 @@
 }
 
 .toolbar_navigation_items a:hover,
-.toolbar_navigation_items a:active{
+.toolbar_navigation_items a:active,
+.toolbar_navigation_items a.active {
   color: #acdbdf;
 }
 

@@ -34,7 +34,8 @@
 }
 
 .side-drawer a:hover,
-.side-drawer a:active {
+.side-drawer a:active,
+.side-drawer a.active {
   color: #acdbdf;
 }
 
