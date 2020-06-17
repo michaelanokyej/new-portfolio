@@ -43,20 +43,14 @@ class SideDrawer extends React.Component {
               this.context.backDropClickHandler();
             }}
           >
-            <NavLink to="/resume">Resume</NavLink>
+            <NavLink to="/me">About Me</NavLink>
           </li>
           <li
             onClick={() => {
               this.context.backDropClickHandler();
             }}
           >
-            <a
-              href="https://github.com/michaelanokyej"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
+            <NavLink to="/resume">Resume</NavLink>
           </li>
         </ul>
       </nav>

@@ -29,17 +29,12 @@ class NavBar extends React.Component {
                 <NavLink exact to="/" >Home</NavLink>
               </li>
               <li>
-                <NavLink to="/resume">Resume</NavLink>
+              <NavLink to="/me">About Me</NavLink>
               </li>
               <li>
-                <a
-                  href="https://github.com/michaelanokyej"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Github
-                </a>
+                <NavLink to="/resume">Resume</NavLink>
               </li>
+              
             </ul>
           </div>
           <div className="toolbar__toggle-button">

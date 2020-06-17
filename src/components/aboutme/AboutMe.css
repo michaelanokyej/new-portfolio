@@ -1,0 +1,37 @@
+.about__me-div {
+  max-width: 900px;
+  margin: 5px auto;
+  padding: 0;
+  color: #f0ece2;
+  padding: 12px;
+}
+
+.about__me-div-quote blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  color: #222831;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.about__me-div-quote blockquote:before {
+  color: #222831;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.about__me-div-quote blockquote p {
+  display: inline;
+}
+
+.about__me-div-quote blockquote p a {
+  color: #c83232;
+}
+
+.about__me-div-more p{
+  padding: 8px;
+  text-align: start;
+}

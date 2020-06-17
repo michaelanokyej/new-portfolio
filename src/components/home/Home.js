@@ -17,6 +17,7 @@ import {
 import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
+import Typical from "react-typical";
 
 class Home extends React.Component {
   static contextType = myContext;
@@ -41,21 +42,50 @@ class Home extends React.Component {
             <div>
               <h1 className="jumboHeader">Hi, I'm Michael Anokye</h1>
               <p>
+                A Multi-faceted software engineer who is knowledgeable in{" "}
+                <Typical
+                  loop={Infinity}
+                  wrapper="b"
+                  steps={[
+                    "JavaScript",
+                    1000,
+                    "Python",
+                    1000,
+                    "MongoDB",
+                    1000,
+                    "RESTful APIs",
+                    1000,
+                    "GraphQL",
+                    1000,
+                    "React",
+                    1000,
+                    "Node",
+                    1000,
+                    "SQL",
+                    1000,
+                    "HTML",
+                    1000,
+                    "CSS",
+                    1000,
+                  ]}
+                />
+              </p>
+              {/* <p>
                 Multi-faceted software engineer who is knowledgeable in
                 JavaScript, Python, SQL, HTML, etc. A true team player offering
                 multiple years of experience in the software industry.
                 Proficient in working with diverse languages. When I'm not
                 coding, I enjoy doing something creative like painting or being
                 physically active in the gym.
-              </p>
+              </p> */}
             </div>
             <div className="jumboButtons">
               <button className="spanButton">
-                <Link to="/resume">About Me</Link>{" "}
+                <Link to="/me">About Me</Link>{" "}
               </button>
               <button className="spanButton">
                 <a
-                  href="Michael-Anokye-Resume-Apr-2020.docx"
+                  href="my-resume.docx"
                   download="myResume"
                 >
                   Download Resume

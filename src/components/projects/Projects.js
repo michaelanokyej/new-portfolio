@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import {
   faHtml5,
   faCss3,

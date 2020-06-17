@@ -4,6 +4,7 @@ import Resume from "../resume/Resume";
 import Projects from "../projects/Projects";
 import Blog from "../blog/Blog";
 import BlogDetailsPage from "../blog/BlogDetailsPage";
+import AboutMe from "../aboutme/AboutMe";
 import Home from "../home/Home";
 import "./MainPage.css";
 import { AnimatePresence } from "framer-motion";
@@ -16,6 +17,7 @@ class MainPage extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/resume" component={Resume} />
+            <Route exact path="/me" component={AboutMe} />
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/blog" component={Blog} />
             <Route exact path="/blog/:blogId" component={BlogDetailsPage} />

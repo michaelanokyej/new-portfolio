@@ -26,6 +26,7 @@
 
 .side-drawer li {
   margin: 0.5rem 0;
+  list-style: none;
 }
 .side-drawer a {
   color: #f0ece2;

@@ -97,8 +97,7 @@ class Resume extends React.Component {
 
         <h2 className="resumeHeader">Experience</h2>
         <h5>
-          Operations Analyst / Software Analyst | Legal General America |
-          October, 2019 TO PRESENT
+          Software Analyst | Legal General America | October, 2019 TO PRESENT
         </h5>
         <ul>
           <li>Deploying in-house applications</li>
@@ -170,7 +169,7 @@ class Resume extends React.Component {
         <ul>
           <li>
             <a href="https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url">
-              ROUTING AND SWITCHING
+              ROUTING AND SWITCHING - Verify
             </a>
           </li>
         </ul>
@@ -181,7 +180,7 @@ class Resume extends React.Component {
         <ul>
           <li>
             <a href="https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM">
-              CERTIFIED DEVELOPER(ASSOCIATE DVA)
+              CERTIFIED DEVELOPER(ASSOCIATE DVA) - Verify
             </a>
           </li>
         </ul>
