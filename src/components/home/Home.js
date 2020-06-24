@@ -310,7 +310,7 @@ class Home extends React.Component {
                     <img src={errorLogger} alt="error logger" />
                   </div>
                   <div className="content">
-                    <h3>Error logger WebApp</h3>
+                    <h3>Error Logger WebApp</h3>
                     <p>A webApp used to log and generate errors.</p>
                     <div className="app-features">
                       <h6>FEATURES</h6>
