@@ -10,7 +10,6 @@ import {
 import {
   faHtml5,
   faCss3,
-  faJsSquare,
   faReact,
   faNode,
 } from "@fortawesome/free-brands-svg-icons";
@@ -18,6 +17,7 @@ import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
 import Typical from "react-typical";
+import errorLogger from './new_error-logger.png'
 
 class Home extends React.Component {
   static contextType = myContext;
@@ -84,10 +84,7 @@ class Home extends React.Component {
                 <Link to="/me">About Me</Link>{" "}
               </button>
               <button className="spanButton">
-                <a
-                  href="my-resume.docx"
-                  download="myResume"
-                >
+                <a href="my-resume.docx" download="myResume">
                   Download Resume
                 </a>
               </button>
@@ -310,6 +307,67 @@ class Home extends React.Component {
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
+                    <img src={errorLogger} alt="error logger" />
+                  </div>
+                  <div className="content">
+                    <h3>Error logger WebApp</h3>
+                    <p>A webApp used to log and generate errors.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Users can log an error.</li>
+                        <li>Users can add a user and a poller.</li>
+                        <li>Users can generate a .csv file report.</li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faDatabase} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://my-error-logger-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/error-logger-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
                     <img
                       src="./project-gifs/private-chat-demo.gif"
                       alt="Private Chat"
@@ -480,64 +538,6 @@ class Home extends React.Component {
                       <span className="spanButton">
                         <a
                           href="https://github.com/michaelanokyej/pdf-generator-client"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Code
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
-                    <img src="parkfinder.png" alt="parkFinder" />
-                  </div>
-                  <div className="content">
-                    <h3>Park Finder WebApp</h3>
-                    <p>An adventure driven web-app that searches for parks.</p>
-                    <div className="app-features">
-                      <h6>FEATURES</h6>
-                      <ul className="app-features-list">
-                        <li>Gets weather at the current location</li>
-                        <li>Gets parks near user current location</li>
-                        <li>User can search for parks anywhere</li>
-                        <li>
-                          Results of user search is displayed with the weather
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="tech-used">
-                      <ul>
-                        <li>STACK</li>
-                        <li>
-                          <FontAwesomeIcon icon={faHtml5} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCss3} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faJsSquare} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="jumboButtons">
-                      <span className="spanButton">
-                        <a
-                          href="https://michaelanokyej.github.io/parkfinder/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Project
-                        </a>{" "}
-                      </span>
-                      <span className="spanButton">
-                        <a
-                          href="https://github.com/michaelanokyej/parkfinder"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
