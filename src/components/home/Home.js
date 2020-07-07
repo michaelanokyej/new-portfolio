@@ -492,20 +492,20 @@ class Home extends React.Component {
                 <div className="box">
                   <div className="imgBx">
                     <img
-                      src="project-gifs/pdf-gen-demo.gif"
-                      alt="PDF Generator"
+                      src="news-app.png"
+                      alt="News App"
                     />
                   </div>
                   <div className="content">
-                    <h3>PDF Generator</h3>
-                    <p>A webapp that generats a pdf file with user input.</p>
+                    <h3>News App</h3>
+                    <p>A webapp that fetches the latest news from Hacker News API.</p>
                     <div className="app-features">
                       <h6>FEATURES</h6>
                       <ul className="app-features-list">
                         <li>
-                          Users can can generator pdf files by providing inputs
+                          Users can go to a news story.
                         </li>
-                        <li>A clean pdf file is generated for users. </li>
+                        <li>Web app has an infinity scroll. </li>
                       </ul>
                     </div>
                     <div className="tech-used">
@@ -520,15 +520,12 @@ class Home extends React.Component {
                         <li>
                           <FontAwesomeIcon icon={faReact} />
                         </li>
-                        <li>
-                          <FontAwesomeIcon icon={faNode} />
-                        </li>
                       </ul>
                     </div>
                     <div className="jumboButtons">
                       <span className="spanButton">
                         <a
-                          href="https://pdf-generator-michael-anokye.netlify.app/"
+                          href="https://my-news-app-michael-anokye.netlify.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -537,7 +534,7 @@ class Home extends React.Component {
                       </span>
                       <span className="spanButton">
                         <a
-                          href="https://github.com/michaelanokyej/pdf-generator-client"
+                          href="https://github.com/michaelanokyej/news-app"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
