@@ -48,7 +48,7 @@ class Resume extends React.Component {
             |{" "}
             <span id="resume">
               <FontAwesomeIcon icon={faDownload} />{" "}
-              <a href="Michael-Anokye-Resume-Apr-2020.docx" download="myResume">
+              <a href="my-resume.pdf" download="myResume">
                 Resume
               </a>
             </span>

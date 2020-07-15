@@ -84,7 +84,7 @@ class Home extends React.Component {
                 <Link to="/me">About Me</Link>{" "}
               </button>
               <button className="spanButton">
-                <a href="my-resume.docx" download="myResume">
+                <a href="my-resume.pdf" download="myResume">
                   Download Resume
                 </a>
               </button>
