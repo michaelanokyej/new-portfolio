@@ -63,6 +63,8 @@ class Home extends React.Component {
                     1000,
                     "SQL",
                     1000,
+                    "CI/CD",
+                    1000,
                     "HTML",
                     1000,
                     "CSS",

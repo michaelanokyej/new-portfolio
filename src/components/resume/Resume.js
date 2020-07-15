@@ -168,7 +168,7 @@ class Resume extends React.Component {
         <h5>CISCO CCNA</h5>
         <ul>
           <li>
-            <a href="https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url">
+            <a href="https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url" className="verification_link">
               ROUTING AND SWITCHING - Verify
             </a>
           </li>
@@ -179,7 +179,7 @@ class Resume extends React.Component {
         <h5>AMAZON WEB SERVICES</h5>
         <ul>
           <li>
-            <a href="https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM">
+            <a href="https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM" className="verification_link">
               CERTIFIED DEVELOPER(ASSOCIATE DVA) - Verify
             </a>
           </li>
@@ -202,9 +202,10 @@ class Resume extends React.Component {
         <h5>THINKFUL | Engineering: Nights and Weekends</h5>
         <ul>
           <li>Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)</li>
-          <li>SQL (MySQL and PostgreSQL)</li>
-          <li>Testing</li>
+          <li>SQL (MySQL and PostgreSQL), MongoDB</li>
+          <li>Testing: Enzyme, Jest etc</li>
           <li>Data Structures and Algorithms</li>
+          <li>CI/CD</li>
         </ul>
 
         <hr className="section" />

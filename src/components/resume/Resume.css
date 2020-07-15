@@ -66,6 +66,15 @@ li {
   padding: 8px;
   list-style: lower-roman;
 }
+
+li .verification_link {
+  color: #c83232;
+}
+
+li .verification_link:hover,  li .verification_link:active, li .verification_link:focus
+{
+  color: #f0ece2;
+}
 /* p {
   line-height: 2px;
 } */
