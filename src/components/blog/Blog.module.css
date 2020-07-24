@@ -2,27 +2,123 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+  background: #fafaf9;
+  max-width: 1200px;
+  color: #495f97;
 }
 
-.imgDiv {
+.blogJumbotron {
   display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.blogHeaderDiv {
+  padding: 1rem;
+  text-align: start;
+  align-items: center;
+}
+
+.blogHeader {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.blogProfileImage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.blogProfileImageDiv {
   justify-content: center;
-  margin: 100px auto;
+  height: 150px;
+  width: 150px;
 }
 
-.workInProgress {
-  width: 400px;
-  height: 200px;
+.blogList {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.blog {
   display: flex;
-  align-self: center;
-
-  /* display: flex;
-  align-self: center; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3f3ed;
+  color: #495f97;
+  box-shadow: 0 8px 6px -6px black;
 }
 
-@media (max-width: 500px) {
-  .workInProgress {
-    width: 350px;
-    height: 200px;
+.blog a div img {
+  width: 100px;
+  height: 120px;
+}
+
+.blogContentDiv {
+  margin: 0;
+  padding: 0;
+  margin-left: 8px;
+}
+
+.blogContentDiv a {
+  color: #495f97;
+}
+
+.blogContentDiv a h1 {
+  font-size: 2rem;
+}
+
+.blogContentDiv p {
+  padding: 8px;
+  text-align: start;
+  padding: 0;
+  margin: 0;
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+
+.blogContentDiv p.posted {
+  padding: 0;
+  margin: 0;
+  font-size: 0.6rem;
+}
+
+@media (max-width: 340px) {
+  .blogJumbotron {
+    /* display: flex;
+    flex-direction: row; */
+    padding: 4px;
+    width: 100%;
+    /* margin: 0 auto; */
+    /* justify-content: space-around; */
+    /* box-shadow: 0 8px 6px -6px black; */
+  }
+
+  .blogHeaderDiv h1.blogHeader {
+    font-size: 1.2rem;
+  }
+
+  .blogHeaderDiv p {
+    line-height: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .blogProfileImage {
+    height: 80px;
+    width: 80px;
+  }
+  .blogProfileImageDiv {
+    justify-content: center;
+    height: 80px;
+    width: 80px;
   }
 }

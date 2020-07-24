@@ -203,8 +203,8 @@ class Resume extends React.Component {
         <ul>
           <li>Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)</li>
           <li>SQL (MySQL and PostgreSQL), MongoDB</li>
-          <li>Testing: Enzyme, Jest etc</li>
           <li>Data Structures and Algorithms</li>
+          <li>Testing: Enzyme, Jest etc</li>
           <li>CI/CD</li>
         </ul>
 

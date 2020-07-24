@@ -60,6 +60,7 @@ class App extends React.Component {
       backDropClickHandler: this.backDropClickHandler,
       pageVariants: pageVariants,
       pageTransition: pageTransition,
+      blogs: []
     };
     return (
       <div className="App">
