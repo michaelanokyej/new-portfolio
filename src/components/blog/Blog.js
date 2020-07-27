@@ -62,12 +62,11 @@ class Blog extends React.Component {
 
   render() {
     const content = this.state.blogsToShow.map((blog) => {
-      const blogLink = `/blog/${blog._id}`;
+      const blogLink = `/blogs/${blog._id}`;
       return (
         <li key={blog._id} className={styles.blog}>
           <Link to={blogLink}>
             <div>
-              {/* <img src="https://source.unsplash.com/mk7D-4UCfmg/100x100" alt="blog" /> */}
               <img src={blog.blogimage} alt="blog" />
             </div>
           </Link>

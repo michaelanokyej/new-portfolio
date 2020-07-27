@@ -285,10 +285,13 @@ ul.skills-qualif-list li:nth-child(6) {
 
 div.tech-used {
   display: flex;
+  line-height: 1rem;
+  width: 100vw;
 }
 
 div.tech-used ul {
   list-style: none;
+  padding: 0;
 }
 
 div.tech-used ul li {
@@ -367,21 +370,26 @@ div.contactWrapper > * {
 div.myInfo {
   background: #69779b;
   color: #f0ece2;
+  margin: 0;
 }
 
 #contact div div ul li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 div.myInfo h5 {
   text-align: center;
-  margin: 0 0 1rem 0;
+  /* margin: 0 0 1rem 0; */
+  margin: 0;
 }
 
 div.myInfo ul {
   text-align: center;
-  margin: 0 0 1rem 0;
-  padding: 10px;
+  /* margin: 0 0 1rem 0; */
+  padding: 0;
+  margin: 0;
 }
 
 div.contactForm {
@@ -443,6 +451,23 @@ div.contactForm form button:focus {
 @media (max-width: 1110px) {
   .myJumbotron {
     grid-auto-rows: 400px;
+  }
+  div.tech-used {
+    line-height: 0.5rem;
+  }
+  
+  div.tech-used ul li {
+    padding: 2px;
+    font-size: 15px;
+  }
+  .jumboButtons {
+    padding: 2px;
+    margin: 3px;
+  }
+  
+  .spanButton {
+    padding: 4px 8px;
+    margin: 3px;
   }
 }
 @media (max-width: 950px) {

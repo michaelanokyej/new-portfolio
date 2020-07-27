@@ -23,3 +23,14 @@
 .blogListControls button:focus {
   outline: none;
 }
+
+@media (max-width: 340px) {
+  .blogListControls {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .blogListControls button {
+    padding: 4px;
+  }
+}

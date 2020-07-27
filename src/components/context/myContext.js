@@ -5,7 +5,8 @@ const myContext = React.createContext({
   backDropClickHandler: () => {},
   pageVariants: {},
   pageTransition: {},
-  blogs: []
+  blogs: [],
+  blogToShowId: ""
 });
 
 export default myContext;

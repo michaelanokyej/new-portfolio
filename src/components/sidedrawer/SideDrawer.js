@@ -20,7 +20,7 @@ class SideDrawer extends React.Component {
               this.context.backDropClickHandler();
             }}
           >
-            <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/blogs">Blog</NavLink>
           </li>
           <li
             onClick={() => {

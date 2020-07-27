@@ -20,7 +20,7 @@ class NavBar extends React.Component {
           <div className="toolbar_navigation_items">
             <ul>
               <li>
-                <NavLink to="/blog">Blog</NavLink>
+                <NavLink to="/blogs">Blog</NavLink>
               </li>
               <li>
                 <NavLink to="/projects">Projects</NavLink>
