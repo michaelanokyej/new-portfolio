@@ -23,24 +23,3 @@
   line-height: 1rem;
   color: rgb(77, 73, 73);
 }
-
-@media (max-width: 1110px) {
-  /* .blog__carousel_div {
-    height: 120px;
-  }
-  .blog__carousel_div_image_div {
-    height: 100px;
-  }
-  
-  .blog__carousel_div_image {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-  } */
-  
-  /* .blog__carousel_div_title h5 {
-    font-size: 0.5rem;
-    line-height: 1rem;
-    color: rgb(77, 73, 73);
-  } */
-}
