@@ -11,12 +11,15 @@ const BlogCarousel = (props) => {
         return (
           <div key={blog._id} className={styles.blog__carousel_div}>
             
-            <div className={styles.blog__carousel_div_image_div}>
+            <div className={styles.blog__carousel_div_image_div} onClick={(e) => {
+                  e.preventDefault();
+                  props.handleCarouselBlog(blog._id)}}>
             <Link to={blogLink}>
               <img
                 src={blog.blogimage}
                 alt="blog"
                 className={styles.blog__carousel_div_image}
+                
               />
                </Link>
             </div>

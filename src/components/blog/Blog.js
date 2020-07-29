@@ -17,6 +17,7 @@ class Blog extends React.Component {
   static contextType = myContext;
 
   componentWillMount = async () => {
+    console.log(this.state);
     await this.fetchBlogs();
   };
 

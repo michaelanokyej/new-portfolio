@@ -69,6 +69,21 @@ class BlogDetailsPage extends React.Component {
     }
   };
 
+  handleBlogChange = async (blogId) => {
+    console.log("blogID:", blogId)
+    const blog = await this.state.blogs.filter(
+      (blog) => blog._id === blogId
+    );
+    const CarouselBlogs = await this.context.blogs.filter(
+      (blog) => blog._id !== blogId
+    );
+
+    this.setState({
+      blog: blog[0],
+      CarouselBlogs,
+    });
+  }
+
   // componentWillUpdate = async (newProps, newState) => {
   //   console.log(" componentWillUpdate called")
   //   console.log("newProps:", newProps)
@@ -92,12 +107,6 @@ class BlogDetailsPage extends React.Component {
 
   render() {
     console.log(this.state);
-    // let postUrl = encodeURI(document.location.href);
-    // let postTitle = encodeURI("Hi everyone, check out: ");
-    // let postImg = encodeURI(this.state.blog.blogimage)
-    // console.log("postUrl:", postUrl)
-    // console.log("postTitle:", postTitle)
-    // console.log("postImg:", postImg)
     let facebookLink = `https://www.facebook.com/sharer.php?u=${encodeURI(document.location.href)}`;
     let pinterestLink = `https://pinterest.com/pin/create/bookmarklet/?media=${encodeURI(this.state.blog.blogimage)}&url=${encodeURI(document.location.href)}&description=${encodeURI("Hi everyone, check out: ")}`;
     let twitterLink = `https://twitter.com/share?url=${encodeURI(document.location.href)}&text=${encodeURI("Hi everyone, check out: ")}`;
@@ -146,7 +155,7 @@ class BlogDetailsPage extends React.Component {
               <p>{this.state.blog.blogbody}</p>
             </div>
             <div className={styles.my_carousel_div}>
-              <BlogCarousel blogs={this.state.CarouselBlogs} />
+              <BlogCarousel blogs={this.state.CarouselBlogs} handleCarouselBlog={this.handleBlogChange}/>
             </div>
           </div>
         </div>
