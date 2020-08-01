@@ -42,8 +42,8 @@
 .spanButton {
   list-style: none;
   background-color: #69779b;
-  padding: 8px 16px;
-  margin: 5px;
+  padding: 4px 8px;
+  margin: 3px;
   border: 0.5 solid #010101;
   border-radius: 6px;
 }
@@ -456,7 +456,7 @@ div.contactForm form button:focus {
   div.tech-used {
     line-height: 0.5rem;
   }
-  
+
   div.tech-used ul li {
     padding: 2px;
     font-size: 15px;
@@ -465,7 +465,7 @@ div.contactForm form button:focus {
     padding: 2px;
     margin: 3px;
   }
-  
+
   .spanButton {
     padding: 4px 8px;
     margin: 3px;

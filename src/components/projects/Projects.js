@@ -36,6 +36,65 @@ class Projects extends React.Component {
                 <div className="box">
                   <div className="imgBx">
                     <img
+                      src="news-app.png"
+                      alt="News App"
+                    />
+                  </div>
+                  <div className="content">
+                    <h3>News App</h3>
+                    <p>A webapp that fetches the latest news from Hacker News API.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>
+                          Users can go to a news story.
+                        </li>
+                        <li>Web app has an infinity scroll. </li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://my-news-app-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/news-app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img
                       src="project-gifs/pdf-gen-demo.gif"
                       alt="PDF Generator"
                     />
