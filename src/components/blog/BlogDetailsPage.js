@@ -11,6 +11,8 @@ import {
   faLinkedin,
   faWhatsappSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import Spinner from "../spinner/Spinner";
+import Swal from "sweetalert2";
 
 class BlogDetailsPage extends React.Component {
   state = {
@@ -45,12 +47,18 @@ class BlogDetailsPage extends React.Component {
       })
       .catch((err) => {
         this.setState({ isLoading: false });
-        console.log(err);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: `<p>${err}</p>`,
+        });
       });
     this.setState({ isLoading: false, blog: blog[0], blogs, CarouselBlogs });
   };
 
   componentWillMount = async () => {
+    this.setState({ isLoading: true });
     if (this.context.blogs.length !== 0) {
       const blog = await this.context.blogs.filter(
         (blog) => blog._id === this.props.match.params.blogId
@@ -63,6 +71,7 @@ class BlogDetailsPage extends React.Component {
         blog: blog[0],
         blogs: this.context.blogs,
         CarouselBlogs,
+        isLoading: false,
       });
     } else {
       await this.fetchBlog();
@@ -70,10 +79,9 @@ class BlogDetailsPage extends React.Component {
   };
 
   handleBlogChange = async (blogId) => {
-    console.log("blogID:", blogId)
-    const blog = await this.state.blogs.filter(
-      (blog) => blog._id === blogId
-    );
+    this.setState({ isLoading: true });
+    console.log("blogID:", blogId);
+    const blog = await this.state.blogs.filter((blog) => blog._id === blogId);
     const CarouselBlogs = await this.context.blogs.filter(
       (blog) => blog._id !== blogId
     );
@@ -81,38 +89,32 @@ class BlogDetailsPage extends React.Component {
     this.setState({
       blog: blog[0],
       CarouselBlogs,
+      isLoading: false,
     });
-  }
-
-  // componentWillUpdate = async (newProps, newState) => {
-  //   console.log(" componentWillUpdate called")
-  //   console.log("newProps:", newProps)
-  //   console.log("newState:", newState)
-  //   console.log("context in componentWillUpdate:", this.context);
-  // this.context.blogToShowId = await newProps.match.params.blogId
-  // blogToShowId
-  // }
-
-  // componentDidUpdate = async (preProps, preState) => {
-  //   console.log(" componentDidUpdate called")
-  //   console.log("preProps:", preProps)
-  //   console.log("preState:", preState)
-  //   console.log("context in componentDidUpdate:", this.context);
-
-  // const blog = await preState.blogs.filter(
-  //   (blog) => blog._id === this.context.blogToShowId
-  // );
-  // this.setState({ blog: blog[0] });
-  // }
+  };
 
   render() {
-    console.log(this.state);
-    let facebookLink = `https://www.facebook.com/sharer.php?u=${encodeURI(document.location.href)}`;
-    let pinterestLink = `https://pinterest.com/pin/create/bookmarklet/?media=${encodeURI(this.state.blog.blogimage)}&url=${encodeURI(document.location.href)}&description=${encodeURI("Hi everyone, check out: ")}`;
-    let twitterLink = `https://twitter.com/share?url=${encodeURI(document.location.href)}&text=${encodeURI("Hi everyone, check out: ")}`;
-    let linkedinLink = `https://www.linkedin.com/shareArticle?url=${encodeURI(document.location.href)}&title=${encodeURI("Hi everyone, check out: ")}`;
-    let whatsappLink = `https://api.whatsapp.com/send?text=${encodeURI("Hi everyone, check out: ")} ${encodeURI(document.location.href)}`;
-    return (
+    console.log(this.state.blog)
+    let facebookLink = `https://www.facebook.com/sharer.php?u=${encodeURI(
+      document.location.href
+    )}`;
+    let pinterestLink = `https://pinterest.com/pin/create/bookmarklet/?media=${encodeURI(
+      this.state.blog.blogimage
+    )}&url=${encodeURI(document.location.href)}&description=${encodeURI(
+      "Hi everyone, check out: "
+    )}`;
+    let twitterLink = `https://twitter.com/share?url=${encodeURI(
+      document.location.href
+    )}&text=${encodeURI("Hi everyone, check out: ")}`;
+    let linkedinLink = `https://www.linkedin.com/shareArticle?url=${encodeURI(
+      document.location.href
+    )}&title=${encodeURI("Hi everyone, check out: ")}`;
+    let whatsappLink = `https://api.whatsapp.com/send?text=${encodeURI(
+      "Hi everyone, check out: "
+    )} ${encodeURI(document.location.href)}`;
+    return this.state.isLoading ? (
+      <Spinner />
+    ) : (
       <div className={styles.blog__details_div}>
         <div className={styles.blog__image}>
           <img src={this.state.blog.blogimage} alt="blog" />
@@ -155,7 +157,10 @@ class BlogDetailsPage extends React.Component {
               <p>{this.state.blog.blogbody}</p>
             </div>
             <div className={styles.my_carousel_div}>
-              <BlogCarousel blogs={this.state.CarouselBlogs} handleCarouselBlog={this.handleBlogChange}/>
+              <BlogCarousel
+                blogs={this.state.CarouselBlogs}
+                handleCarouselBlog={this.handleBlogChange}
+              />
             </div>
           </div>
         </div>

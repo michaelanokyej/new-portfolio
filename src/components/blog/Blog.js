@@ -5,6 +5,8 @@ import BlogControls from "./blogControls/blogControls";
 import config from "../../config";
 import { Link } from "react-router-dom";
 import myContext from "../context/myContext";
+import Spinner from "../spinner/Spinner";
+import Swal from 'sweetalert2'
 
 class Blog extends React.Component {
   state = {
@@ -17,7 +19,6 @@ class Blog extends React.Component {
   static contextType = myContext;
 
   componentWillMount = async () => {
-    console.log(this.state);
     await this.fetchBlogs();
   };
 
@@ -33,13 +34,17 @@ class Blog extends React.Component {
         return res.json();
       })
       .then((res) => {
-        console.log(res);
         this.context.blogs = res;
         return res;
       })
       .catch((err) => {
         this.setState({ isLoading: false });
-        console.log(err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+          footer: `<p>${err}</p>`
+        })
       });
     this.setState({ isLoading: false, blogs, blogsToShow: blogs });
   };
@@ -58,33 +63,34 @@ class Blog extends React.Component {
       );
       this.setState({ outputType: "other", blogsToShow: otherBlogs });
     }
-    console.log(this.state);
   };
 
   render() {
-    const content = this.state.blogsToShow.map((blog) => {
-      const blogLink = `/blogs/${blog._id}`;
-      return (
-        <li key={blog._id} className={styles.blog}>
-          <Link to={blogLink}>
-            <div>
-              <img src={blog.blogimage} alt="blog" />
-            </div>
-          </Link>
-          <div className={styles.blogContentDiv}>
+    const content = this.state.isLoading ? (
+      <Spinner />
+    ) : (
+      this.state.blogsToShow.map((blog) => {
+        const blogLink = `/blogs/${blog._id}`;
+        return (
+          <li key={blog._id} className={styles.blog}>
             <Link to={blogLink}>
-              <h1>{blog.title}</h1>
+              <div>
+                <img src={blog.blogimage} alt="blog" />
+              </div>
             </Link>
-            <p>{blog.description}</p>
-            <p className={styles.posted}>
-              Posted on {new Date(blog.posted).toLocaleTimeString()}
-            </p>
-          </div>
-        </li>
-      );
-    });
-    console.log(this.state);
-    console.log(this.context);
+            <div className={styles.blogContentDiv}>
+              <Link to={blogLink}>
+                <h1>{blog.title}</h1>
+              </Link>
+              <p>{blog.description}</p>
+              <p className={styles.posted}>
+                Posted on {new Date(blog.posted).toLocaleTimeString()}
+              </p>
+            </div>
+          </li>
+        );
+      })
+    );
     return (
       <div className={styles.container}>
         <div className={styles.blogJumbotron}>
