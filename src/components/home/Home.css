@@ -41,8 +41,8 @@
 .spanButton {
   list-style: none;
   background-color: #69779b;
-  padding: 8px 16px;
-  margin: 5px;
+  padding: 4px 8px;
+  margin: 3px;
   border: 0.5 solid #010101;
   border-radius: 6px;
 }
