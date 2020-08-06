@@ -17,10 +17,22 @@ import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
 import Typical from "react-typical";
-import errorLogger from './new_error-logger.png'
+import errorLogger from './new_error-logger.png';
+import Swal from "sweetalert2";
 
 class Home extends React.Component {
   static contextType = myContext;
+
+  componentDidMount = () => {
+    Swal.fire({
+      title: 'Hello Friend!',
+      text: 'This website is being redesigned. For now enjoy this!',
+      imageUrl: 'work-in-progress.jpg',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Work in progress',
+    })
+  }
 
   render() {
     const pageVariants = this.context.pageVariants;

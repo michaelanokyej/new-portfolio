@@ -31,24 +31,22 @@ class Projects extends React.Component {
             <h1 className="jumboHeader">More Projects</h1>
           </div>
           <div className="projects">
-          <div className="project">
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
-                    <img
-                      src="news-app.png"
-                      alt="News App"
-                    />
+                    <img src="news-app.png" alt="News App" />
                   </div>
                   <div className="content">
                     <h3>News App</h3>
-                    <p>A webapp that fetches the latest news from Hacker News API.</p>
+                    <p>
+                      A webapp that fetches the latest news from Hacker News
+                      API.
+                    </p>
                     <div className="app-features">
                       <h6>FEATURES</h6>
                       <ul className="app-features-list">
-                        <li>
-                          Users can go to a news story.
-                        </li>
+                        <li>Users can go to a news story.</li>
                         <li>Web app has an infinity scroll. </li>
                       </ul>
                     </div>
@@ -90,7 +88,7 @@ class Projects extends React.Component {
                 </div>
               </div>
             </div>
-          <div className="project">
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
@@ -152,7 +150,7 @@ class Projects extends React.Component {
                 </div>
               </div>
             </div>
-          <div className="project">
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
