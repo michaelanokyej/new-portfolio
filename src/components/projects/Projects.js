@@ -6,10 +6,14 @@ import {
   faCss3,
   faReact,
   faNode,
-  faJsSquare,
+  faJsSquare
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faDatabase
+} from "@fortawesome/free-solid-svg-icons";
 import myContext from "../context/myContext.js";
 import { motion } from "framer-motion";
+import errorLogger from './new_error-logger.png'
 import "./Projects.css";
 
 class Projects extends React.Component {
@@ -31,24 +35,205 @@ class Projects extends React.Component {
             <h1 className="jumboHeader">More Projects</h1>
           </div>
           <div className="projects">
-          <div className="project">
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src={errorLogger} alt="error logger" />
+                  </div>
+                  <div className="content">
+                    <h3>Error Logger WebApp</h3>
+                    <p>A webApp used to log and generate errors.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Users can log an error.</li>
+                        <li>Users can add a user and a poller.</li>
+                        <li>Users can generate a .csv file report.</li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faDatabase} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://my-error-logger-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/error-logger-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
                     <img
-                      src="news-app.png"
-                      alt="News App"
+                      src="./project-gifs/private-chat-demo.gif"
+                      alt="Private Chat"
                     />
                   </div>
                   <div className="content">
-                    <h3>News App</h3>
-                    <p>A webapp that fetches the latest news from Hacker News API.</p>
+                    <h3>Private Chat App</h3>
+                    <p>A webapp for users to instantly chat, privately.</p>
                     <div className="app-features">
                       <h6>FEATURES</h6>
                       <ul className="app-features-list">
+                        <li>Users can register.</li>
+                        <li>Users can create a room.</li>
+                        <li>Any user with a room name can join room.</li>
                         <li>
-                          Users can go to a news story.
+                          Users are alerted when others join and/or leave.
                         </li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://private-chat-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/instantMessaging-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="covid-19-tracker.png" alt="covid-19-tracker" />
+                  </div>
+                  <div className="content">
+                    <h3>Covid-19 Tracker</h3>
+                    <p>A webapp for Covid 19 globally.</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Users can get global statistics.</li>
+                        <li>
+                          Users can select a specific country to get statistics
+                          from.
+                        </li>
+                        <li>Users are provided a chart for the statistics.</li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://covid-19-tracker-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/covid-19-tracker"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="news-app.png" alt="News App" />
+                  </div>
+                  <div className="content">
+                    <h3>News App</h3>
+                    <p>
+                      A webapp that fetches the latest news from Hacker News
+                      API.
+                    </p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Users can go to a news story.</li>
                         <li>Web app has an infinity scroll. </li>
                       </ul>
                     </div>
@@ -90,7 +275,7 @@ class Projects extends React.Component {
                 </div>
               </div>
             </div>
-          <div className="project">
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
@@ -152,7 +337,7 @@ class Projects extends React.Component {
                 </div>
               </div>
             </div>
-          <div className="project">
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">

@@ -20,6 +20,7 @@ class BlogDetailsPage extends React.Component {
     blogs: [],
     isLoading: false,
     CarouselBlogs: [],
+    blogBodySententces: [],
   };
   static contextType = myContext;
 
@@ -27,6 +28,7 @@ class BlogDetailsPage extends React.Component {
     this.setState({ isLoading: true });
     let blog = {};
     let CarouselBlogs = [];
+    let bodySentences = [];
     const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
       method: "Get",
       headers: new Headers({
@@ -43,6 +45,7 @@ class BlogDetailsPage extends React.Component {
         CarouselBlogs = res.filter(
           (blog) => blog._id !== this.props.match.params.blogId
         );
+
         return res;
       })
       .catch((err) => {
@@ -54,47 +57,64 @@ class BlogDetailsPage extends React.Component {
           footer: `<p>${err}</p>`,
         });
       });
-    this.setState({ isLoading: false, blog: blog[0], blogs, CarouselBlogs });
+    bodySentences = blog[0].blogbody.split("///");
+
+    this.setState({
+      isLoading: false,
+      blog: blog[0],
+      blogs,
+      CarouselBlogs,
+      blogBodySententces: bodySentences,
+    });
   };
 
   componentWillMount = async () => {
-    this.setState({ isLoading: true });
-    if (this.context.blogs.length !== 0) {
-      const blog = await this.context.blogs.filter(
-        (blog) => blog._id === this.props.match.params.blogId
-      );
-      const CarouselBlogs = await this.context.blogs.filter(
-        (blog) => blog._id !== this.props.match.params.blogId
-      );
-
-      this.setState({
-        blog: blog[0],
-        blogs: this.context.blogs,
-        CarouselBlogs,
-        isLoading: false,
-      });
-    } else {
-      await this.fetchBlog();
-    }
+    await this.fetchBlog();
   };
 
   handleBlogChange = async (blogId) => {
     this.setState({ isLoading: true });
-    console.log("blogID:", blogId);
+    let bodySentences = [];
     const blog = await this.state.blogs.filter((blog) => blog._id === blogId);
     const CarouselBlogs = await this.context.blogs.filter(
       (blog) => blog._id !== blogId
     );
 
+    
+
+    bodySentences = blog[0].blogbody.split("///");
+
     this.setState({
       blog: blog[0],
       CarouselBlogs,
       isLoading: false,
+      blogBodySententces: bodySentences,
     });
   };
 
   render() {
-    console.log(this.state.blog)
+    const blogBodyElements = this.state.blogBodySententces.map(
+      (sentence, i) => {
+        return (
+          <p className={styles.body_text} key={i}>
+            {sentence}
+          </p>
+        );
+      }
+    );
+
+    const linkTemplate = (links) => {
+      if (links.length < 1) {
+        return null;
+      }
+      const liGroup = links.map((link, i) => (
+        <li className={styles.blogLink} key={i}>
+          <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+        </li>
+      ));
+      return <ul className={styles.blogLinks}>{liGroup}</ul>;
+    };
+
     let facebookLink = `https://www.facebook.com/sharer.php?u=${encodeURI(
       document.location.href
     )}`;
@@ -145,17 +165,23 @@ class BlogDetailsPage extends React.Component {
             </div>
             <div className={styles.blog__content_description}>
               <p className={styles.blog__content_description_title_time}>
-                Title
+                Description
               </p>
-              <p>{this.state.blog.description}</p>
+              <p className={styles.desription_text}>
+                {this.state.blog.description}
+              </p>
               <p className={styles.blog__content_description_title_time}>
                 Posted on{" "}
                 {new Date(this.state.blog.posted).toLocaleTimeString()}
               </p>
             </div>
-            <div>
-              <p>{this.state.blog.blogbody}</p>
+            <div className={styles.blog__content_body}>
+              {/* <p className={styles.body_text}>
+                {this.state.blog.blogbody.replace(/(\r\n|\n|\r)/gm, "\r\n")}
+              </p> */}
+              {blogBodyElements}
             </div>
+            {linkTemplate(this.state.blog.links)}
             <div className={styles.my_carousel_div}>
               <BlogCarousel
                 blogs={this.state.CarouselBlogs}

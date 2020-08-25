@@ -7,7 +7,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 300px;
   padding-top: 5px;
-  /* grid-gap: 5px; */
 }
 
 .jumbotronItem {
@@ -348,6 +347,48 @@ div.tech-used ul li:nth-child(6) {
   cursor: pointer;
   background: #f0ece2;
   color: #393e46;
+}
+
+.blog__div {
+  margin: 5px auto;
+  background: #393e46;
+  color: #f0ece2;
+  width: 95%;
+}
+
+.blog_list {
+  width: 95%;
+  margin: 5px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 420px;
+  color: #393e46;
+}
+
+.blog_list .blog {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  font-family: "Poppons", sans-serif;
+  cursor: pointer;
+  background: #f0ece2;
+  color: #393e46;
+}
+
+.blog_list .blog .blog_img {
+  height: 320px;
+  margin-bottom: 5px;
+  object-fit: cover;
+}
+
+.blog_list .blog p.blog__title {
+  color: #393e46;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 #contact {

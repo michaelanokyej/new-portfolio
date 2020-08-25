@@ -16,15 +16,93 @@ import {
 import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
+import config from "../../config";
+import Swal from "sweetalert2";
 import Typical from "react-typical";
-import errorLogger from './new_error-logger.png'
 
 class Home extends React.Component {
+  state = {
+    blogs: [],
+    blogsToShow: [],
+  };
   static contextType = myContext;
+
+  componentWillMount = async () => {
+    await this.fetchBlogs();
+  };
+
+  fetchBlogs = async () => {
+    this.setState({ isLoading: true });
+    const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
+      method: "Get",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        this.context.blogs = res;
+        return res;
+      })
+      .catch((err) => {
+        this.setState({ isLoading: false });
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: `<p>${err}</p>`,
+        });
+      });
+
+    const blogsToShow = (await blogs.length) >= 3 ? blogs.splice(0, 3) : blogs;
+    this.setState({ blogs, blogsToShow });
+  };
 
   render() {
     const pageVariants = this.context.pageVariants;
     const pageTransition = this.context.pageTransition;
+    const blogsToShow = this.state.blogsToShow.map((blog) => {
+      const blogLink = `/blogs/${blog._id}`;
+      return (
+        // <Link to={blogLink} key={blog._id}>
+        //   <div className="blog">
+        //     <img src={blog.blogimage} className="blog_img" alt="blog" />
+        //     <p className="blog__title">{blog.title}</p>
+        //   </div>
+        // </Link>
+        <div className="project" key={blog._id}>
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src={blog.blogimage} alt="blog" />
+                  </div>
+                  <div className="content">
+                    <h3>{blog.title}</h3>
+                    <p>{blog.description}</p>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                      <Link to={blogLink} key={blog._id}>
+                          Go To Blog 
+                        </Link>
+                      </span>
+                      {/* <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/event-booking-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      );
+    });
 
     return (
       <motion.div
@@ -176,7 +254,7 @@ class Home extends React.Component {
             <span className="PSA">Hover/Tap On A Project For More</span>
           </h6>
           <div className="projects">
-          <div className="project">
+            <div className="project">
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
@@ -188,14 +266,10 @@ class Home extends React.Component {
                     <div className="app-features">
                       <h6>FEATURES</h6>
                       <ul className="app-features-list">
-                        <li>
-                          Users can sign up/in
-                        </li>
+                        <li>Users can sign up/in</li>
                         <li>Users can book events.</li>
                         <li>Users can create events.</li>
-                        <li>
-                          Users can cancel events.
-                        </li>
+                        <li>Users can cancel events.</li>
                       </ul>
                     </div>
                     <div className="tech-used">
@@ -371,195 +445,22 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
-                    <img src={errorLogger} alt="error logger" />
-                  </div>
-                  <div className="content">
-                    <h3>Error Logger WebApp</h3>
-                    <p>A webApp used to log and generate errors.</p>
-                    <div className="app-features">
-                      <h6>FEATURES</h6>
-                      <ul className="app-features-list">
-                        <li>Users can log an error.</li>
-                        <li>Users can add a user and a poller.</li>
-                        <li>Users can generate a .csv file report.</li>
-                      </ul>
-                    </div>
-                    <div className="tech-used">
-                      <ul>
-                        <li>STACK</li>
-                        <li>
-                          <FontAwesomeIcon icon={faHtml5} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCss3} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faNode} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faReact} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faDatabase} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="jumboButtons">
-                      <span className="spanButton">
-                        <a
-                          href="https://my-error-logger-michael-anokye.netlify.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Project
-                        </a>{" "}
-                      </span>
-                      <span className="spanButton">
-                        <a
-                          href="https://github.com/michaelanokyej/error-logger-client"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Code
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
-                    <img
-                      src="./project-gifs/private-chat-demo.gif"
-                      alt="Private Chat"
-                    />
-                  </div>
-                  <div className="content">
-                    <h3>Private Chat App</h3>
-                    <p>A webapp for users to instantly chat, privately.</p>
-                    <div className="app-features">
-                      <h6>FEATURES</h6>
-                      <ul className="app-features-list">
-                        <li>Users can register.</li>
-                        <li>Users can create a room.</li>
-                        <li>Any user with a room name can join room.</li>
-                        <li>
-                          Users are alerted when others join and/or leave.
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="tech-used">
-                      <ul>
-                        <li>STACK</li>
-                        <li>
-                          <FontAwesomeIcon icon={faHtml5} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCss3} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faNode} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faReact} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="jumboButtons">
-                      <span className="spanButton">
-                        <a
-                          href="https://private-chat-michael-anokye.netlify.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Project
-                        </a>{" "}
-                      </span>
-                      <span className="spanButton">
-                        <a
-                          href="https://github.com/michaelanokyej/instantMessaging-client"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Code
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
-                    <img src="covid-19-tracker.png" alt="covid-19-tracker" />
-                  </div>
-                  <div className="content">
-                    <h3>Covid-19 Tracker</h3>
-                    <p>A webapp for Covid 19 globally.</p>
-                    <div className="app-features">
-                      <h6>FEATURES</h6>
-                      <ul className="app-features-list">
-                        <li>Users can get global statistics.</li>
-                        <li>
-                          Users can select a specific country to get statistics
-                          from.
-                        </li>
-                        <li>Users are provided a chart for the statistics.</li>
-                      </ul>
-                    </div>
-                    <div className="tech-used">
-                      <ul>
-                        <li>STACK</li>
-                        <li>
-                          <FontAwesomeIcon icon={faHtml5} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCss3} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faReact} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="jumboButtons">
-                      <span className="spanButton">
-                        <a
-                          href="https://covid-19-tracker-michael-anokye.netlify.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Project
-                        </a>{" "}
-                      </span>
-                      <span className="spanButton">
-                        <a
-                          href="https://github.com/michaelanokyej/covid-19-tracker"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Code
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
           </div>
           <div className="jumboButtons">
             <button className="spanButton">
               <Link to="/projects">More Projects</Link>
+            </button>
+          </div>
+        </div>
+        <div className="blog__div">
+          <h4 className="home-section-header">Blog</h4>
+          <h6>
+            <span className="PSA">Hover/Tap On A Blog For More</span>
+          </h6>
+          <div className="blog_list">{blogsToShow}</div>
+          <div className="jumboButtons">
+            <button className="spanButton">
+              <Link to="/blogs">More Blogs</Link>
             </button>
           </div>
         </div>

@@ -96,7 +96,7 @@ class Blog extends React.Component {
         <div className={styles.blogJumbotron}>
           <div className={styles.blogHeaderDiv}>
             <h1 className={styles.blogHeader}>Hello World!</h1>
-            <p>Hello! Welcome to my attempt to blogging!!!</p>
+            <p>Short and simple articles on web development and more.</p>
           </div>
           <div className={styles.blogProfileImageDiv}>
             <img
