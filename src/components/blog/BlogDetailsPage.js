@@ -121,6 +121,7 @@ class BlogDetailsPage extends React.Component {
     return this.state.isLoading ? (
       <Spinner />
     ) : (
+      <>
       <div className={styles.blog__details_div}>
         <div className={styles.blog__image}>
           <img src={this.state.blog.blogimage} alt="blog" />
@@ -177,6 +178,8 @@ class BlogDetailsPage extends React.Component {
           </div>
         </div>
       </div>
+      <div className="convertful-65087"></div>
+      </>
     );
   }
 }
