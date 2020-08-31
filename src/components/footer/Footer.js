@@ -8,7 +8,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer>
-        © Michael Anokye - Connect with me: {" "}
+        Connect with me {" "}
         <a
           href="https://www.linkedin.com/in/michael-anokye/"
         >

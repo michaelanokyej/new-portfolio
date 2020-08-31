@@ -5,6 +5,10 @@
   color: #f0ece2;
 }
 
+ul.resumeSkills li, ul.resume_UL li {
+  list-style: inside;
+}
+
 hr.section {
   height: 30px;
   border-style: solid;
@@ -24,10 +28,6 @@ hr.section:before {
   border-radius: 20px;
 }
 
-/* hr.experience-separator {
-
-} */
-
 hr.experience-separator {
   border: 0;
   height: 0; /* Firefox... */
@@ -44,7 +44,6 @@ span#address {
 .resumeHeader {
   margin: 8px;
   padding: 8px;
-  /* border: 1px solid #f0ece2; */
   border: 1px inset #c83232;
   border-radius: 6px;
 }
@@ -56,10 +55,6 @@ span#address {
   line-height: 2rem;
 }
 
-
-/* p {
-  line-height: 2rem;
-} */
 
 li {
   margin: 8px;
@@ -75,6 +70,3 @@ li .verification_link:hover,  li .verification_link:active, li .verification_lin
 {
   color: #f0ece2;
 }
-/* p {
-  line-height: 2px;
-} */

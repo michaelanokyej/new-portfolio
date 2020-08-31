@@ -1,0 +1,25 @@
+.blog__carousel_div {
+  height: 150px;
+}
+
+.blog__carousel_div_image_div {
+  width: 300px;
+  background: #dadad7;
+  padding: 2px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog__carousel_div_image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.blog__carousel_div_title h5 {
+  font-size: 0.5rem;
+  line-height: 1rem;
+  color: rgb(77, 73, 73);
+}

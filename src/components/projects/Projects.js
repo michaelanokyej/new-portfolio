@@ -6,7 +6,7 @@ import {
   faCss3,
   faReact,
   faNode,
-  faJsSquare,
+  faJsSquare
 } from "@fortawesome/free-brands-svg-icons";
 import myContext from "../context/myContext.js";
 import { motion } from "framer-motion";

@@ -4,7 +4,9 @@ const myContext = React.createContext({
   drawerToggleClickHandler: () => {},
   backDropClickHandler: () => {},
   pageVariants: {},
-  pageTransition: {}
+  pageTransition: {},
+  blogs: [],
+  blogToShowId: ""
 });
 
 export default myContext;

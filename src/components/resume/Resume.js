@@ -99,7 +99,7 @@ class Resume extends React.Component {
         <h5>
           Software Analyst | Legal General America | October, 2019 TO PRESENT
         </h5>
-        <ul>
+        <ul className="resume_UL">
           <li>Deploying in-house applications</li>
           <li>
             Developing an in-house error logger for all in house applications
@@ -118,7 +118,7 @@ class Resume extends React.Component {
           Full Stack Developer - REMOTE | RingoCars & Autoparts | April, 2019
           –Present
         </h5>
-        <ul>
+        <ul className="resume_UL">
           <li>
             Developing and Designing Solutions using Agile Software Development
             Methodology (Scrum and Kanban)
@@ -140,7 +140,7 @@ class Resume extends React.Component {
           Remote Hands Technician - LEAD | Digital Realty | July,2017 –
           October,2019
         </h5>
-        <ul>
+        <ul className="resume_UL">
           <li>
             Assisted customers with the basic-mid level configuration assistance
             of routers, servers and switches to include naming, IP addressing,
@@ -166,7 +166,7 @@ class Resume extends React.Component {
 
         <h2 className="resumeHeader">Certifications</h2>
         <h5>CISCO CCNA</h5>
-        <ul>
+        <ul className="resume_UL">
           <li>
             <a href="https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url" className="verification_link">
               ROUTING AND SWITCHING - Verify
@@ -177,7 +177,7 @@ class Resume extends React.Component {
         <hr className="experience-separator" />
 
         <h5>AMAZON WEB SERVICES</h5>
-        <ul>
+        <ul className="resume_UL">
           <li>
             <a href="https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM" className="verification_link">
               CERTIFIED DEVELOPER(ASSOCIATE DVA) - Verify
@@ -192,7 +192,7 @@ class Resume extends React.Component {
           GEOGRAPHY | JUNE 2013 | KWAME NKRUMAH UNIVERSITY OF SCIENCE AND
           TECHNOLOGY
         </h5>
-        <ul>
+        <ul className="resume_UL">
           <li>Major: Geographic Information Systems</li>
           <li>Minor: Economics</li>
         </ul>
@@ -200,18 +200,18 @@ class Resume extends React.Component {
         <hr className="experience-separator" />
 
         <h5>THINKFUL | Engineering: Nights and Weekends</h5>
-        <ul>
+        <ul className="resume_UL">
           <li>Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)</li>
           <li>SQL (MySQL and PostgreSQL), MongoDB</li>
-          <li>Testing: Enzyme, Jest etc</li>
           <li>Data Structures and Algorithms</li>
+          <li>Testing: Enzyme, Jest etc</li>
           <li>CI/CD</li>
         </ul>
 
         <hr className="section" />
 
         <h2 className="resumeHeader">Volunteering / Community Service</h2>
-        <ul>
+        <ul className="resume_UL">
           <li>
             Vice President of the Groove phi Groove SFI (Garden City Chapter.),
             Kumasi, Ghana.

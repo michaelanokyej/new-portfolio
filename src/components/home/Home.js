@@ -16,27 +16,79 @@ import {
 import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
-import Typical from "react-typical";
-import errorLogger from './new_error-logger.png';
+import config from "../../config";
+import errorLogger from './new_error-logger.png'
 import Swal from "sweetalert2";
+import Typical from "react-typical";
 
 class Home extends React.Component {
+  state = {
+    blogs: [],
+    blogsToShow: [],
+  };
   static contextType = myContext;
 
-  componentDidMount = () => {
-    Swal.fire({
-      title: 'Hello Friend!',
-      text: 'This website is being redesigned. For now enjoy this!',
-      imageUrl: 'work-in-progress.jpg',
-      imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: 'Work in progress',
+  componentWillMount = async () => {
+    await this.fetchBlogs();
+  };
+
+  fetchBlogs = async () => {
+    this.setState({ isLoading: true });
+    const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
+      method: "Get",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
     })
-  }
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        this.context.blogs = res;
+        return res;
+      })
+      .catch((err) => {
+        this.setState({ isLoading: false });
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: `<p>${err}</p>`,
+        });
+      });
+
+    const blogsToShow = (await blogs.length) >= 3 ? blogs.splice(0, 3) : blogs;
+    this.setState({ blogs, blogsToShow });
+  };
 
   render() {
     const pageVariants = this.context.pageVariants;
     const pageTransition = this.context.pageTransition;
+    const blogsToShow = this.state.blogsToShow.map((blog) => {
+      const blogLink = `/blogs/${blog._id}`;
+      return (
+        <div className="project" key={blog._id}>
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src={blog.blogimage} alt="blog" />
+                  </div>
+                  <div className="content">
+                    <h3>{blog.title}</h3>
+                    <p>{blog.description}</p>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                      <Link to={blogLink} key={blog._id}>
+                          Go To Blog 
+                        </Link>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      );
+    });
 
     return (
       <motion.div
@@ -69,6 +121,8 @@ class Home extends React.Component {
                     1000,
                     "GraphQL",
                     1000,
+                    "AWS",
+                    1000,
                     "React",
                     1000,
                     "Node",
@@ -84,14 +138,6 @@ class Home extends React.Component {
                   ]}
                 />
               </p>
-              {/* <p>
-                Multi-faceted software engineer who is knowledgeable in
-                JavaScript, Python, SQL, HTML, etc. A true team player offering
-                multiple years of experience in the software industry.
-                Proficient in working with diverse languages. When I'm not
-                coding, I enjoy doing something creative like painting or being
-                physically active in the gym.
-              </p> */}
             </div>
             <div className="jumboButtons">
               <button className="spanButton">
@@ -208,6 +254,68 @@ class Home extends React.Component {
                         <li>
                           Users can cancel events.
                         </li>
+                      </ul>
+                    </div>
+                    <div className="tech-used">
+                      <ul>
+                        <li>STACK</li>
+                        <li>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faCss3} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faNode} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faReact} />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon icon={faDatabase} />
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="jumboButtons">
+                      <span className="spanButton">
+                        <a
+                          href="https://evently-michael-anokye.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Project
+                        </a>{" "}
+                      </span>
+                      <span className="spanButton">
+                        <a
+                          href="https://github.com/michaelanokyej/event-booking-client"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Code
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <div className="container">
+                <div className="box">
+                  <div className="imgBx">
+                    <img src="evently.png" alt="evently" />
+                  </div>
+                  <div className="content">
+                    <h3>Evently WebApp</h3>
+                    <p>A webapp for users to book and manage events</p>
+                    <div className="app-features">
+                      <h6>FEATURES</h6>
+                      <ul className="app-features-list">
+                        <li>Users can sign up/in</li>
+                        <li>Users can book events.</li>
+                        <li>Users can create events.</li>
+                        <li>Users can cancel events.</li>
                       </ul>
                     </div>
                     <div className="tech-used">
@@ -566,11 +674,26 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             
+=======
+>>>>>>> designing-blog-page
           </div>
           <div className="jumboButtons">
             <button className="spanButton">
               <Link to="/projects">More Projects</Link>
+            </button>
+          </div>
+        </div>
+        <div className="blog__div">
+          <h4 className="home-section-header">Blog</h4>
+          <h6>
+            <span className="PSA">Hover/Tap On A Blog For More</span>
+          </h6>
+          <div className="blog_list">{blogsToShow}</div>
+          <div className="jumboButtons">
+            <button className="spanButton">
+              <Link to="/blogs">More Blogs</Link>
             </button>
           </div>
         </div>
