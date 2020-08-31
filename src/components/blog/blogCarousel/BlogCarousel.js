@@ -26,8 +26,6 @@ const BlogCarousel = (props) => {
             <div className={styles.blog__carousel_div_title}>
               <h5>{blog.title}</h5>
             </div>
-         
-           
           </div>
         );
       })}

@@ -11,6 +11,7 @@ import {
   faLinkedin,
   faWhatsappSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import Markdown from "markdown-to-jsx";
 import Spinner from "../spinner/Spinner";
 import Swal from "sweetalert2";
 
@@ -20,7 +21,6 @@ class BlogDetailsPage extends React.Component {
     blogs: [],
     isLoading: false,
     CarouselBlogs: [],
-    blogBodySententces: [],
   };
   static contextType = myContext;
 
@@ -28,7 +28,6 @@ class BlogDetailsPage extends React.Component {
     this.setState({ isLoading: true });
     let blog = {};
     let CarouselBlogs = [];
-    let bodySentences = [];
     const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
       method: "Get",
       headers: new Headers({
@@ -57,14 +56,12 @@ class BlogDetailsPage extends React.Component {
           footer: `<p>${err}</p>`,
         });
       });
-    bodySentences = blog[0].blogbody.split("///");
 
     this.setState({
       isLoading: false,
       blog: blog[0],
       blogs,
       CarouselBlogs,
-      blogBodySententces: bodySentences,
     });
   };
 
@@ -74,46 +71,35 @@ class BlogDetailsPage extends React.Component {
 
   handleBlogChange = async (blogId) => {
     this.setState({ isLoading: true });
-    let bodySentences = [];
     const blog = await this.state.blogs.filter((blog) => blog._id === blogId);
-    const CarouselBlogs = await this.context.blogs.filter(
+    const CarouselBlogs = await this.state.blogs.filter(
       (blog) => blog._id !== blogId
     );
 
-    
-
-    bodySentences = blog[0].blogbody.split("///");
 
     this.setState({
       blog: blog[0],
       CarouselBlogs,
       isLoading: false,
-      blogBodySententces: bodySentences,
     });
   };
 
   render() {
-    const blogBodyElements = this.state.blogBodySententces.map(
-      (sentence, i) => {
-        return (
-          <p className={styles.body_text} key={i}>
-            {sentence}
-          </p>
-        );
-      }
-    );
-
     const linkTemplate = (links) => {
       if (links.length < 1) {
         return null;
       }
       const liGroup = links.map((link, i) => (
         <li className={styles.blogLink} key={i}>
-          <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {link}
+          </a>
         </li>
       ));
       return <ul className={styles.blogLinks}>{liGroup}</ul>;
     };
+
+    const bodyMD = `${this.state.blog.blogbody}`;
 
     let facebookLink = `https://www.facebook.com/sharer.php?u=${encodeURI(
       document.location.href
@@ -176,10 +162,10 @@ class BlogDetailsPage extends React.Component {
               </p>
             </div>
             <div className={styles.blog__content_body}>
-              {/* <p className={styles.body_text}>
-                {this.state.blog.blogbody.replace(/(\r\n|\n|\r)/gm, "\r\n")}
-              </p> */}
-              {blogBodyElements}
+              <Markdown
+                children={bodyMD}
+                className={styles.body_MD_Div}
+              />
             </div>
             {linkTemplate(this.state.blog.links)}
             <div className={styles.my_carousel_div}>

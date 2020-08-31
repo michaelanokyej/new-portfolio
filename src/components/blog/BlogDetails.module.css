@@ -99,13 +99,18 @@
   font-size: 1.8vw;
 }
 
-.blog__content_body p.body_text {
+.blog__content_body p.body_text, 
+.blog__content_body .body_MD_Div p.body_text{
   line-height: 1.4;
   font-size: 1.2vw;
 }
 
+.blog__content_body .body_MD_Div ul li {
+  list-style: inside;
+}
+
 .blog__content_Content ul.blogLinks::before {
-  content: "Related Links";
+  content: "RESOURCES";
   font-size: 0.8rem;
   display: block;
   text-align: center;
