@@ -234,72 +234,6 @@ class Home extends React.Component {
             <span className="PSA">Hover/Tap On A Project For More</span>
           </h6>
           <div className="projects">
-          <div className="project">
-              <div className="container">
-                <div className="box">
-                  <div className="imgBx">
-                    <img src="evently1.png" alt="evently" />
-                  </div>
-                  <div className="content">
-                    <h3>Evently WebApp</h3>
-                    <p>A webapp for users to book and manage events</p>
-                    <div className="app-features">
-                      <h6>FEATURES</h6>
-                      <ul className="app-features-list">
-                        <li>
-                          Users can sign up/in
-                        </li>
-                        <li>Users can book events.</li>
-                        <li>Users can create events.</li>
-                        <li>
-                          Users can cancel events.
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="tech-used">
-                      <ul>
-                        <li>STACK</li>
-                        <li>
-                          <FontAwesomeIcon icon={faHtml5} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faCss3} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faNode} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faReact} />
-                        </li>
-                        <li>
-                          <FontAwesomeIcon icon={faDatabase} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="jumboButtons">
-                      <span className="spanButton">
-                        <a
-                          href="https://evently-michael-anokye.netlify.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Project
-                        </a>{" "}
-                      </span>
-                      <span className="spanButton">
-                        <a
-                          href="https://github.com/michaelanokyej/event-booking-client"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Code
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="project">
               <div className="container">
                 <div className="box">
@@ -674,10 +608,6 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            
-=======
->>>>>>> designing-blog-page
           </div>
           <div className="jumboButtons">
             <button className="spanButton">
