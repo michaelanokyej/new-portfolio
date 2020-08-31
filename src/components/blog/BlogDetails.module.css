@@ -40,6 +40,7 @@
 .blog__content div p {
   line-height: 1rem;
   font-size: 0.8rem;
+  max-width: 55ch;
 }
 
 .blog__content div.share_btn_container {
@@ -97,6 +98,7 @@
 .blog__content_description p.desription_text {
   line-height: 1.2;
   font-size: 1.8vw;
+  max-width: 50ch;
 }
 
 .blog__content_body p.body_text, 
