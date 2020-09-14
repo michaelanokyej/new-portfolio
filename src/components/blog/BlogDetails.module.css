@@ -107,6 +107,19 @@
   font-size: 1.2vw;
 }
 
+.body_MD_Div p > a {
+  color: #c83232;
+}
+
+.body_MD_Div p > a:hover {
+  color: #7e4f4f;
+}
+
+.body_MD_Div iframe {
+  width: 100%;
+  height: 30vh;
+}
+
 .blog__content_body .body_MD_Div ul li {
   list-style: inside;
 }
