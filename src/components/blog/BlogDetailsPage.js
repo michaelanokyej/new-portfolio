@@ -76,7 +76,6 @@ class BlogDetailsPage extends React.Component {
       (blog) => blog._id !== blogId
     );
 
-
     this.setState({
       blog: blog[0],
       CarouselBlogs,
@@ -100,6 +99,18 @@ class BlogDetailsPage extends React.Component {
     };
 
     const bodyMD = `${this.state.blog.blogbody}`;
+    const blogVideo = this.state.blog.blogvideo ? (
+      <iframe
+        src={this.state.blog.blogvideo}
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        width="100%"
+        height="250px"
+        title="video"
+        controls
+      />
+    ) : null;
 
     let facebookLink = `https://www.facebook.com/sharer.php?u=${encodeURI(
       document.location.href
@@ -122,63 +133,61 @@ class BlogDetailsPage extends React.Component {
       <Spinner />
     ) : (
       <>
-      <div className={styles.blog__details_div}>
-        <div className={styles.blog__image}>
-          <img src={this.state.blog.blogimage} alt="blog" />
-        </div>
-        <div className={styles.blog__content}>
-          <div className={styles.share_btn_container}>
-            <a className={styles.facebookIcon} href={facebookLink}>
-              <FontAwesomeIcon icon={faFacebookSquare} />
-            </a>
-            <a className={styles.pinterestIcon} href={pinterestLink}>
-              <FontAwesomeIcon icon={faPinterestSquare} />
-            </a>
-            <a className={styles.twitterIcon} href={twitterLink}>
-              <FontAwesomeIcon icon={faTwitterSquare} />
-            </a>
-            <a className={styles.linkedinIcon} href={linkedinLink}>
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a className={styles.whatsappIcon} href={whatsappLink}>
-              <FontAwesomeIcon icon={faWhatsappSquare} />
-            </a>
+        <div className={styles.blog__details_div}>
+          <div className={styles.blog__image}>
+            <img src={this.state.blog.blogimage} alt="blog" />
           </div>
-          <div className={styles.blog__content_Content}>
-            <div>
-              <h1 className={styles.blog__content_title}>
-                {this.state.blog.title}
-              </h1>
+          <div className={styles.blog__content}>
+            <div className={styles.share_btn_container}>
+              <a className={styles.facebookIcon} href={facebookLink}>
+                <FontAwesomeIcon icon={faFacebookSquare} />
+              </a>
+              <a className={styles.pinterestIcon} href={pinterestLink}>
+                <FontAwesomeIcon icon={faPinterestSquare} />
+              </a>
+              <a className={styles.twitterIcon} href={twitterLink}>
+                <FontAwesomeIcon icon={faTwitterSquare} />
+              </a>
+              <a className={styles.linkedinIcon} href={linkedinLink}>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a className={styles.whatsappIcon} href={whatsappLink}>
+                <FontAwesomeIcon icon={faWhatsappSquare} />
+              </a>
             </div>
-            <div className={styles.blog__content_description}>
-              <p className={styles.blog__content_description_title_time}>
-                Description
-              </p>
-              <p className={styles.desription_text}>
-                {this.state.blog.description}
-              </p>
-              <p className={styles.blog__content_description_title_time}>
-                Posted on{" "}
-                {new Date(this.state.blog.posted).toLocaleTimeString()}
-              </p>
-            </div>
-            <div className={styles.blog__content_body}>
-              <Markdown
-                children={bodyMD}
-                className={styles.body_MD_Div}
-              />
-            </div>
-            {linkTemplate(this.state.blog.links)}
-            <div className={styles.my_carousel_div}>
-              <BlogCarousel
-                blogs={this.state.CarouselBlogs}
-                handleCarouselBlog={this.handleBlogChange}
-              />
+            <div className={styles.blog__content_Content}>
+              <div>
+                <h1 className={styles.blog__content_title}>
+                  {this.state.blog.title}
+                </h1>
+              </div>
+              <div className={styles.blog__content_description}>
+                <p className={styles.blog__content_description_title_time}>
+                  Description
+                </p>
+                <p className={styles.desription_text}>
+                  {this.state.blog.description}
+                </p>
+                <p className={styles.blog__content_description_title_time}>
+                  Posted on{" "}
+                  {new Date(this.state.blog.posted).toLocaleTimeString()}
+                </p>
+              </div>
+              {blogVideo}
+              <div className={styles.blog__content_body}>
+                <Markdown children={bodyMD} className={styles.body_MD_Div} />
+              </div>
+              {linkTemplate(this.state.blog.links)}
+              <div className={styles.my_carousel_div}>
+                <BlogCarousel
+                  blogs={this.state.CarouselBlogs}
+                  handleCarouselBlog={this.handleBlogChange}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="convertful-65087"></div>
+        <div className="convertful-65087"></div>
       </>
     );
   }
