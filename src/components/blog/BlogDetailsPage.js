@@ -170,7 +170,7 @@ class BlogDetailsPage extends React.Component {
                 </p>
                 <p className={styles.blog__content_description_title_time}>
                   Posted on{" "}
-                  {new Date(this.state.blog.posted).toLocaleTimeString()}
+                  {new Date(this.state.blog.posted).toLocaleString()}
                 </p>
               </div>
               {blogVideo}
