@@ -16,6 +16,18 @@
 > My portfolio welcomes you with a home screen where almost everything about me is summerized with a few projects and skills.
 > ![Portfolio Landing Screen](public/new-portfolio.png "Portfolio Landingpage screenshot")
 
+## Blog Home Screen
+
+> My blog page welcomes you with a home screen where you are presented with all stories beginning with the latest story.
+
+> You can choose between "Code Stories" which are posts about tech and "Other Stories" which are posts about everything else.
+> ![Blog Home Screen](public/blogs-page.png "Blog Home screenshot")
+
+## Blog Details Screen
+
+> My blog details page shows the actual blog post.
+> ![Blog Details Screen](public/blog-details-page.png "Blog Details screenshot")
+
 ### Contact Form
 
 > You can reach out to me by submitting this form.
