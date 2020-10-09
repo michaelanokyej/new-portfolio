@@ -129,9 +129,10 @@ ul.skills-qualif-list li .framework-skills {
 
 ul.skills-qualif-list li:hover,
 ul.skills-qualif-list li:active {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
   background: #dab4a7;
-  color: #b63e16;
+  color: #393e46;
+  /* color: #b63e16; */
 }
 
 .qualifications {

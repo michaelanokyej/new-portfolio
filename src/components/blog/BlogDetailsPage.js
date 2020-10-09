@@ -63,6 +63,7 @@ class BlogDetailsPage extends React.Component {
       blogs,
       CarouselBlogs,
     });
+
   };
 
   componentWillMount = async () => {
