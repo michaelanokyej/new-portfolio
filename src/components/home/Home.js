@@ -17,7 +17,7 @@ import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
 import config from "../../config";
-import errorLogger from './new_error-logger.png'
+import dashBoard from './oper-dashboard.png'
 import Swal from "sweetalert2";
 import Typical from "react-typical";
 
@@ -429,16 +429,18 @@ class Home extends React.Component {
               <div className="container">
                 <div className="box">
                   <div className="imgBx">
-                    <img src={errorLogger} alt="error logger" />
+                    <img src={dashBoard} alt="error logger" />
                   </div>
                   <div className="content">
-                    <h3>Error Logger WebApp</h3>
-                    <p>A webApp used to log and generate errors.</p>
+                    <h3>Oper Dashboard</h3>
+                    <p>A dashboard to log and generate error reports.</p>
                     <div className="app-features">
                       <h6>FEATURES</h6>
                       <ul className="app-features-list">
                         <li>Users can log an error.</li>
-                        <li>Users can add a user and a poller.</li>
+                        <li>Users can view all operations.</li>
+                        <li>Users are presented with 2 charts.</li>
+                        <li>Users can add a user and an operation.</li>
                         <li>Users can generate a .csv file report.</li>
                       </ul>
                     </div>
@@ -465,7 +467,7 @@ class Home extends React.Component {
                     <div className="jumboButtons">
                       <span className="spanButton">
                         <a
-                          href="https://my-error-logger-michael-anokye.netlify.app/"
+                          href="https://oper-dashboard-michael-anokye.netlify.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -474,7 +476,7 @@ class Home extends React.Component {
                       </span>
                       <span className="spanButton">
                         <a
-                          href="https://github.com/michaelanokyej/error-logger-client"
+                          href="https://github.com/michaelanokyej/oper-dashboard"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
