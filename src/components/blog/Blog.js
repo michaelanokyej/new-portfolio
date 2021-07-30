@@ -91,6 +91,7 @@ class Blog extends React.Component {
         );
       })
     );
+
     return (
       <div className={styles.container}>
         <div className={styles.blogJumbotron}>
@@ -111,7 +112,8 @@ class Blog extends React.Component {
             activeOutputType={this.state.outputType}
             onChange={this.changeOutputTypeHandler}
           />
-          <ul className={styles.blogList}>{content}</ul>
+          {content.length < 1 && <h1 className={styles.blogHeader}>No blogs in this category</h1>}
+          {content.length > 0 && <ul className={styles.blogList}>{content}</ul>}
         </div>
       </div>
     );

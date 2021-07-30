@@ -56,7 +56,7 @@ class Resume extends React.Component {
         </header>
         <h2 className="resumeHeader">Summary</h2>
         <p className="summaryPara">
-          Multi-faceted software engineer who is knowledgeable in JavaScript,
+          Multi-faceted software engineer who is knowledgeable in JavaScript, Ruby, PHP,
           Python, MySQL, HTML, etc. A true team player offering multiple years
           of experience in the software industry. Seeking the opportunity to
           provide outstanding, clean code in a collaborative environment.
@@ -71,8 +71,8 @@ class Resume extends React.Component {
           <div className="col-6 col-12-small">
             <ul className="resumeSkills">
               <li>
-                Extensive knowledge in HTML, CSS, JavaScript, React.js,
-                Express.js, Node.js and others
+                Extensive knowledge in HTML, CSS, Ruby, PHP, JavaScript, React.js,
+                 Node.js etc.
               </li>
               <li>
                 Extensive knowledge in Databases; MongoDB, PostgreSQL, Oracle
@@ -97,7 +97,34 @@ class Resume extends React.Component {
 
         <h2 className="resumeHeader">Experience</h2>
         <h5>
-          Software Analyst | Legal General America | October, 2019 TO PRESENT
+        Application Developer | Data Storage Science | December 2020 – Present
+        </h5>
+        <ul className="resume_UL">
+          <li>Building and maintaining big data driven ReactJs applications tailored to the needs of the US Patent &
+          Trademark Office</li>
+          <li>Building and maintaining in-house APIs to access database</li>
+          <li>Using Tableau to visualize data</li>
+          <li>Using AWS EC2 and S2 to create custom solutions for clients</li>
+        </ul>
+
+        <hr className="experience-separator" />
+
+        <h5>
+        Software Engineer (Sup) | Learn Platform | December 2020 – Present
+        </h5>
+        <ul className="resume_UL">
+          <li>Develop features per customer and PM request</li>
+          <li>Finding and fixing bugs in the main platform built on React, Ruby and PostgreSQL</li>
+          <li>Updating database with client data when manually intervention is required</li>
+          <li>Automating redundant support issues</li>
+          <li>Monitor resources and errors with New Relic and Roll bar</li>
+          <li>Create and troubleshoot scripts to automate redundant tasks.</li>
+        </ul>
+
+        <hr className="experience-separator" />
+
+        <h5>
+          Software Analyst | Legal General America | October, 2019 TO December, 2020
         </h5>
         <ul className="resume_UL">
           <li>Deploying in-house applications</li>
@@ -116,7 +143,7 @@ class Resume extends React.Component {
 
         <h5>
           Full Stack Developer - REMOTE | RingoCars & Autoparts | April, 2019
-          –Present
+          – December, 2020
         </h5>
         <ul className="resume_UL">
           <li>
@@ -208,7 +235,6 @@ class Resume extends React.Component {
           <li>CI/CD</li>
         </ul>
 
-        <hr className="section" />
 
         <h2 className="resumeHeader">Volunteering / Community Service</h2>
         <ul className="resume_UL">
