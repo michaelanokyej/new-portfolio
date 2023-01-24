@@ -18,36 +18,36 @@ class Blog extends React.Component {
 
   static contextType = myContext;
 
-  componentWillMount = async () => {
-    await this.fetchBlogs();
-  };
+  // componentWillMount = async () => {
+    // await this.fetchBlogs();
+  // };
 
-  fetchBlogs = async () => {
-    this.setState({ isLoading: true });
-    const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
-      method: "Get",
-      headers: new Headers({
-        "Content-Type": "application/json",
-      }),
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        this.context.blogs = res;
-        return res;
-      })
-      .catch((err) => {
-        this.setState({ isLoading: false });
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-          footer: `<p>${err}</p>`
-        })
-      });
-    this.setState({ isLoading: false, blogs, blogsToShow: blogs });
-  };
+  // fetchBlogs = async () => {
+  //   this.setState({ isLoading: true });
+  //   const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
+  //     method: "Get",
+  //     headers: new Headers({
+  //       "Content-Type": "application/json",
+  //     }),
+  //   })
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((res) => {
+  //       this.context.blogs = res;
+  //       return res;
+  //     })
+  //     .catch((err) => {
+  //       this.setState({ isLoading: false });
+  //       Swal.fire({
+  //         icon: 'error',
+  //         title: 'Oops...',
+  //         text: 'Something went wrong!',
+  //         footer: `<p>${err}</p>`
+  //       })
+  //     });
+  //   this.setState({ isLoading: false, blogs, blogsToShow: blogs });
+  // };
 
   changeOutputTypeHandler = (output) => {
     if (output === "all") {
