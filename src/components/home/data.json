@@ -1,0 +1,188 @@
+{
+  "skills": [
+    {
+      "category": "JavaScript Frameworks",
+      "items": [
+        "ReactJS",
+        "Node.js",
+        "Jquery",
+        "ExpressJS"
+      ]
+    },
+    {
+      "category": "Testing Frameworks",
+      "items": [
+        "Jasmine",
+        "Karma",
+        "Mocha",
+        "Chai"
+      ]
+    },
+    {
+      "category": "Scripting Technology",
+      "items": [
+        "Python",
+        "BASH",
+        "Batch"
+      ]
+    },
+    {
+      "category": "Database",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "category": "Amazon Web Services",
+      "items": [
+        "EC2",
+        "ELB",
+        "API Gateway",
+        "S3"
+      ]
+    },
+    {
+      "category": "Additional Skills",
+      "items": [
+        "API development skills (REST)"
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "Amazon AWS Certified Developer",
+      "link": "https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM"
+    },
+    {
+      "name": "Cisco Certified Network Associate (CCNA)",
+      "link": "https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url"
+    },
+    {
+      "name": "Thinkful Engineering Immersion Program",
+      "date": "March, 2020"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Evently WebApp",
+      "description": "A webapp for users to book and manage events",
+      "image": "evently.png",
+      "features": [
+        "Users can sign up/in",
+        "Users can book events.",
+        "Users can create events.",
+        "Users can cancel events."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://evently-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/event-booking-client"
+    },
+    {
+      "title": "Wander WebApp",
+      "description": "A webapp for users that wander and find new places.",
+      "image": "wander.png",
+      "features": [
+        "Users can search for tours in every state in the USA",
+        "New users can sign up to book tours.",
+        "Old users can sign in too book tours.",
+        "A registered user can become a guide by posting a tour."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://wander-client.michaelanokyej.now.sh/",
+      "codeLink": "https://github.com/michaelanokyej/wander-client"
+    },
+    {
+      "title": "UpLift WebApp",
+      "description": "A webapp to make mentorship accessible to users.",
+      "image": "upLift-home.png",
+      "features": [
+        "Users can sign up/sign in.",
+        "Users can post something.",
+        "Users can comment on posts",
+        "Users can send messages"
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://uplift-olive.now.sh/",
+      "codeLink": "https://github.com/irodriguez20/team-mike-india-client"
+    },
+    {
+      "title": "Oper Dashboard",
+      "description": "A dashboard to log and generate error reports.",
+      "image": "oper-dashboard.png",
+      "features": [
+        "Users can log an error.",
+        "Users can view all operations.",
+        "Users are presented with 2 charts.",
+        "Users can add a user and an operation.",
+        "Users can generate a .csv file report."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://oper-dashboard-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/oper-dashboard"
+    },
+    {
+      "title": "Private Chat App",
+      "description": "A webapp for users to instantly chat, privately.",
+      "image": "./project-gifs/private-chat-demo.gif",
+      "features": [
+        "Users can register.",
+        "Users can create a room.",
+        "Any user with a room name can join room.",
+        "Users are alerted when others join and/or leave."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact"
+      ],
+      "liveLink": "https://private-chat-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/instantMessaging-client"
+    },
+    {
+      "title": "Covid-19 Tracker",
+      "description": "A webapp for Covid 19 globally.",
+      "image": "covid-19-tracker.png",
+      "features": [
+        "Users can get global statistics.",
+        "Users can get country-specific statistics.",
+        "Users can see the trend of cases over time.",
+        "Users can compare statistics between countries."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact"
+      ],
+      "liveLink": "https://covid-19-tracker-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/covid-19-tracker"
+    }
+  ]
+}
