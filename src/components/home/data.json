@@ -1,4 +1,10 @@
 {
+  "name": "Michael Anokye",
+  "profilePic": "profilePic.jpg",
+  "email": "michaelanokyej@yahoo.com",
+  "address": "Rockville, MD",
+  "introText": "A Multi-faceted software engineer who is knowledgeable in",
+  "heroProgammingLangs": "['JavaScript',1000,'ReactJs',1000,'NodeJs',1000,'Python',1000,'MongoDB',1000,'Ruby',1000,'Rails',1000,'PHP',1000,'Laravel',1000,'RESTful APIs',1000,'GraphQL',1000,'AWS',1000,'SQL',1000,'CI/CD',1000,'HTML',1000,'CSS',1000]",
   "skills": [
     {
       "category": "JavaScript Frameworks",

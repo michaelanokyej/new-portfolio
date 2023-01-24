@@ -124,50 +124,18 @@ class Home extends React.Component {
       >
         <div className="myJumbotron">
           <div className="jumbotronItem profileImgContainer">
-            <img src="profilePic.jpg" alt="profilePic" className="profilePic" />
+            <img src={data.profilePic} alt="profilePic" className="profilePic" />
           </div>
           <div className="jumbotronItem">
             <div>
-              <h1 className="jumboHeader">Hi, I'm Michael Anokye</h1>
+              <h1 className="jumboHeader">Hi, I'm {data.name}</h1>
               <p>
-                A Multi-faceted software engineer who is knowledgeable in{" "}
+                {data.introText} {" "}
                 <Typical
                   loop={Infinity}
                   wrapper="b"
-                  steps={[
-                    "JavaScript",
-                    1000,
-                    "ReactJs",
-                    1000,
-                    "NodeJs",
-                    1000,
-                    "Python",
-                    1000,
-                    "MongoDB",
-                    1000,
-                    "Ruby",
-                    1000,
-                    "Rails",
-                    1000,
-                    "PHP",
-                    1000,
-                    "Laravel",
-                    1000,
-                    "RESTful APIs",
-                    1000,
-                    "GraphQL",
-                    1000,
-                    "AWS",
-                    1000,
-                    "SQL",
-                    1000,
-                    "CI/CD",
-                    1000,
-                    "HTML",
-                    1000,
-                    "CSS",
-                    1000,
-                  ]}
+                  // eslint-disable-next-line no-eval
+                  steps={eval(data.heroProgammingLangs)}
                 />
               </p>
             </div>
@@ -280,8 +248,6 @@ class Home extends React.Component {
                 </div>
               </div>
             ))}
-            
-            
           </div>
           <div className="jumboButtons">
             <button className="spanButton">
@@ -305,13 +271,13 @@ class Home extends React.Component {
           <h4 className="center contactMessage">Get in touch</h4>
           <div className="contactWrapper animated bounceInLeft">
             <div className="myInfo">
-              <h5>Michael Anokye</h5>
+              <h5>{data.name}</h5>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faRoad} /> Rockville, MD
+                  <FontAwesomeIcon icon={faRoad} /> {data.address}
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faEnvelope} /> michaelanokyej@yahoo.com
+                  <FontAwesomeIcon icon={faEnvelope} /> {data.email}
                 </li>
               </ul>
             </div>
