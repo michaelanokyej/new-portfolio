@@ -1,50 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faRoad,
-  faEnvelope,
-  faDatabase,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faHtml5,
-  faCss3,
-  faReact,
-  faNode,
-} from "@fortawesome/free-brands-svg-icons";
 import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
 import config from "../../config";
 import Swal from "sweetalert2";
 import Typical from "react-typical";
-import data from "./data.json";
+import data from "../../data.json";
+import { Icon } from "../icons.js";
 
-const Icon = ({ icon }) => {
-  let res;
-  switch (icon) {
-    case "faHtml5":
-      res = <FontAwesomeIcon icon={faHtml5} />;
-      break;
-    case "faCss3":
-      res = <FontAwesomeIcon icon={faCss3} />;
-      break;
-    case "faNode":
-      res = <FontAwesomeIcon icon={faNode} />;
-      break;
-    case "faReact":
-      res = <FontAwesomeIcon icon={faReact} />;
-      break;
-    case "faDatabase":
-      res = <FontAwesomeIcon icon={faDatabase} />;
-      break;
-
-    default:
-      break;
-  }
-  return res;
-};
 class Home extends React.Component {
   state = {
     blogs: [],
@@ -115,13 +80,7 @@ class Home extends React.Component {
     });
 
     return (
-      <motion.div
-        exit="out"
-        animate="in"
-        initial="initial"
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      <motion.div exit="out" animate="in" initial="initial" variants={pageVariants} transition={pageTransition}>
         <div className="myJumbotron">
           <div className="jumbotronItem profileImgContainer">
             <img src={data.profilePic} alt="profilePic" className="profilePic" />
@@ -130,7 +89,7 @@ class Home extends React.Component {
             <div>
               <h1 className="jumboHeader">Hi, I'm {data.name}</h1>
               <p>
-                {data.introText} {" "}
+                {data.introText}{" "}
                 <Typical
                   loop={Infinity}
                   wrapper="b"
@@ -158,9 +117,7 @@ class Home extends React.Component {
               {data.skills.map((item, index) => (
                 <li key={index}>
                   <span className="framework">{item.category}:</span>
-                  <span className="framework-skills">
-                    {item.items.join(", ")}
-                  </span>
+                  <span className="framework-skills">{item.items.join(", ")}</span>
                 </li>
               ))}
             </ul>
@@ -225,20 +182,12 @@ class Home extends React.Component {
                       </div>
                       <div className="jumboButtons">
                         <span className="spanButton">
-                          <a
-                            href={project.liveLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                             View Project
                           </a>{" "}
                         </span>
                         <span className="spanButton">
-                          <a
-                            href={project.codeLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <a href={project.codeLink} target="_blank" rel="noopener noreferrer">
                             View Code
                           </a>
                         </span>
@@ -274,21 +223,17 @@ class Home extends React.Component {
               <h5>{data.name}</h5>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faRoad} /> {data.address}
+                  <Icon icon={data.icons.road} />
+                  {data.address}
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faEnvelope} /> {data.email}
+                  <Icon icon={data.icons.envelope} />
+                  {data.email}
                 </li>
               </ul>
             </div>
             <div className="contactForm">
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                data-netlify-recaptcha="true"
-                data-netlify-honeypot="bot-field"
-              >
+              <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact" />
                 <div>
                   <label>Name</label>
