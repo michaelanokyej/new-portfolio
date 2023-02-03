@@ -1,7 +1,7 @@
 import React from "react";
 import myContext from "../context/myContext";
 import styles from "./BlogDetails.module.css";
-import config from "../../config";
+// import config from "../../config";
 import BlogCarousel from "./blogCarousel/BlogCarousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Markdown from "markdown-to-jsx";
 import Spinner from "../spinner/Spinner";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 class BlogDetailsPage extends React.Component {
   state = {

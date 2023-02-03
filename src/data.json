@@ -193,6 +193,147 @@
       "codeLink": "https://github.com/michaelanokyej/covid-19-tracker"
     }
   ],
+  "moreProjects": [
+    {
+      "title": "News App",
+      "description": "A webapp that fetches the latest news from Hacker News API.",
+      "image": "news-app.png",
+      "features": [
+        "Users can go to a news story.",
+        "Web app has an infinity scroll."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact"
+      ],
+      "liveLink": "https://my-news-app-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/news-app"
+    },
+    {
+      "title": "PDF Generator",
+      "description": "A webapp that generates a pdf file with user input.",
+      "image": "project-gifs/pdf-gen-demo.gif",
+      "features": [
+        "Users can generator pdf files by providing inputs",
+        "A clean pdf file is generated for users"
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact",
+        "faNode"
+      ],
+      "liveLink": "https://pdf-generator-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/pdf-generator-client"
+    },
+    {
+      "title": "Park Finder WebApp",
+      "description": "An adventure driven web-app that searches for parks.",
+      "image": "parkfinder.png",
+      "features": [
+        "Gets weather at the current location",
+        "Gets parks near user current location",
+        "User can search for parks anywhere",
+        "Results of user search is displayed with the weather"
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faJavaScript"
+      ],
+      "liveLink": "https://michaelanokyej.github.io/parkfinder/",
+      "codeLink": "https://github.com/michaelanokyej/parkfinder"
+    },
+    {
+      "title": "Calorie Counter",
+      "description": "A webapp for users to keep track of calorie intake.",
+      "image": "calorieCounter.png",
+      "features": [
+        "Users can register.",
+        "Users are provided BMI from user info.",
+        "Users are provided a barchart for calories consumed."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact"
+      ],
+      "liveLink": "https://calorie-counter-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/calorie-counter"
+    },
+    {
+      "title": "Chuck Norris Jokes",
+      "description": "A webapp that generates random Chuck Norris Jokes.",
+      "image": "./project-gifs/chuck-norris-demo.gif",
+      "features": [
+        "Users select a category of jokes.",
+        "Users can go to the next random joke.",
+        "Users can view the developer."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact"
+      ],
+      "liveLink": "https://chuck-norris-jokes-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/chuck-norris-jokes"
+    },
+    {
+      "title": "Advicely App",
+      "description": "A webapp that generates random advice.",
+      "image": "./project-gifs/advicely-demo.gif",
+      "features": [
+        "Users are provided a random advice when page loads.",
+        "Users can go to the next random advice.",
+        "Users can go to the developers portfolio."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact"
+      ],
+      "liveLink": "https://advicely-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/advicely"
+    },
+    {
+      "title": "RGB Game",
+      "description": "A game for users to better understand RGB.",
+      "image": "rgb.png",
+      "features": [
+        "Displays a color in RGB",
+        "User clicks on a color to choose",
+        "User is prompted with results after each click",
+        "Game can be restarted by user when ended."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faJavaScript"
+      ],
+      "liveLink": "https://michaelanokyej.github.io/colorGame/",
+      "codeLink": "https://github.com/michaelanokyej/colorGame"
+    },
+    {
+      "title": "Unit Converter",
+      "description": "A react converter that converts temperatures and volumes.",
+      "image": "/project-gifs/react-unit-converter-video-demo.gif",
+      "features": [
+        "Users can choose unit to convert.",
+        "User is provided with options to convert.",
+        "User is provided with the correct answer.",
+        "Student input is verified."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faJavaScript"
+      ],
+      "liveLink": "https://react-unit-converter-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/react-unit-converter"
+    }
+  ],
   "aboutMe": {
     "title": "About Me",
     "quote": "As a first generation college graduate, I always found it very difficult to navigate the corporate world so I have always been eager to create products that help and uplift people like me. This is the reason why I am working on a personal project that will make mentorship accessible and available to anyone with a cell phone and internet (click here to view project). I am a true team player offering multiple years of experience in the software industry. Proficient in working with diverse languages.",
@@ -331,6 +472,7 @@
   "icons": {
     "html5": "faHtml5",
     "css3": "faCss3",
+    "javascript": "faJavaScript",
     "node": "faNode",
     "react": "faReact",
     "db": "faDatabase",

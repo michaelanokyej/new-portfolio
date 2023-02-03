@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoad, faEnvelope, faDatabase, faMapMarkerAlt, faMobileAlt, faDownload } from "@fortawesome/free-solid-svg-icons";
-import { faHtml5, faCss3, faReact, faNode } from "@fortawesome/free-brands-svg-icons";
+import { faHtml5, faCss3, faReact, faNode, faJsSquare } from "@fortawesome/free-brands-svg-icons";
 
 export const Icon = ({ icon }) => {
   let res;
@@ -35,6 +35,9 @@ export const Icon = ({ icon }) => {
       break;
     case "faRoad":
       res = <FontAwesomeIcon icon={faRoad} />;
+      break;
+    case "faJavaScript":
+      res = <FontAwesomeIcon icon={faJsSquare} />;
       break;
 
     default:
