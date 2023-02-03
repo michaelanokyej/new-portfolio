@@ -276,6 +276,56 @@
           ]
         }
       ]
+    },
+    "section4": {
+      "title": "Certifications",
+      "content": [
+        {
+          "title": "CISCO CCNA",
+          "link": "https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url",
+          "verification": "ROUTING AND SWITCHING"
+        },
+        {
+          "title": "AMAZON WEB SERVICES",
+          "link": "https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM",
+          "verification": "CERTIFIED DEVELOPER(ASSOCIATE DVA)"
+        }
+      ]
+    },
+    "section5": {
+      "title": "Education",
+      "content": [
+        {
+          "name": "GEOGRAPHY",
+          "monthYear": "JUNE 2013",
+          "university": "KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+          "majors": [
+            "Major: Geographic Information Systems",
+            "Minor: Economics"
+          ]
+        },
+        {
+          "name": "THINKFUL | Engineering: Nights and Weekends",
+          "monthYear": "",
+          "university": "",
+          "majors": [
+            "Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)",
+            "SQL (MySQL and PostgreSQL), MongoDB",
+            "Data Structures and Algorithms",
+            "Testing: Enzyme, Jest etc",
+            "CI/CD"
+          ]
+        }
+      ]
+    },
+    "section6": {
+      "title": "Volunteering / Community Service",
+      "content": [
+        "Vice President of the Groove phi Groove SFI (Garden City Chapter.), Kumasi, Ghana.",
+        "Head of the mentor-ship programs of Groove Phi Groove S.F.I Kumasi , Ashanti.",
+        "Organize Charity events such as book drives, feed the hungry etc.",
+        "Community work; environmental sanitation and public education."
+      ]
     }
   },
   "icons": {
