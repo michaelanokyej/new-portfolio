@@ -11,6 +11,7 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
+    "express": "^4.18.2",
     "framer-motion": "^1.10.3",
     "markdown-to-jsx": "^6.11.4",
     "parcel-bundler": "^1.12.4",
@@ -26,7 +27,7 @@
     "sweetalert2": "^9.17.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "concurrently -n 'server,client' -c 'bgWhite,white' \"nodemon server.js\" \"react-scripts --openssl-legacy-provider start\"",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.20"
   }
 }
