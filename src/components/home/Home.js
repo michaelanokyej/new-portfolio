@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 // import config from "../../config";
 // import Swal from "sweetalert2";
 import Typical from "react-typical";
-import data from "../../data.json";
+import data from "../../portfolio.json";
 import { Icon } from "../icons.js";
 
 class Home extends React.Component {

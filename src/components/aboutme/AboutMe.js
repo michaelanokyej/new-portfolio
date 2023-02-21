@@ -2,7 +2,7 @@ import React from "react";
 import "./AboutMe.css";
 import myContext from "../context/myContext.js";
 import { motion } from "framer-motion";
-import data from "../../data.json";
+import data from "../../portfolio.json";
 
 const aboutMe = (props) => {
   return (
