@@ -226,6 +226,19 @@ function AdminPage() {
     });
   };
 
+  const handleSection3HeadingChange = (event, index) => {
+    const newTitle = event.target.value;
+    setResume({
+      ...resume,
+      section3: {
+        ...resume.section3,
+        content: resume.section3.content.map((item, i) =>
+          i === index ? { ...item, title: newTitle } : item
+        ),
+      },
+    });
+  };
+
   // handle updating list item
   const handleListItemChange = (event, sectionIndex, listItemIndex) => {
     const updatedList = resume.section3.content[sectionIndex].list.map((listItem, index) => {
@@ -1015,7 +1028,7 @@ function AdminPage() {
                 <input
                   type="text"
                   className={textInputStyle}
-                  defaultValue={item}
+                  value={item}
                   onChange={(event) => handleUpdateListItem("list1", index, event.target.value)}
                 />
                 <button className="delete-btn ml-2" onClick={() => handleDeleteFromSkillList("list1", index)}>
@@ -1039,7 +1052,7 @@ function AdminPage() {
                 <input
                   type="text"
                   className={textInputStyle}
-                  defaultValue={item}
+                  value={item}
                   onChange={(event) => handleUpdateListItem("list2", index, event.target.value)}
                 />
                 <button className="delete-btn ml-2" onClick={() => handleDeleteFromSkillList("list2", index)}>
@@ -1064,7 +1077,7 @@ function AdminPage() {
           <div key={sectionIndex}>
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}>Heading</label>
-              <input type="text" className={textInputStyle} value={section.title} />
+              <input type="text" className={textInputStyle} value={section.title} onChange={(event) => handleSection3HeadingChange(event, sectionIndex)} />
             </div>
             <div>
               {section.list.map((listItem, listItemIndex) => (
