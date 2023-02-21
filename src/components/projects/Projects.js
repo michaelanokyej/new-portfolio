@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import myContext from "../context/myContext.js";
 import { motion } from "framer-motion";
 import "./Projects.css";
-import data from "../../data.json";
+import data from "../../portfolio.json";
 import { Icon } from "../icons.js";
 
 class Projects extends React.Component {

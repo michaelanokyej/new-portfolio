@@ -2,7 +2,7 @@ import React from "react";
 import "./Resume.css";
 import { motion } from "framer-motion";
 import myContext from "../context/myContext.js";
-import data from "../../data.json";
+import data from "../../portfolio.json";
 import { Icon } from "../icons";
 
 class Resume extends React.Component {
