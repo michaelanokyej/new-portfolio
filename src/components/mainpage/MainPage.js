@@ -17,7 +17,7 @@ class MainPage extends React.Component {
         <main className="App__main">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/admin" component={Admin} />
+            {process.env.NODE_ENV === "development" && <Route exact path="/admin" component={Admin} />}
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/me" component={AboutMe} />
             <Route exact path="/projects" component={Projects} />

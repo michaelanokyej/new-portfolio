@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
+.edit-data {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  background-color: #fff;
+  color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 .myJumbotron {
   width: 95%;
   margin: 0px auto;
@@ -19,6 +31,8 @@
   width: 100%;
   overflow: hidden;
   padding: 8px;
+  display: flex;
+  justify-content: center;
 }
 
 .profilePic {
