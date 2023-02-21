@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Resume from "../resume/Resume";
 import Projects from "../projects/Projects";
 import Blog from "../blog/Blog";
@@ -17,7 +17,7 @@ class MainPage extends React.Component {
         <main className="App__main">
           <Switch>
             <Route exact path="/" component={Home} />
-            {process.env.NODE_ENV === "development" && <Route exact path="/admin" component={Admin} />}
+            {process.env.NODE_ENV === "development" ? <Route exact path="/admin" component={Admin} /> : <Redirect to="/" />}
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/me" component={AboutMe} />
             <Route exact path="/projects" component={Projects} />
