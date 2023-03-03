@@ -86,6 +86,11 @@ class Home extends React.Component {
             Edit Data
           </Link>
         )}
+        {process.env.NODE_ENV === "development" && (
+          <Link className="post-blog" to="/admin/blog">
+            Go to Blogs
+          </Link>
+        )}
         <motion.div exit="out" animate="in" initial="initial" variants={pageVariants} transition={pageTransition}>
           <div className="myJumbotron">
             <div className="jumbotronItem profileImgContainer">

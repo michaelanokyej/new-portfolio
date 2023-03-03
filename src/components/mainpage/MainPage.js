@@ -7,6 +7,7 @@ import BlogDetailsPage from "../blog/BlogDetailsPage";
 import AboutMe from "../aboutme/AboutMe";
 import Home from "../home/Home";
 import Admin from "../admin/Admin";
+import AdminBlog from "../admin/Blog";
 import "./MainPage.css";
 import { AnimatePresence } from "framer-motion";
 
@@ -17,7 +18,18 @@ class MainPage extends React.Component {
         <main className="App__main">
           <Switch>
             <Route exact path="/" component={Home} />
-            {process.env.NODE_ENV === "development" ? <Route exact path="/admin" component={Admin} /> : <Redirect to="/" />}
+            {process.env.NODE_ENV === "development" ? (
+              <Route exact path="/admin" component={Admin} />
+            ) : (
+              <Redirect to="/" />
+            )}
+
+            {process.env.NODE_ENV === "development" ? (
+              <Route exact path="/admin/blog" component={AdminBlog} />
+            ) : (
+              <Redirect to="/" />
+            )}
+
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/me" component={AboutMe} />
             <Route exact path="/projects" component={Projects} />

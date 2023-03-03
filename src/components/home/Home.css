@@ -12,6 +12,19 @@
   border-radius: 5px;
 }
 
+.post-blog{
+  position: fixed;
+  bottom: 100px;
+  right: 170px;
+  background-color: #fff;
+  color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 1;
+}
+
 .myJumbotron {
   width: 95%;
   margin: 0px auto;
