@@ -13,6 +13,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Markdown from "markdown-to-jsx";
 import Spinner from "../spinner/Spinner";
+import config from "../../config";
+import Swal from "sweetalert2";
 // import Swal from "sweetalert2";
 
 class BlogDetailsPage extends React.Component {
@@ -24,47 +26,47 @@ class BlogDetailsPage extends React.Component {
   };
   static contextType = myContext;
 
-  // fetchBlog = async () => {
-  //   this.setState({ isLoading: true });
-  //   let blog = {};
-  //   let CarouselBlogs = [];
-  //   const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
-  //     method: "Get",
-  //     headers: new Headers({
-  //       "Content-Type": "application/json",
-  //     }),
-  //   })
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((res) => {
-  //       blog = res.filter(
-  //         (blog) => blog._id === this.props.match.params.blogId
-  //       );
-  //       CarouselBlogs = res.filter(
-  //         (blog) => blog._id !== this.props.match.params.blogId
-  //       );
+  fetchBlog = async () => {
+    this.setState({ isLoading: true });
+    let blog = {};
+    let CarouselBlogs = [];
+    const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
+      method: "Get",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        blog = res.filter(
+          (blog) => blog._id === this.props.match.params.blogId
+        );
+        CarouselBlogs = res.filter(
+          (blog) => blog._id !== this.props.match.params.blogId
+        );
 
-  //       return res;
-  //     })
-  //     .catch((err) => {
-  //       this.setState({ isLoading: false });
-  //       Swal.fire({
-  //         icon: "error",
-  //         title: "Oops...",
-  //         text: "Something went wrong!",
-  //         footer: `<p>${err}</p>`,
-  //       });
-  //     });
+        return res;
+      })
+      .catch((err) => {
+        this.setState({ isLoading: false });
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: `<p>${err}</p>`,
+        });
+      });
 
-  //   this.setState({
-  //     isLoading: false,
-  //     blog: blog[0],
-  //     blogs,
-  //     CarouselBlogs,
-  //   });
+    this.setState({
+      isLoading: false,
+      blog: blog[0],
+      blogs,
+      CarouselBlogs,
+    });
 
-  // };
+  };
 
   componentWillMount = async () => {
     await this.fetchBlog();
