@@ -9,6 +9,7 @@
   font-weight: bold;
 }
 
+
 .delete-btn {
   color: #b45a5a;
   border: 1px solid #8b0000;
@@ -27,7 +28,8 @@
 .admin-page h5,
 .admin-page h6,
 .admin-page button,
-.admin-page label {
+.admin-page label,
+.admin-page textarea {
   color: whitesmoke;
 }
 
@@ -49,4 +51,8 @@ button {
 
 .admin-page input[type="checkbox"][disabled] {
   color: gray;
+}
+
+.w-md-editor-text-pre, .w-md-editor-text-input {
+  color: inherit
 }

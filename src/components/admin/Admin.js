@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import data from "../../portfolio.json";
 import "./Admin.css";
 
-const labelStyle = "w-40 text-left mb-0 text-lg font-medium text-gray-900 dark:text-white";
+const labelStyle =
+  "w-40 text-left mb-0 text-lg font-medium text-gray-900 dark:text-white";
 const textInputStyle =
   "bg-gray-50 border border-gray-300 w-2/3 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
 const labelTextInputWrapper = "flex items-center my-2 ";
@@ -157,8 +158,7 @@ function AdminPage() {
 
   const handleFeatureAdd = (setProjects, index, value) => {
     const updatedProjects = [...projects];
-    console.log("updatedProjects[index]", updatedProjects[index], index);
-    console.log("updatedProjects[index].features", updatedProjects[index].features);
+
     if (!updatedProjects[index].features) {
       updatedProjects[index].features = [];
     }
@@ -241,13 +241,15 @@ function AdminPage() {
 
   // handle updating list item
   const handleListItemChange = (event, sectionIndex, listItemIndex) => {
-    const updatedList = resume.section3.content[sectionIndex].list.map((listItem, index) => {
-      if (index === listItemIndex) {
-        return event.target.value;
-      } else {
-        return listItem;
+    const updatedList = resume.section3.content[sectionIndex].list.map(
+      (listItem, index) => {
+        if (index === listItemIndex) {
+          return event.target.value;
+        } else {
+          return listItem;
+        }
       }
-    });
+    );
 
     setResume({
       ...resume,
@@ -285,7 +287,9 @@ function AdminPage() {
 
   // handle deleting list item
   const handleDeleteListItem = (sectionIndex, listItemIndex) => {
-    const updatedList = resume.section3.content[sectionIndex].list.filter((listItem, index) => index !== listItemIndex);
+    const updatedList = resume.section3.content[sectionIndex].list.filter(
+      (listItem, index) => index !== listItemIndex
+    );
 
     setResume({
       ...resume,
@@ -392,7 +396,10 @@ function AdminPage() {
       ...resume,
       section4: {
         ...resume.section4,
-        content: [...resume.section4.content.slice(0, index), ...resume.section4.content.slice(index + 1)],
+        content: [
+          ...resume.section4.content.slice(0, index),
+          ...resume.section4.content.slice(index + 1),
+        ],
       },
     };
     setResume(newResume);
@@ -506,18 +513,17 @@ function AdminPage() {
   };
 
   const handleDeleteSection5Item = (index) => {
-    console.log({ index });
-    console.log("resume: BEFORE", resume.section5.content);
     const newResume = {
       ...resume,
       section5: {
         ...resume.section5,
-        content: [...resume.section5.content.slice(0, index), ...resume.section5.content.slice(index + 1)],
+        content: [
+          ...resume.section5.content.slice(0, index),
+          ...resume.section5.content.slice(index + 1),
+        ],
       },
     };
     setResume(newResume);
-    console.log("resume: AFTER", newResume.section5.content);
-    console.log("resume.section5.content", resume.section5.content);
   };
 
   const handleAddSection5MajorsItem = (index) => {
@@ -548,8 +554,13 @@ function AdminPage() {
           {
             ...resume.section5.content[parentIndex],
             majors: [
-              ...resume.section5.content[parentIndex].majors.slice(0, indexToDelete),
-              ...resume.section5.content[parentIndex].majors.slice(indexToDelete + 1),
+              ...resume.section5.content[parentIndex].majors.slice(
+                0,
+                indexToDelete
+              ),
+              ...resume.section5.content[parentIndex].majors.slice(
+                indexToDelete + 1
+              ),
             ],
           },
           ...resume.section5.content.slice(parentIndex + 1),
@@ -587,7 +598,9 @@ function AdminPage() {
 
   // delete an item from the content array
   const deleteContentItem = (index) => {
-    const updatedContent = resume.section6.content.filter((item, i) => i !== index);
+    const updatedContent = resume.section6.content.filter(
+      (item, i) => i !== index
+    );
     setResume({
       ...resume,
       section6: {
@@ -649,27 +662,55 @@ function AdminPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="admin-page text-white py-20 justify-items-start items-start">
+    <form
+      onSubmit={handleSubmit}
+      className="admin-page text-white py-20 justify-items-start items-start"
+    >
       <h1 className="text-white w-fit mb-3">Personal Information</h1>
       <div className={labelTextInputWrapper}>
         <label className={labelStyle}>Name </label>
-        <input className={textInputStyle} type="text" value={name} onChange={handleNameChange} />
+        <input
+          className={textInputStyle}
+          type="text"
+          value={name}
+          onChange={handleNameChange}
+        />
       </div>
       <div className={labelTextInputWrapper}>
         <label className={labelStyle}>Profile Picture</label>
-        <input className={textInputStyle} type="text" value={profilePic} onChange={handleProfilePicChange} disabled />
+        <input
+          className={textInputStyle}
+          type="text"
+          value={profilePic}
+          onChange={handleProfilePicChange}
+          disabled
+        />
       </div>
       <div className={labelTextInputWrapper}>
         <label className={labelStyle}>Email</label>
-        <input className={textInputStyle} type="email" value={email} onChange={handleEmailChange} />
+        <input
+          className={textInputStyle}
+          type="email"
+          value={email}
+          onChange={handleEmailChange}
+        />
       </div>
       <div className={labelTextInputWrapper}>
         <label className={labelStyle}>Intro Text</label>
-        <textarea className={textInputStyle} value={introText} onChange={handleIntroTextChange} />
+        <textarea
+          className={textInputStyle}
+          value={introText}
+          onChange={handleIntroTextChange}
+        />
       </div>
       <div className={labelTextInputWrapper}>
         <label className={labelStyle}>Phone</label>
-        <input className={textInputStyle} type="tel" value={phone} onChange={handlePhoneChange} />
+        <input
+          className={textInputStyle}
+          type="tel"
+          value={phone}
+          onChange={handlePhoneChange}
+        />
       </div>
       <div>
         <h1 className="text-white w-fit mt-10 mb-3">Qualifications</h1>
@@ -677,10 +718,29 @@ function AdminPage() {
           <div key={index}>
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}>Title</label>
-              <input className={textInputStyle} type="text" value={qualification.name} onChange={(e) => handleQualificationNameChange(e, index)} />
-              <label className={"w-20 ml-3 text-left mr-2 mb-0 text-lg font-medium text-gray-900 dark:text-white"}>Url</label>
-              <input className={textInputStyle} type="url" value={qualification.link} onChange={(e) => handleQualificationLinkChange(e, index)} />
-              <button className="delete-btn ml-2" onClick={() => handleDeleteQualification(index)}>
+              <input
+                className={textInputStyle}
+                type="text"
+                value={qualification.name}
+                onChange={(e) => handleQualificationNameChange(e, index)}
+              />
+              <label
+                className={
+                  "w-20 ml-3 text-left mr-2 mb-0 text-lg font-medium text-gray-900 dark:text-white"
+                }
+              >
+                Url
+              </label>
+              <input
+                className={textInputStyle}
+                type="url"
+                value={qualification.link}
+                onChange={(e) => handleQualificationLinkChange(e, index)}
+              />
+              <button
+                className="delete-btn ml-2"
+                onClick={() => handleDeleteQualification(index)}
+              >
                 Delete
               </button>
             </div>
@@ -692,12 +752,19 @@ function AdminPage() {
       <div>
         <h1 className="text-white w-fit mt-10 mb-3">Skills</h1>
         {skills.map((skill, index) => (
-          <div key={index} className="mb-20 p-2 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl">
+          <div
+            key={index}
+            className="mb-20 p-2 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl"
+          >
             <div className={labelTextInputWrapper}>
               <button type="button" onClick={() => handleAddSkillItem(index)}>
                 Add Skill
               </button>
-              <button className="delete-btn ml-2" type="button" onClick={() => handleDeleteSkill(index)}>
+              <button
+                className="delete-btn ml-2"
+                type="button"
+                onClick={() => handleDeleteSkill(index)}
+              >
                 Delete Category
               </button>
             </div>
@@ -707,10 +774,14 @@ function AdminPage() {
                 className={textInputStyle}
                 type="text"
                 value={skill.category}
-                onChange={(event) => handleSkillChange(index, "category", event)}
+                onChange={(event) =>
+                  handleSkillChange(index, "category", event)
+                }
               />
             </div>
-            <p className="text-left mr-2 mb-0 text-lg text-gray-900 dark:text-white">Skills</p>
+            <p className="text-left mr-2 mb-0 text-lg text-gray-900 dark:text-white">
+              Skills
+            </p>
             {skill.items.map((item, itemIndex) => (
               <div key={itemIndex} className={labelTextInputWrapper}>
                 <label className={labelStyle}></label>
@@ -718,9 +789,15 @@ function AdminPage() {
                   className={textInputStyle}
                   type="text"
                   value={item}
-                  onChange={(event) => handleSkillItemChange(index, itemIndex, "items", event)}
+                  onChange={(event) =>
+                    handleSkillItemChange(index, itemIndex, "items", event)
+                  }
                 />
-                <button className="delete-btn ml-2" type="button" onClick={() => handleDeleteSkillItem(index, itemIndex)}>
+                <button
+                  className="delete-btn ml-2"
+                  type="button"
+                  onClick={() => handleDeleteSkillItem(index, itemIndex)}
+                >
                   Delete
                 </button>
               </div>
@@ -734,9 +811,16 @@ function AdminPage() {
       <div>
         <h1 className="text-white w-fit mt-10 mb-3">Projects:</h1>
         {projects.map((project, index) => (
-          <div key={index} className="mb-20 p-3 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl">
+          <div
+            key={index}
+            className="mb-20 p-3 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl"
+          >
             <div className={labelTextInputWrapper}>
-              <button className="delete-btn" type="button" onClick={() => handleProjectDelete(setProjects, index)}>
+              <button
+                className="delete-btn"
+                type="button"
+                onClick={() => handleProjectDelete(setProjects, index)}
+              >
                 Delete project
               </button>
             </div>
@@ -749,7 +833,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`title-${index}`}
                 value={project.title}
-                onChange={(event) => handleProjectChange(setProjects, event, index, "title")}
+                onChange={(event) =>
+                  handleProjectChange(setProjects, event, index, "title")
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -761,7 +847,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`description-${index}`}
                 value={project.description}
-                onChange={(event) => handleProjectChange(setProjects, event, index, "description")}
+                onChange={(event) =>
+                  handleProjectChange(setProjects, event, index, "description")
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -773,7 +861,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`image-${index}`}
                 value={project.image}
-                onChange={(event) => handleProjectChange(setProjects, event, index, "image")}
+                onChange={(event) =>
+                  handleProjectChange(setProjects, event, index, "image")
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -781,7 +871,10 @@ function AdminPage() {
             </div>
             {project.features.map((feature, featureIndex) => (
               <div key={featureIndex} className={labelTextInputWrapper}>
-                <label className={labelStyle} htmlFor={`feature-${index}-${featureIndex}`}>
+                <label
+                  className={labelStyle}
+                  htmlFor={`feature-${index}-${featureIndex}`}
+                >
                   Feature {featureIndex + 1}:
                 </label>
                 <input
@@ -789,17 +882,37 @@ function AdminPage() {
                   className={textInputStyle}
                   id={`feature-${index}-${featureIndex}`}
                   value={feature}
-                  onChange={(event) => handleFeatureUpdate(setProjects, index, featureIndex, event.target.value)}
+                  onChange={(event) =>
+                    handleFeatureUpdate(
+                      setProjects,
+                      index,
+                      featureIndex,
+                      event.target.value
+                    )
+                  }
                 />
-                <button className="delete-btn ml-2" onClick={() => handleFeatureDelete(setProjects, index, featureIndex)}>
+                <button
+                  className="delete-btn ml-2"
+                  onClick={() =>
+                    handleFeatureDelete(setProjects, index, featureIndex)
+                  }
+                >
                   Delete
                 </button>
               </div>
             ))}
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}></label>
-              <div className={textInputStyle.replace(" border border-gray-300", "")}></div>
-              <button onClick={() => handleFeatureAdd(setProjects, index, "")}> Add Feature</button>
+              <div
+                className={textInputStyle.replace(
+                  " border border-gray-300",
+                  ""
+                )}
+              ></div>
+              <button onClick={() => handleFeatureAdd(setProjects, index, "")}>
+                {" "}
+                Add Feature
+              </button>
             </div>
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}>Stack:</label>
@@ -809,10 +922,15 @@ function AdminPage() {
                     type="checkbox"
                     id={`stack-${index}-${stackIndex}`}
                     checked={project.stack.includes(stackItem)}
-                    onChange={(event) => handleProjectStackChange(setProjects, event, index)}
+                    onChange={(event) =>
+                      handleProjectStackChange(setProjects, event, index)
+                    }
                     disabled
                   />
-                  <label className={labelStyle} htmlFor={`stack-${index}-${stackIndex}`}>
+                  <label
+                    className={labelStyle}
+                    htmlFor={`stack-${index}-${stackIndex}`}
+                  >
                     {stackItem}
                   </label>
                 </div>
@@ -827,7 +945,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`live-link-${index}`}
                 value={project.liveLink}
-                onChange={(event) => handleProjectChange(setProjects, event, index, "liveLink")}
+                onChange={(event) =>
+                  handleProjectChange(setProjects, event, index, "liveLink")
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -839,7 +959,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`code-link-${index}`}
                 value={project.codeLink}
-                onChange={(event) => handleProjectChange(setProjects, event, index, "codeLink")}
+                onChange={(event) =>
+                  handleProjectChange(setProjects, event, index, "codeLink")
+                }
               />
             </div>
           </div>
@@ -852,9 +974,16 @@ function AdminPage() {
       <div>
         <h1 className="text-white w-fit mt-10 mb-3">More Projects:</h1>
         {moreProjects.map((project, index) => (
-          <div key={index} className="mb-20 p-3 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl">
+          <div
+            key={index}
+            className="mb-20 p-3 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl"
+          >
             <div className={labelTextInputWrapper}>
-              <button className="delete-btn" type="button" onClick={() => handleProjectDelete(setMoreProjects, index)}>
+              <button
+                className="delete-btn"
+                type="button"
+                onClick={() => handleProjectDelete(setMoreProjects, index)}
+              >
                 Delete project
               </button>
             </div>
@@ -867,7 +996,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`title-${index}`}
                 value={project.title}
-                onChange={(event) => handleProjectChange(setMoreProjects, event, index, "title")}
+                onChange={(event) =>
+                  handleProjectChange(setMoreProjects, event, index, "title")
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -879,7 +1010,14 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`description-${index}`}
                 value={project.description}
-                onChange={(event) => handleProjectChange(setMoreProjects, event, index, "description")}
+                onChange={(event) =>
+                  handleProjectChange(
+                    setMoreProjects,
+                    event,
+                    index,
+                    "description"
+                  )
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -891,7 +1029,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`image-${index}`}
                 value={project.image}
-                onChange={(event) => handleProjectChange(setMoreProjects, event, index, "image")}
+                onChange={(event) =>
+                  handleProjectChange(setMoreProjects, event, index, "image")
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -899,7 +1039,10 @@ function AdminPage() {
             </div>
             {project.features.map((feature, featureIndex) => (
               <div key={featureIndex} className={labelTextInputWrapper}>
-                <label className={labelStyle} htmlFor={`feature-${index}-${featureIndex}`}>
+                <label
+                  className={labelStyle}
+                  htmlFor={`feature-${index}-${featureIndex}`}
+                >
                   Feature {featureIndex + 1}:
                 </label>
                 <input
@@ -907,17 +1050,38 @@ function AdminPage() {
                   className={textInputStyle}
                   id={`feature-${index}-${featureIndex}`}
                   value={feature}
-                  onChange={(event) => handleFeatureUpdate(setMoreProjects, index, featureIndex, event.target.value)}
+                  onChange={(event) =>
+                    handleFeatureUpdate(
+                      setMoreProjects,
+                      index,
+                      featureIndex,
+                      event.target.value
+                    )
+                  }
                 />
-                <button className="delete-btn ml-2" onClick={() => handleFeatureDelete(setMoreProjects, index, featureIndex)}>
+                <button
+                  className="delete-btn ml-2"
+                  onClick={() =>
+                    handleFeatureDelete(setMoreProjects, index, featureIndex)
+                  }
+                >
                   Delete
                 </button>
               </div>
             ))}
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}></label>
-              <div className={textInputStyle.replace(" border border-gray-300", "")}></div>
-              <button onClick={() => handleFeatureAdd(setMoreProjects, index, "")}>Add Feature</button>
+              <div
+                className={textInputStyle.replace(
+                  " border border-gray-300",
+                  ""
+                )}
+              ></div>
+              <button
+                onClick={() => handleFeatureAdd(setMoreProjects, index, "")}
+              >
+                Add Feature
+              </button>
             </div>
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}>Stack:</label>
@@ -927,10 +1091,14 @@ function AdminPage() {
                     type="checkbox"
                     id={`stack-${index}-${stackIndex}`}
                     checked={project.stack.includes(stackItem)}
-                    onChange={(event) => handleProjectStackChange(setMoreProjects, event, index)}
+                    onChange={(event) =>
+                      handleProjectStackChange(setMoreProjects, event, index)
+                    }
                     disabled
                   />
-                  <label htmlFor={`stack-${index}-${stackIndex}`}>{stackItem}</label>
+                  <label htmlFor={`stack-${index}-${stackIndex}`}>
+                    {stackItem}
+                  </label>
                 </div>
               ))}
             </div>
@@ -943,7 +1111,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`live-link-${index}`}
                 value={project.liveLink}
-                onChange={(event) => handleProjectChange(setMoreProjects, event, index, "liveLink")}
+                onChange={(event) =>
+                  handleProjectChange(setMoreProjects, event, index, "liveLink")
+                }
               />
             </div>
             <div className={labelTextInputWrapper}>
@@ -955,7 +1125,9 @@ function AdminPage() {
                 className={textInputStyle}
                 id={`code-link-${index}`}
                 value={project.codeLink}
-                onChange={(event) => handleProjectChange(setMoreProjects, event, index, "codeLink")}
+                onChange={(event) =>
+                  handleProjectChange(setMoreProjects, event, index, "codeLink")
+                }
               />
             </div>
           </div>
@@ -969,16 +1141,29 @@ function AdminPage() {
         <h1 className="text-white w-fit mt-10 mb-3">About Yourself</h1>
         <div className={labelTextInputWrapper}>
           <label className={labelStyle}>Title:</label>
-          <input className={textInputStyle} type="text" value={aboutMe.title} onChange={handleTitleChange} />
+          <input
+            className={textInputStyle}
+            type="text"
+            value={aboutMe.title}
+            onChange={handleTitleChange}
+          />
         </div>
         <div className={labelTextInputWrapper}>
           <label className={labelStyle}>Quote:</label>
-          <textarea className={textInputStyle} value={aboutMe.quote} onChange={handleQuoteChange} />
+          <textarea
+            className={textInputStyle}
+            value={aboutMe.quote}
+            onChange={handleQuoteChange}
+          />
         </div>
         {aboutMe.more.map((moreText, index) => (
           <div key={index} className={labelTextInputWrapper}>
             <label className={labelStyle}>Paragraph {index + 1}:</label>
-            <textarea className={textInputStyle} value={moreText} onChange={(event) => handleMoreChange(event, index)} />
+            <textarea
+              className={textInputStyle}
+              value={moreText}
+              onChange={(event) => handleMoreChange(event, index)}
+            />
           </div>
         ))}
       </div>
@@ -993,7 +1178,12 @@ function AdminPage() {
             type="text"
             className={textInputStyle}
             value={resume.section1.title}
-            onChange={(event) => handleUpdateField("section1", { ...resume.section1, title: event.target.value })}
+            onChange={(event) =>
+              handleUpdateField("section1", {
+                ...resume.section1,
+                title: event.target.value,
+              })
+            }
             disabled
           />
         </div>
@@ -1004,7 +1194,12 @@ function AdminPage() {
             id="summary"
             className={textInputStyle}
             value={resume.section1.text}
-            onChange={(event) => handleFieldUpdate("section1", { title: "Summary", text: event.target.value })}
+            onChange={(event) =>
+              handleFieldUpdate("section1", {
+                title: "Summary",
+                text: event.target.value,
+              })
+            }
           />
         </div>
 
@@ -1016,7 +1211,12 @@ function AdminPage() {
             type="text"
             className={textInputStyle}
             value={resume.section2.title}
-            onChange={(event) => handleUpdateField("section2", { ...resume.section2, title: event.target.value })}
+            onChange={(event) =>
+              handleUpdateField("section2", {
+                ...resume.section2,
+                title: event.target.value,
+              })
+            }
             disabled
           />
         </div>
@@ -1029,9 +1229,14 @@ function AdminPage() {
                   type="text"
                   className={textInputStyle}
                   value={item}
-                  onChange={(event) => handleUpdateListItem("list1", index, event.target.value)}
+                  onChange={(event) =>
+                    handleUpdateListItem("list1", index, event.target.value)
+                  }
                 />
-                <button className="delete-btn ml-2" onClick={() => handleDeleteFromSkillList("list1", index)}>
+                <button
+                  className="delete-btn ml-2"
+                  onClick={() => handleDeleteFromSkillList("list1", index)}
+                >
                   Delete
                 </button>
               </div>
@@ -1041,7 +1246,9 @@ function AdminPage() {
 
         <div className={labelTextInputWrapper}>
           <div className="w-[70%]"></div>
-          <button onClick={() => handleAddToSkillList("list1", "")}>Add To List 1</button>
+          <button onClick={() => handleAddToSkillList("list1", "")}>
+            Add To List 1
+          </button>
         </div>
 
         <div className={labelTextInputWrapper}>
@@ -1053,9 +1260,14 @@ function AdminPage() {
                   type="text"
                   className={textInputStyle}
                   value={item}
-                  onChange={(event) => handleUpdateListItem("list2", index, event.target.value)}
+                  onChange={(event) =>
+                    handleUpdateListItem("list2", index, event.target.value)
+                  }
                 />
-                <button className="delete-btn ml-2" onClick={() => handleDeleteFromSkillList("list2", index)}>
+                <button
+                  className="delete-btn ml-2"
+                  onClick={() => handleDeleteFromSkillList("list2", index)}
+                >
                   Delete
                 </button>
               </div>
@@ -1065,19 +1277,34 @@ function AdminPage() {
 
         <div className={labelTextInputWrapper}>
           <div className="w-[70%]"></div>
-          <button onClick={() => handleAddToSkillList("list2", "")}>Add To List 2</button>
+          <button onClick={() => handleAddToSkillList("list2", "")}>
+            Add To List 2
+          </button>
         </div>
 
         <div className={labelTextInputWrapper}>
           <label className={labelStyle}>Section 3</label>
-          <input type="text" className={textInputStyle} value={resume.section3.title} onChange={handleSection3TitleChange} disabled />
+          <input
+            type="text"
+            className={textInputStyle}
+            value={resume.section3.title}
+            onChange={handleSection3TitleChange}
+            disabled
+          />
         </div>
 
         {resume.section3.content.map((section, sectionIndex) => (
           <div key={sectionIndex}>
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}>Heading</label>
-              <input type="text" className={textInputStyle} value={section.title} onChange={(event) => handleSection3HeadingChange(event, sectionIndex)} />
+              <input
+                type="text"
+                className={textInputStyle}
+                value={section.title}
+                onChange={(event) =>
+                  handleSection3HeadingChange(event, sectionIndex)
+                }
+              />
             </div>
             <div>
               {section.list.map((listItem, listItemIndex) => (
@@ -1087,9 +1314,16 @@ function AdminPage() {
                     type="text"
                     className={textInputStyle}
                     value={listItem}
-                    onChange={(event) => handleListItemChange(event, sectionIndex, listItemIndex)}
+                    onChange={(event) =>
+                      handleListItemChange(event, sectionIndex, listItemIndex)
+                    }
                   />
-                  <button className="delete-btn ml-2" onClick={() => handleDeleteListItem(sectionIndex, listItemIndex)}>
+                  <button
+                    className="delete-btn ml-2"
+                    onClick={() =>
+                      handleDeleteListItem(sectionIndex, listItemIndex)
+                    }
+                  >
                     Delete
                   </button>
                 </div>
@@ -1097,28 +1331,56 @@ function AdminPage() {
             </div>
             <div className={labelTextInputWrapper}>
               <label className={labelStyle}></label>
-              <div className={textInputStyle.replace("bg-gray-50 border border-gray-300", "bg-transparent")}></div>
-              <button onClick={() => handleAddListItem(sectionIndex)}>Add a Point</button>
+              <div
+                className={textInputStyle.replace(
+                  "bg-gray-50 border border-gray-300",
+                  "bg-transparent"
+                )}
+              ></div>
+              <button onClick={() => handleAddListItem(sectionIndex)}>
+                Add a Point
+              </button>
             </div>
           </div>
         ))}
 
         <div className={labelTextInputWrapper}>
           <label className={labelStyle}>Section 4 Title:</label>
-          <input type="text" className={textInputStyle} value={resume.section4.title} onChange={handleSection4TitleChange} disabled />
+          <input
+            type="text"
+            className={textInputStyle}
+            value={resume.section4.title}
+            onChange={handleSection4TitleChange}
+            disabled
+          />
         </div>
         <div className={labelTextInputWrapper}>
           <label className={labelStyle}></label>
           <div className="w-8/12">
             {resume.section4.content.map((item, index) => (
-              <div key={index} className="mb-3 p-2 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl">
+              <div
+                key={index}
+                className="mb-3 p-2 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl"
+              >
                 <div className={labelTextInputWrapper}>
                   <label className={labelStyle}>Title</label>
-                  <input type="text" className={textInputStyle} value={item.title} onChange={(event) => handleSection4ContentChange(index, event)} />
+                  <input
+                    type="text"
+                    className={textInputStyle}
+                    value={item.title}
+                    onChange={(event) =>
+                      handleSection4ContentChange(index, event)
+                    }
+                  />
                 </div>
                 <div className={labelTextInputWrapper}>
                   <label className={labelStyle}>Link</label>
-                  <input type="text" className={textInputStyle} value={item.link} onChange={(event) => handleSection4LinkChange(index, event)} />
+                  <input
+                    type="text"
+                    className={textInputStyle}
+                    value={item.link}
+                    onChange={(event) => handleSection4LinkChange(index, event)}
+                  />
                 </div>
                 <div className={labelTextInputWrapper}>
                   <label className={labelStyle}>Verification</label>
@@ -1126,13 +1388,23 @@ function AdminPage() {
                     type="text"
                     className={textInputStyle}
                     value={item.verification}
-                    onChange={(event) => handleSection4VerificationChange(index, event)}
+                    onChange={(event) =>
+                      handleSection4VerificationChange(index, event)
+                    }
                   />
                 </div>
                 <div className={labelTextInputWrapper}>
                   <label className={labelStyle}></label>
-                  <div className={textInputStyle.replace("bg-gray-50 border border-gray-300", "bg-transparent w-1/2")}></div>
-                  <button className="delete-btn w-fit" onClick={() => handleDeleteSection4Item(index)}>
+                  <div
+                    className={textInputStyle.replace(
+                      "bg-gray-50 border border-gray-300",
+                      "bg-transparent w-1/2"
+                    )}
+                  ></div>
+                  <button
+                    className="delete-btn w-fit"
+                    onClick={() => handleDeleteSection4Item(index)}
+                  >
                     Delete Certification
                   </button>
                 </div>
@@ -1143,62 +1415,96 @@ function AdminPage() {
         <button onClick={handleAddSection4Item}>Add Certification</button>
         <div className={labelTextInputWrapper + " mb-3"}>
           <label className={labelStyle}>Section 5 Title</label>
-          <input className={textInputStyle} value={resume.section5.title} onChange={handleSection5TitleChange} disabled />
+          <input
+            className={textInputStyle}
+            value={resume.section5.title}
+            onChange={handleSection5TitleChange}
+            disabled
+          />
         </div>
-        {console.log("INSIDE: ", resume.section5.content) ||
-          resume.section5.content.map((item, index) => (
-            <div key={index} className="mb-10 p-2 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl">
-              {console.log({ item, index })}
-              <div className={labelTextInputWrapper}>
-                <button className="delete-btn" onClick={() => handleDeleteSection5Item(index)}>
-                  Delete Education
-                </button>
-              </div>
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>Name</label>
-                <input type="text" className={textInputStyle} value={item.name} onChange={(event) => handleSection5ContentNameChange(index, event)} />
-              </div>
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>Month/Year</label>
-                <input
-                  type="text"
-                  className={textInputStyle}
-                  value={item.monthYear}
-                  onChange={(event) => handleSection5ContentMonthYearChange(index, event)}
-                />
-              </div>
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>University</label>
-                <input
-                  type="text"
-                  className={textInputStyle}
-                  value={item.university}
-                  onChange={(event) => handleSection5ContentUniversityChange(index, event)}
-                />
-              </div>
-              {item.majors.map((major, listIndex) => (
-                <div key={listIndex}>
-                  <div className={labelTextInputWrapper}>
-                    <label className={labelStyle}></label>
-                    <input
-                      type="text"
-                      className={textInputStyle}
-                      value={major}
-                      onChange={(event) => handleSection5ContentMajorsChange(listIndex, index, event)}
-                    />
-                    <button className="delete-btn ml-2" onClick={() => handleDeleteSection5MajorsItem(listIndex, index)}>
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              ))}
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}></label>
-                <div className={textInputStyle.replace("bg-gray-50 border border-gray-300", "bg-transparent")}></div>
-                <button onClick={() => handleAddSection5MajorsItem(index)}>Add Input</button>
-              </div>
+        {resume.section5.content.map((item, index) => (
+          <div
+            key={index}
+            className="mb-10 p-2 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div className={labelTextInputWrapper}>
+              <button
+                className="delete-btn"
+                onClick={() => handleDeleteSection5Item(index)}
+              >
+                Delete Education
+              </button>
             </div>
-          ))}
+            <div className={labelTextInputWrapper}>
+              <label className={labelStyle}>Name</label>
+              <input
+                type="text"
+                className={textInputStyle}
+                value={item.name}
+                onChange={(event) =>
+                  handleSection5ContentNameChange(index, event)
+                }
+              />
+            </div>
+            <div className={labelTextInputWrapper}>
+              <label className={labelStyle}>Month/Year</label>
+              <input
+                type="text"
+                className={textInputStyle}
+                value={item.monthYear}
+                onChange={(event) =>
+                  handleSection5ContentMonthYearChange(index, event)
+                }
+              />
+            </div>
+            <div className={labelTextInputWrapper}>
+              <label className={labelStyle}>University</label>
+              <input
+                type="text"
+                className={textInputStyle}
+                value={item.university}
+                onChange={(event) =>
+                  handleSection5ContentUniversityChange(index, event)
+                }
+              />
+            </div>
+            {item.majors.map((major, listIndex) => (
+              <div key={listIndex}>
+                <div className={labelTextInputWrapper}>
+                  <label className={labelStyle}></label>
+                  <input
+                    type="text"
+                    className={textInputStyle}
+                    value={major}
+                    onChange={(event) =>
+                      handleSection5ContentMajorsChange(listIndex, index, event)
+                    }
+                  />
+                  <button
+                    className="delete-btn ml-2"
+                    onClick={() =>
+                      handleDeleteSection5MajorsItem(listIndex, index)
+                    }
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
+            <div className={labelTextInputWrapper}>
+              <label className={labelStyle}></label>
+              <div
+                className={textInputStyle.replace(
+                  "bg-gray-50 border border-gray-300",
+                  "bg-transparent"
+                )}
+              ></div>
+              <button onClick={() => handleAddSection5MajorsItem(index)}>
+                Add Input
+              </button>
+            </div>
+          </div>
+        ))}
         <button className="mb-3" onClick={handleAddSection5Item}>
           Add Education
         </button>
@@ -1223,17 +1529,32 @@ function AdminPage() {
         <div key={index}>
           <div className={labelTextInputWrapper}>
             <label className={labelStyle}></label>
-            <input type="text" className={textInputStyle} value={item} onChange={(e) => updateContentItem(index, e.target.value)} />
+            <input
+              type="text"
+              className={textInputStyle}
+              value={item}
+              onChange={(e) => updateContentItem(index, e.target.value)}
+            />
             <button onClick={() => deleteContentItem(index)}>Delete</button>
           </div>
         </div>
       ))}
       <div className={labelTextInputWrapper}>
         <label className={labelStyle}></label>
-        <div className={textInputStyle.replace("bg-gray-50 border border-gray-300", "bg-transparent")}></div>
+        <div
+          className={textInputStyle.replace(
+            "bg-gray-50 border border-gray-300",
+            "bg-transparent"
+          )}
+        ></div>
         <button onClick={() => addContentItem("")}>Add Input</button>
       </div>
-      <button type="submit" className="save-btn" onClick={() => setSaveBtnClicked(true)}>
+
+      <button
+        type="submit"
+        className="save-btn"
+        onClick={() => setSaveBtnClicked(true)}
+      >
         Save
       </button>
     </form>
