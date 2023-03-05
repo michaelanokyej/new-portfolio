@@ -71,7 +71,7 @@ class Blog extends React.Component {
     const content = this.state.isLoading ? (
       <Spinner />
     ) : (
-      this.state.blogsToShow.map((blog) => {
+      this.state.blogsToShow && this.state.blogsToShow.map((blog) => {
         const blogLink = `/blogs/${blog._id}`;
         return (
           <li key={blog._id} className={styles.blog}>

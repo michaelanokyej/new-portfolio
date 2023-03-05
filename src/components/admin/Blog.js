@@ -112,7 +112,7 @@ export default function Blog() {
           console.log(response.status);
           if (response.ok) {
             alert("Blog posted successfully.");
-            window.location.reload()
+            window.location.reload();
           } else {
             alert("Error posting blog.");
           }
@@ -207,73 +207,110 @@ export default function Blog() {
         </div>
         <button onClick={postBlog}>Post blog</button>
       </div>
-      <div>
+      <div className="pb-20">
         <h1 className="text-white w-fit mt-10 mb-3">Edit Blogs</h1>
         {blogs ? (
-          blogs.map((blog, index) => (
-            <div
-              key={blog._id}
-              className="mb-20 p-2 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl"
-            >
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>Title</label>
-                <input
-                  className={textInputStyle}
-                  type="text"
-                  name="title"
-                  value={blog.title}
-                  onChange={(event) => handleChangeEdit(event, index)}
-                />
-              </div>
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>Description</label>
-                <input
-                  className={textInputStyle}
-                  type="text"
-                  name="description"
-                  value={blog.description}
-                  onChange={(event) => handleChangeEdit(event, index)}
-                />
-              </div>
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>Blog image</label>
-                <input
-                  className={textInputStyle}
-                  type="text"
-                  name="blogimage"
-                  value={blog.blogimage}
-                  onChange={(event) => handleChangeEdit(event, index)}
-                />
-              </div>
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>Blog Video</label>
-                <input
-                  className={textInputStyle}
-                  type="text"
-                  name="blogvideo"
-                  value={blog.blogvideo}
-                  onChange={(event) => handleChangeEdit(event, index)}
-                />
-              </div>
-              <div className={labelTextInputWrapper}>
-                <label className={labelStyle}>Body</label>
-                <div className="w-8/12">
-                  <MDEditor
-                    value={blog.blogbody}
-                    onChange={(val) =>
-                      handleChangeEdit(
-                        { target: { name: "blogbody", value: val } },
-                        index
-                      )
-                    }
-                  />
-                </div>
-              </div>
-              <div
-                className={labelTextInputWrapper}
-                onChange={(event) => handleChangeEdit(event, index)}
-              >
-                {/* <label className={labelStyle}>Blog Type</label>
+          <div id="accordionExample">
+            {blogs.map((blog, index) => (
+              <div class="rounded-t-lg bg-slate-800 mb-2">
+                <h2 class="mb-0">
+                  <div
+                    class="group relative flex w-full items-center rounded-t-[15px] border-0 bg-slate-600 py-4 px-5 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] hover:bg-slate-600 focus:z-[3] focus:outline-none dark:text-white [&:not([data-te-collapse-collapsed])]:bg-slate-700 [&:not([data-te-collapse-collapsed])] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-slate-700 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                    type="button"
+                    data-te-collapse-init
+                    data-te-collapse-collapsed
+                    data-te-target={"#collapse" + index}
+                    aria-expanded="true"
+                    aria-controls={"collapse" + index}
+                  >
+                    {blog.title}
+                    <span class="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="h-6 w-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </h2>
+                <div
+                  id={"collapse" + index}
+                  class="!visible hidden"
+                  data-te-collapse-item
+                  data-te-parent="#accordionExample"
+                >
+                  <div
+                    key={blog._id}
+                    className="p-2 pl-5 dark:bg-slate-700 rounded-lg ring-1 ring-slate-900/5 shadow-xl"
+                  >
+                    <div className={labelTextInputWrapper}>
+                      <label className={labelStyle}>Title</label>
+                      <input
+                        className={textInputStyle}
+                        type="text"
+                        name="title"
+                        value={blog.title}
+                        onChange={(event) => handleChangeEdit(event, index)}
+                      />
+                    </div>
+                    <div className={labelTextInputWrapper}>
+                      <label className={labelStyle}>Description</label>
+                      <input
+                        className={textInputStyle}
+                        type="text"
+                        name="description"
+                        value={blog.description}
+                        onChange={(event) => handleChangeEdit(event, index)}
+                      />
+                    </div>
+                    <div className={labelTextInputWrapper}>
+                      <label className={labelStyle}>Blog image</label>
+                      <input
+                        className={textInputStyle}
+                        type="text"
+                        name="blogimage"
+                        value={blog.blogimage}
+                        onChange={(event) => handleChangeEdit(event, index)}
+                      />
+                    </div>
+                    <div className={labelTextInputWrapper}>
+                      <label className={labelStyle}>Blog Video</label>
+                      <input
+                        className={textInputStyle}
+                        type="text"
+                        name="blogvideo"
+                        value={blog.blogvideo}
+                        onChange={(event) => handleChangeEdit(event, index)}
+                      />
+                    </div>
+                    <div className={labelTextInputWrapper}>
+                      <label className={labelStyle}>Body</label>
+                      <div className="w-8/12">
+                        <MDEditor
+                          value={blog.blogbody}
+                          onChange={(val) =>
+                            handleChangeEdit(
+                              { target: { name: "blogbody", value: val } },
+                              index
+                            )
+                          }
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className={labelTextInputWrapper}
+                      onChange={(event) => handleChangeEdit(event, index)}
+                    >
+                      {/* <label className={labelStyle}>Blog Type</label>
                 <input
                   className={textInputStyle}
                   type="text"
@@ -282,33 +319,32 @@ export default function Blog() {
                   onChange={(event) => handleChangeEdit(event, index)}
                 /> */}
 
-                <div className="flex m-2 items-center">
-                  <input
-                    // className={textInputStyle}
-                    type="radio"
-                    name={"editblogtype" + index}
-                    value="code"
-                    checked={blog.blogtype === "code"}
-                    // onChange={(event) => handleChangeEdit(event, index)}
-                  />
-                  <p className="text-white m-0 ml-1">Code Stories</p>
-                </div>
-                <div className="flex m-2 items-center">
-                  <input
-                    // className={textInputStyle}
-                    type="radio"
-                    name={"editblogtype" + index}
-                    value="other"
-                    checked={blog.blogtype === "other"}
-                    // onChange={(event) => handleChangeEdit(event, index)}
-                  />
-                  <p className="text-white m-0 ml-1">Other Stories</p>
+                      <div className="flex m-2 items-center">
+                        <input
+                          type="radio"
+                          name={"editblogtype" + index}
+                          value="code"
+                          checked={blog.blogtype === "code"}
+                        />
+                        <p className="text-white m-0 ml-1">Code Stories</p>
+                      </div>
+                      <div className="flex m-2 items-center">
+                        <input
+                          type="radio"
+                          name={"editblogtype" + index}
+                          value="other"
+                          checked={blog.blogtype === "other"}
+                        />
+                        <p className="text-white m-0 ml-1">Other Stories</p>
+                      </div>
+                    </div>
+                    <button onClick={() => updatePost(blog)}>Save Edit</button>
+                    <button onClick={() => deletePost(blog)}>Delete</button>
+                  </div>
                 </div>
               </div>
-              <button onClick={() => updatePost(blog)}>Save Edit</button>
-              <button onClick={() => deletePost(blog)}>Delete</button>
-            </div>
-          ))
+            ))}
+          </div>
         ) : (
           <h3 className="pb-60">Fetching Blogs...</h3>
         )}
