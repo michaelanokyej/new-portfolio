@@ -170,16 +170,11 @@ export default function Blog() {
         </div>
         <div className={labelTextInputWrapper}>
           <label className={labelStyle}>Body</label>
-
           <MDEditor
             value={addBlog.blogbody}
             onChange={(val) =>
               handleChangeAdd({ target: { name: "blogbody", value: val } })
             }
-          />
-          <MDEditor.Markdown
-            source={addBlog.blogbody}
-            style={{ whiteSpace: "pre-wrap" }}
           />
         </div>
         <div className={labelTextInputWrapper} onChange={handleChangeAdd}>
