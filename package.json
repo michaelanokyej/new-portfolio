@@ -31,8 +31,9 @@
     "sweetalert2": "^9.17.1"
   },
   "scripts": {
-    "start": "concurrently -n 'server,client' -c 'bgWhite,white' \"nodemon server.js\" \"react-scripts --openssl-legacy-provider start\"",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "react-scripts start",
+    "server": "node server.js",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

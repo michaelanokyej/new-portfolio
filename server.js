@@ -6,7 +6,6 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-
 dotenv.config();
 app.use(cors());
 app.use(express.json());
@@ -61,7 +60,7 @@ const blogSchema = new mongoose.Schema({
   },
   posted: {
     type: Date,
-    default:  Date.now
+    default: Date.now,
   },
 });
 
@@ -131,7 +130,5 @@ app.delete("/api/blog/delete/:id", async (req, res) => {
 mongoose.connect(process.env.DB).then(() => {
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
-    console.log(`Rendering client on port 3000 ...`);
   });
 });
- 
