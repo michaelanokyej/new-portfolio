@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import myContext from "../context/myContext.js";
 import "./Home.css";
 import { motion } from "framer-motion";
-// import config from "../../config";
-// import Swal from "sweetalert2";
+import config from "../../config";
+import Swal from "sweetalert2";
 import Typical from "react-typical";
 import data from "../../portfolio.json";
 import { Icon } from "../icons.js";
@@ -17,38 +17,38 @@ class Home extends React.Component {
   };
   static contextType = myContext;
 
-  // componentWillMount = async () => {
-  //   await this.fetchBlogs();
-  // };
+  componentWillMount = async () => {
+    await this.fetchBlogs();
+  };
 
-  // fetchBlogs = async () => {
-  //   this.setState({ isLoading: true });
-  //   const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
-  //     method: "Get",
-  //     headers: new Headers({
-  //       "Content-Type": "application/json",
-  //     }),
-  //   })
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((res) => {
-  //       this.context.blogs = res;
-  //       return res;
-  //     })
-  //     .catch((err) => {
-  //       this.setState({ isLoading: false });
-  //       Swal.fire({
-  //         icon: "error",
-  //         title: "Oops...",
-  //         text: "Something went wrong!",
-  //         footer: `<p>${err}</p>`,
-  //       });
-  //     });
+  fetchBlogs = async () => {
+    this.setState({ isLoading: true });
+    const blogs = await fetch(`${config.API_ENDPOINT}/blogs`, {
+      method: "Get",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        this.context.blogs = res;
+        return res;
+      })
+      .catch((err) => {
+        this.setState({ isLoading: false });
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: `<p>${err}</p>`,
+        });
+      });
 
-  //   const blogsToShow = (await blogs.length) >= 3 ? blogs.splice(0, 3) : blogs;
-  //   this.setState({ blogs, blogsToShow });
-  // };
+    const blogsToShow = (await blogs.length) >= 3 ? blogs.splice(0, 3) : blogs;
+    this.setState({ blogs, blogsToShow });
+  };
 
   render() {
     const pageVariants = this.context.pageVariants;
