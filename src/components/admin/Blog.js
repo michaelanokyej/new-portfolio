@@ -207,7 +207,7 @@ export default function Blog() {
         {blogs ? (
           <div id="accordionExample">
             {blogs.map((blog, index) => (
-              <div class="rounded-t-lg bg-slate-800 mb-2">
+              <div key= {index} class="rounded-t-lg bg-slate-800 mb-2" >
                 <h2 class="mb-0">
                   <div
                     class="group relative flex w-full items-center rounded-t-[15px] border-0 bg-slate-600 py-4 px-5 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] hover:bg-slate-600 focus:z-[3] focus:outline-none dark:text-white [&:not([data-te-collapse-collapsed])]:bg-slate-700 [&:not([data-te-collapse-collapsed])] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-slate-700 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"

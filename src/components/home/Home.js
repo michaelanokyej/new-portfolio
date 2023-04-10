@@ -163,8 +163,8 @@ class Home extends React.Component {
               <span className="PSA">Hover/Tap On A Project For More</span>
             </h6>
             <div className="projects">
-              {data.projects.map((project) => (
-                <div className="project" key={project.title}>
+              {data.projects.map((project, i) => (
+                <div className="project" key={i}>
                   <div className="container">
                     <div className="box">
                       <div className="imgBx">
@@ -176,16 +176,16 @@ class Home extends React.Component {
                         <div className="app-features">
                           <h6>FEATURES</h6>
                           <ul className="app-features-list">
-                            {project.features.map((feature) => (
-                              <li key={feature}>{feature}</li>
+                            {project.features.map((feature, i) => (
+                              <li key={i}>{feature}</li>
                             ))}
                           </ul>
                         </div>
                         <div className="tech-used">
                           <ul>
                             <li>STACK</li>
-                            {project.stack.map((tech) => (
-                              <li key={tech}>
+                            {project.stack.map((tech, i) => (
+                              <li key={i}>
                                 <Icon icon={tech} />
                               </li>
                             ))}

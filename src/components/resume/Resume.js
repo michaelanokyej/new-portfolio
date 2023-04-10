@@ -62,7 +62,7 @@ class Resume extends React.Component {
 
         <h2 className="resumeHeader">{data.resume.section3.title}</h2>
         {data.resume.section3.content.map((item, index) => (
-          <>
+          <div key={index}>
             <h5>{item.title}</h5>
             <ul className="resume_UL">
               {item.list.map((listItem, index) => (
@@ -70,15 +70,15 @@ class Resume extends React.Component {
               ))}
             </ul>
             <hr className="experience-separator" />
-          </>
+          </div>
         ))}
 
         <hr className="section" />
 
         <h2 className="resumeHeader">{data.resume.section4.title}</h2>
         {data.resume.section4.content.map((certification, index) => (
-          <>
-            <h5 key={index}>{certification.title}</h5>
+          <div key={index}>
+            <h5>{certification.title}</h5>
             <ul className="resume_UL">
               <li>
                 <a href={certification.link} className="verification_link">
@@ -87,15 +87,15 @@ class Resume extends React.Component {
               </li>
             </ul>
             {index !== data.resume.section4.length - 1 && <hr className="experience-separator" />}
-          </>
+          </div>
         ))}
 
         <hr className="section" />
 
         <h2 className="resumeHeader">{data.resume.section5.title}</h2>
         {data.resume.section5.content.map((school, index) => (
-          <>
-            <h5 key={index}>
+          <div key={index}>
+            <h5>
               {school.name} | {school.monthYear} | {school.university}
             </h5>
             <ul className="resume_UL">
@@ -104,7 +104,7 @@ class Resume extends React.Component {
               ))}
             </ul>
             {index !== data.resume.section5.length - 1 && <hr className="experience-separator" />}
-          </>
+          </div>
         ))}
 
         <h2 className="resumeHeader">{data.resume.section6.title}</h2>
