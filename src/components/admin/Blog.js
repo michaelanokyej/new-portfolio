@@ -207,10 +207,10 @@ export default function Blog() {
         {blogs ? (
           <div id="accordionExample">
             {blogs.map((blog, index) => (
-              <div key= {index} class="rounded-t-lg bg-slate-800 mb-2" >
-                <h2 class="mb-0">
+              <div key= {index} className="rounded-t-lg bg-slate-800 mb-2" >
+                <h2 className="mb-0">
                   <div
-                    class="group relative flex w-full items-center rounded-t-[15px] border-0 bg-slate-600 py-4 px-5 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] hover:bg-slate-600 focus:z-[3] focus:outline-none dark:text-white [&:not([data-te-collapse-collapsed])]:bg-slate-700 [&:not([data-te-collapse-collapsed])] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-slate-700 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                    className="group relative flex w-full items-center rounded-t-[15px] border-0 bg-slate-600 py-4 px-5 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] hover:bg-slate-600 focus:z-[3] focus:outline-none dark:text-white [&:not([data-te-collapse-collapsed])]:bg-slate-700 [&:not([data-te-collapse-collapsed])] [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-slate-700 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
                     type="button"
                     data-te-collapse-init
                     data-te-collapse-collapsed
@@ -219,18 +219,18 @@ export default function Blog() {
                     aria-controls={"collapse" + index}
                   >
                     {blog.title}
-                    <span class="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                    <span className="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
-                        class="h-6 w-6"
+                        className="h-6 w-6"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                         />
                       </svg>
@@ -239,7 +239,7 @@ export default function Blog() {
                 </h2>
                 <div
                   id={"collapse" + index}
-                  class="!visible hidden"
+                  className="!visible hidden"
                   data-te-collapse-item
                   data-te-parent="#accordionExample"
                 >
@@ -320,6 +320,7 @@ export default function Blog() {
                           name={"editblogtype" + index}
                           value="code"
                           checked={blog.blogtype === "code"}
+                          onChange={e => {}}
                         />
                         <p className="text-white m-0 ml-1">Code Stories</p>
                       </div>
@@ -329,6 +330,7 @@ export default function Blog() {
                           name={"editblogtype" + index}
                           value="other"
                           checked={blog.blogtype === "other"}
+                          onChange={e => {}}
                         />
                         <p className="text-white m-0 ml-1">Other Stories</p>
                       </div>
