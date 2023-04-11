@@ -1,51 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created for and by Michael Anokye"
-    />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>Michael's Portfolio</title>
-    <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=16979" async></script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <div>
-        <label>Name</label>
-        <input type="text" name="name" />
-      </div>
-      <div>
-        <label>Company</label>
-        <input type="text" name="company" />
-      </div>
-      <div>
-        <label>Email Address</label>
-        <input type="email" name="email" />
-      </div>
-      <div>
-        <label>Phone Number</label>
-        <input type="Number" name="phone" />
-      </div>
-      <div className="full">
-        <label>Message</label>
-        <textarea name="message" rows="4"></textarea>
-      </div>
-      <div>
-        <div data-netlify-recaptcha="true"></div>
-      </div>
-      <div className="full">
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created for and by Michael Anokye" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <title>Michael's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/?plugins=forms"></script>
+  <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=16979" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+</head>
+
+<body className="text-gray-800">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
 </html>

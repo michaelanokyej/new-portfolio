@@ -2,11 +2,13 @@ import React from "react";
 import styles from "./Blog.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BlogControls from "./blogControls/blogControls";
-import config from "../../config";
+// import config from "../../config";
 import { Link } from "react-router-dom";
 import myContext from "../context/myContext";
 import Spinner from "../spinner/Spinner";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
+import config from "../../config";
+// import Swal from 'sweetalert2'
 
 class Blog extends React.Component {
   state = {
@@ -69,7 +71,7 @@ class Blog extends React.Component {
     const content = this.state.isLoading ? (
       <Spinner />
     ) : (
-      this.state.blogsToShow.map((blog) => {
+      this.state.blogsToShow && this.state.blogsToShow.map((blog) => {
         const blogLink = `/blogs/${blog._id}`;
         return (
           <li key={blog._id} className={styles.blog}>
