@@ -18,6 +18,11 @@ class MainPage extends React.Component {
         <main className="App__main">
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/resume" component={Resume} />
+            <Route exact path="/me" component={AboutMe} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/blogs" component={Blog} />
+            <Route exact path="/blogs/:blogId" component={BlogDetailsPage} />
             {process.env.NODE_ENV === "development" ? (
               <Route exact path="/admin" component={Admin} />
             ) : (
@@ -30,11 +35,11 @@ class MainPage extends React.Component {
               <Redirect to="/" />
             )}
 
-            <Route exact path="/resume" component={Resume} />
+            {/* <Route exact path="/resume" component={Resume} />
             <Route exact path="/me" component={AboutMe} />
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/blogs" component={Blog} />
-            <Route exact path="/blogs/:blogId" component={BlogDetailsPage} />
+            <Route exact path="/blogs/:blogId" component={BlogDetailsPage} /> */}
           </Switch>
         </main>
       </AnimatePresence>
