@@ -34,6 +34,7 @@
     "start": "react-scripts start",
     "server": "node server.js",
     "build": "react-scripts build",
+    "build-server": "npm i",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
