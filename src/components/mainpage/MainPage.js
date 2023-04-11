@@ -34,12 +34,6 @@ class MainPage extends React.Component {
             ) : (
               <Redirect to="/" />
             )}
-
-            {/* <Route exact path="/resume" component={Resume} />
-            <Route exact path="/me" component={AboutMe} />
-            <Route exact path="/projects" component={Projects} />
-            <Route exact path="/blogs" component={Blog} />
-            <Route exact path="/blogs/:blogId" component={BlogDetailsPage} /> */}
           </Switch>
         </main>
       </AnimatePresence>
