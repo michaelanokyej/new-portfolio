@@ -5,5 +5,5 @@
 //   API_ENDPOINT: "http://localhost:5000/api"
 // };
 export default {
-  API_ENDPOINT: "https://portfolio-service-tgvp.onrender.com"
+  API_ENDPOINT: "https://portfolio-service-tgvp.onrender.com/api"
 };
