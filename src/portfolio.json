@@ -1,15 +1,515 @@
-{"name":"Michael Anokye","profilePic":"profilePic.jpg","email":"michaelanokyej@yahoo.com","address":"Rockville, MD","introText":"A Multi-faceted software engineer who is knowledgeable in","heroProgammingLangs":"['JavaScript',1000,'ReactJs',1000,'NodeJs',1000,'Python',1000,'MongoDB',1000,'Ruby',1000,'Rails',1000,'PHP',1000,'Laravel',1000,'RESTful APIs',1000,'GraphQL',1000,'AWS',1000,'SQL',1000,'CI/CD',1000,'HTML',1000,'CSS',1000]","phone":"+15715528289","resumepdf":"my-resume.pdf","skills":[{"category":"JavaScript Frameworks","items":["ReactJS","Node.js","Jquery","ExpressJS"]},{"category":"Testing Frameworks","items":["Jasmine","Karma","Mocha","Chai"]},{"category":"Scripting Technology","items":["Python","BASH","Batch"]},{"category":"Database","items":["MySQL","PostgreSQL","MongoDB"]},{"category":"Amazon Web Services","items":["EC2","ELB","API Gateway","S3 etc"]},{"category":"Additional Skills","items":["API development","PHP","Ruby"]}],"qualifications":[{"name":"AWS Certified Devops Engineer - Professional","link":"https://www.credly.com/badges/2c735d3a-da6a-4971-9f2f-ea07ce335772/public_url"},{"name":"AWS Certified Solution Architect - Professional ","link":"https://www.credly.com/badges/de47f6e0-4f62-4f27-8f8d-41c653bcf4ab/public_url"},{"name":"AWS Certified Solution Architect - Associate ","link":"https://www.credly.com/badges/1bf82707-22ca-491c-a806-e11644102ce8/public_url"},{"name":"Amazon AWS Certified Developer - Associate","link":"https://www.credly.com/badges/bc5f6b66-d7cc-4cba-9195-98f78fa34513/public_url"},{"name":"Cisco Certified Network Associate (CCNA)","link":"https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url"},{"name":"Thinkful Engineering Immersion Program","date":"March, 2020"}],"projects":[{"title":"Evently WebApp","description":"A webapp for users to book and manage events","image":"evently.png","features":["Users can sign up/in","Users can book events.","Users can create events.","Users can cancel events."],"stack":["faHtml5","faCss3","faNode","faReact","faDatabase"],"liveLink":"https://evently-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/event-booking-client"},{"title":"Wander WebApp","description":"A webapp for users that wander and find new places.","image":"wander.png","features":["Users can search for tours in every state in the USA","New users can sign up to book tours.","Old users can sign in too book tours.","A registered user can become a guide by posting a tour."],"stack":["faHtml5","faCss3","faNode","faReact","faDatabase"],"liveLink":"https://wander-client.michaelanokyej.now.sh/","codeLink":"https://github.com/michaelanokyej/wander-client"},{"title":"UpLift WebApp","description":"A webapp to make mentorship accessible to users.","image":"upLift-home.png","features":["Users can sign up/sign in.","Users can post something.","Users can comment on posts","Users can send messages"],"stack":["faHtml5","faCss3","faNode","faReact","faDatabase"],"liveLink":"https://uplift-olive.now.sh/","codeLink":"https://github.com/irodriguez20/team-mike-india-client"},{"title":"Oper Dashboard","description":"A dashboard to log and generate error reports.","image":"oper-dashboard.png","features":["Users can log an error.","Users can view all operations.","Users are presented with 2 charts.","Users can add a user and an operation.","Users can generate a .csv file report."],"stack":["faHtml5","faCss3","faNode","faReact","faDatabase"],"liveLink":"https://oper-dashboard-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/oper-dashboard"},{"title":"Private Chat App","description":"A webapp for users to instantly chat, privately.","image":"./project-gifs/private-chat-demo.gif","features":["Users can register.","Users can create a room.","Any user with a room name can join room.","Users are alerted when others join and/or leave."],"stack":["faHtml5","faCss3","faNode","faReact"],"liveLink":"https://private-chat-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/instantMessaging-client"},{"title":"Covid-19 Tracker","description":"A webapp for Covid 19 globally.","image":"covid-19-tracker.png","features":["Users can get global statistics.","Users can get country-specific statistics.","Users can see the trend of cases over time.","Users can compare statistics between countries."],"stack":["faHtml5","faCss3","faNode","faReact"],"liveLink":"https://covid-19-tracker-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/covid-19-tracker"}],"moreProjects":[{"title":"News App","description":"A webapp that fetches the latest news from Hacker News API.","image":"news-app.png","features":["Users can go to a news story.","Web app has an infinity scroll."],"stack":["faHtml5","faCss3","faReact"],"liveLink":"https://my-news-app-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/news-app"},{"title":"PDF Generator","description":"A webapp that generates a pdf file with user input.","image":"project-gifs/pdf-gen-demo.gif","features":["Users can generator pdf files by providing inputs","A clean pdf file is generated for users"],"stack":["faHtml5","faCss3","faReact","faNode"],"liveLink":"https://pdf-generator-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/pdf-generator-client"},{"title":"Park Finder WebApp","description":"An adventure driven web-app that searches for parks.","image":"parkfinder.png","features":["Gets weather at the current location","Gets parks near user current location","User can search for parks anywhere","Results of user search is displayed with the weather"],"stack":["faHtml5","faCss3","faJavaScript"],"liveLink":"https://michaelanokyej.github.io/parkfinder/","codeLink":"https://github.com/michaelanokyej/parkfinder"},{"title":"Calorie Counter","description":"A webapp for users to keep track of calorie intake.","image":"calorieCounter.png","features":["Users can register.","Users are provided BMI from user info.","Users are provided a barchart for calories consumed."],"stack":["faHtml5","faCss3","faReact"],"liveLink":"https://calorie-counter-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/calorie-counter"},{"title":"Chuck Norris Jokes","description":"A webapp that generates random Chuck Norris Jokes.","image":"./project-gifs/chuck-norris-demo.gif","features":["Users select a category of jokes.","Users can go to the next random joke.","Users can view the developer."],"stack":["faHtml5","faCss3","faReact"],"liveLink":"https://chuck-norris-jokes-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/chuck-norris-jokes"},{"title":"Advicely App","description":"A webapp that generates random advice.","image":"./project-gifs/advicely-demo.gif","features":["Users are provided a random advice when page loads.","Users can go to the next random advice.","Users can go to the developers portfolio."],"stack":["faHtml5","faCss3","faNode","faReact"],"liveLink":"https://advicely-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/advicely"},{"title":"RGB Game","description":"A game for users to better understand RGB.","image":"rgb.png","features":["Displays a color in RGB","User clicks on a color to choose","User is prompted with results after each click","Game can be restarted by user when ended."],"stack":["faHtml5","faCss3","faJavaScript"],"liveLink":"https://michaelanokyej.github.io/colorGame/","codeLink":"https://github.com/michaelanokyej/colorGame"},{"title":"Unit Converter","description":"A react converter that converts temperatures and volumes.","image":"/project-gifs/react-unit-converter-video-demo.gif","features":["Users can choose unit to convert.","User is provided with options to convert.","User is provided with the correct answer.","Student input is verified."],"stack":["faHtml5","faCss3","faJavaScript"],"liveLink":"https://react-unit-converter-michael-anokye.netlify.app/","codeLink":"https://github.com/michaelanokyej/react-unit-converter"}],"aboutMe":{"title":"About Me","quote":"As a seasoned Cloud Engineer and Full Stack Developer, I am dedicated to empowering aspiring technologists by creating accessible learning platforms that provide mentorship and guidance for those seeking careers in tech. With extensive experience in building scalable cloud-based applications, API development, and infrastructure automation, I leverage my expertise across AWS, Azure, and GCP to democratize opportunities through mobile and internet-based solutions. As a certified professional with a passion for continuous learning, I thrive in collaborative environments, where I can contribute to impactful projects and uplift others along the way.","more":[
-  "With a deep passion for cloud engineering and software development, I began my journey by understanding both software and hardware, allowing me to gain a comprehensive view of how systems function holistically. Over the past several years, I’ve built extensive experience in deploying scalable cloud infrastructures and creating secure, data-driven applications.",
-  
-  "I have over 5 years of professional experience, including roles in network engineering, hardware deployments, and software development. This has provided me with a solid foundation in securing connections and deploying code across various platforms. My proficiency spans languages such as Python, JavaScript, SQL, and frameworks like React.js and Node.js, as well as cloud platforms like AWS, Azure, and Google Cloud.",
-  
-  "As a Senior Software Engineer at Data Storage Science, I’m part of the development team building and maintaining big data-driven applications tailored to the needs of the US Patent & Trademark Office (USPTO). My work focuses on architecting and optimizing cloud-based solutions that drive efficiency and scalability while ensuring compliance with FedRAMP standards.",
-  
-  "In addition, as a Full Stack Developer at Ringo Cars, I contributed to creating a new web environment using React.js on the front end and Node.js with a SQL database on the back end. My experience in cloud deployments and data centers made me a valuable collaborator with the DevOps team, where I helped optimize deployments and infrastructure management.",
-  
-  "During my time as a Software Analyst at Legal General America, I was responsible for the deployment and maintenance of internal applications, managing updates to the MySQL database, and developing an error logging system to improve our team's ability to identify and resolve issues efficiently.",
-  
-  "Previously, as the Lead Remote Hands Technician at Digital Realty, I advised high-profile clients such as PNC, Starbucks, and Symantec on hardware deployments and configurations. I ensured that mission-critical infrastructure was implemented and maintained to meet operational demands.",
-  
-  "Beyond my professional life, I’m passionate about creativity and staying active. When I’m not coding, you’ll often find me painting or working out at the gym. I hope you enjoy exploring my portfolio, and feel free to reach out for any inquiries."
-]},"resume":{"section1":{"title":"Summary","text":"Solutions-focused Cloud Engineer and Full Stack Developer with years of experience in building scalable, secure, and efficient cloud-based applications. Proficient in AWS, Azure, and GCP platforms, leveraging Infrastructure as Code (IaC) tools like T erraform, CloudFormation, and Ansible to deploy and maintain cloud infrastructures. Experienced in developing RESTful and SOAP APIs, implementing CI/CD pipelines, and using tools like React.js, Node.js, Python, and MySQL. Skilled in optimizing systems for performance and scalability, ensuring compliance with FedRAMP and NIST standards."},"section2":{"title":"SKILLS","list1":["Extensive knowledge in HTML, CSS, Ruby, PHP, JavaScript, React.js, Node.js etc.","Extensive knowledge in Databases; MongoDB, PostgreSQL, Oracle DB, MySQL etc","Experience scripting in python, batch and bash"],"list2":["Experience working with Git and Github","Experience with testing technologies such as Mocha, Chai, Jasmine, Karma, Webpack, Browserify, Heroku, Enzyme.","Hosting, Deployment & Maintenance"]},"section3":{"title":"Experience","content":[{"title":"Application Developer | Data Storage Science | December 2020 – Present","list":["Building and maintaining big data driven ReactJs applications tailored to the needs of the US Patent & Trademark Office","Building and maintaining in-house APIs to access database","Using Tableau to visualize data","Using AWS EC2 and S2 to create custom solutions for clients"]},{"title":"Software Engineer (Sup) | Learn Platform | December 2020 – Present","list":["Develop features per customer and PM request","Finding and fixing bugs in the main platform built on React, Ruby and PostgreSQL","Updating database with client data when manually intervention is required","Automating redundant support issues","Monitor resources and errors with New Relic and Roll bar","Create and troubleshoot scripts to automate redundant tasks."]},{"title":"Software Analyst | Legal General America | October, 2019 TO December, 2020","list":["Deploying in-house applications","Developing an in-house error logger for all in house applications","Designing and developing a scalable virtual environment for Operations team.","Updating and maintaining an SQL database.","Create and troubleshoot scripts to automate redundant tasks."]},{"title":"Full Stack Developer - REMOTE | RingoCars & Autoparts | April, 2019 – December, 2020","list":["Developing and Designing Solutions using Agile Software Development Methodology (Scrum and Kanban)","Using React for the front end client","Building the API/Backend of company website with NODEJS / EXPRESS Building the company database with POSTGRESQL","Collaborate with the rest of the engineering team using Git to design and launch new features."]},{"title":"Remote Hands Technician - LEAD | Digital Realty | July, 2017 – October, 2019","list":["Assisted customers with the basic-mid level configuration assistance of routers, servers and switches to include naming, IP addressing, service turn ups, vlan creations, etc.","Monitored the data center's mission critical infrastructure with the use of monitoring systems and inventory databases","Provided timely customer and internal updates using a computer based ticketing system","Assist customers with the diagnosis of hardware and software to include but not limited to iLO, iDrac, IOS configurations; server components such as WCM, WCB, motherboards, CPUs, fan modules, heat sinks, etc. on their network equipment"]}]},"section4":{"title":"Certifications","content":[{"title":"CISCO CCNA","link":"https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url","verification":"ROUTING AND SWITCHING"},{"title":"AMAZON WEB SERVICES","link":"https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM","verification":"CERTIFIED DEVELOPER(ASSOCIATE DVA)"}]},"section5":{"title":"Education","content":[{"name":"GEOGRAPHY","monthYear":"JUNE 2013","university":"KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY","majors":["Major: Geographic Information Systems","Minor: Economics"]},{"name":"THINKFUL | Engineering: Nights and Weekends","monthYear":"","university":"","majors":["Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)","SQL (MySQL and PostgreSQL), MongoDB","Data Structures and Algorithms","Testing: Enzyme, Jest etc","CI/CD"]}]},"section6":{"title":"Volunteering / Community Service","content":["Vice President of the Groove phi Groove SFI (Garden City Chapter.), Kumasi, Ghana.","Head of the mentor-ship programs of Groove Phi Groove S.F.I Kumasi , Ashanti.","Organize Charity events such as book drives, feed the hungry etc.","Community work; environmental sanitation and public education."]}},"icons":{"html5":"faHtml5","css3":"faCss3","javascript":"faJavaScript","node":"faNode","react":"faReact","db":"faDatabase","location":"faMapMarkerAlt","road":"faRoad","phone":"faMobileAlt","download":"faDownload","envelope":"faEnvelope"}}
+{
+  "name": "Michael Anokye",
+  "profilePic": "profilePic.jpg",
+  "email": "michaelanokyej@yahoo.com",
+  "address": "Rockville, MD",
+  "introText": "A Multi-faceted software engineer who is knowledgeable in",
+  "heroProgammingLangs": "['JavaScript',1000,'ReactJs',1000,'NodeJs',1000,'Python',1000,'MongoDB',1000,'Ruby',1000,'Rails',1000,'PHP',1000,'Laravel',1000,'RESTful APIs',1000,'GraphQL',1000,'AWS',1000,'SQL',1000,'CI/CD',1000,'HTML',1000,'CSS',1000]",
+  "phone": "+15715528289",
+  "resumepdf": "my-resume.pdf",
+  "skills": [
+    {
+      "category": "JavaScript Frameworks",
+      "items": [
+        "ReactJS",
+        "Node.js",
+        "Express.js"
+      ]
+    },
+    {
+      "category": "Scripting Languages",
+      "items": [
+        "Python",
+        "Bash",
+        "PHP (Laravel)"
+      ]
+    },
+    {
+      "category": "Database Management",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "DynamoDB"
+      ]
+    },
+    {
+      "category": "Cloud Technologies",
+      "items": [
+        "AWS (EC2, S3, Lambda)",
+        "Azure",
+        "GCP",
+        "CloudFormation",
+        "Terraform",
+        "Ansible"
+      ]
+    },
+    {
+      "category": "CI/CD & Automation",
+      "items": [
+        "Jenkins",
+        "GitHub Actions",
+        "Docker",
+        "Kubernetes",
+        "Ansible"
+      ]
+    },
+    {
+      "category": "Monitoring & Logging",
+      "items": [
+        "Splunk",
+        "Elasticsearch",
+        "Kibana",
+        "Prometheus",
+        "Nagios"
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "items": [
+        "FedRAMP",
+        "NIST",
+        "CIS",
+        "VPC",
+        "Security Groups",
+        "Network ACLs"
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "AWS Certified Devops Engineer - Professional",
+      "link": "https://www.credly.com/badges/2c735d3a-da6a-4971-9f2f-ea07ce335772/public_url"
+    },
+    {
+      "name": "AWS Certified Solution Architect - Professional ",
+      "link": "https://www.credly.com/badges/de47f6e0-4f62-4f27-8f8d-41c653bcf4ab/public_url"
+    },
+    {
+      "name": "AWS Certified Solution Architect - Associate ",
+      "link": "https://www.credly.com/badges/1bf82707-22ca-491c-a806-e11644102ce8/public_url"
+    },
+    {
+      "name": "Amazon AWS Certified Developer - Associate",
+      "link": "https://www.credly.com/badges/bc5f6b66-d7cc-4cba-9195-98f78fa34513/public_url"
+    },
+    {
+      "name": "Cisco Certified Network Associate (CCNA)",
+      "link": "https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url"
+    },
+    {
+      "name": "Thinkful Engineering Immersion Program",
+      "date": "March, 2020"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Evently WebApp",
+      "description": "A webapp for users to book and manage events",
+      "image": "evently.png",
+      "features": [
+        "Users can sign up/in",
+        "Users can book events.",
+        "Users can create events.",
+        "Users can cancel events."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://evently-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/event-booking-client"
+    },
+    {
+      "title": "Wander WebApp",
+      "description": "A webapp for users that wander and find new places.",
+      "image": "wander.png",
+      "features": [
+        "Users can search for tours in every state in the USA",
+        "New users can sign up to book tours.",
+        "Old users can sign in too book tours.",
+        "A registered user can become a guide by posting a tour."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://wander-client.michaelanokyej.now.sh/",
+      "codeLink": "https://github.com/michaelanokyej/wander-client"
+    },
+    {
+      "title": "UpLift WebApp",
+      "description": "A webapp to make mentorship accessible to users.",
+      "image": "upLift-home.png",
+      "features": [
+        "Users can sign up/sign in.",
+        "Users can post something.",
+        "Users can comment on posts",
+        "Users can send messages"
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://uplift-olive.now.sh/",
+      "codeLink": "https://github.com/irodriguez20/team-mike-india-client"
+    },
+    {
+      "title": "Oper Dashboard",
+      "description": "A dashboard to log and generate error reports.",
+      "image": "oper-dashboard.png",
+      "features": [
+        "Users can log an error.",
+        "Users can view all operations.",
+        "Users are presented with 2 charts.",
+        "Users can add a user and an operation.",
+        "Users can generate a .csv file report."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact",
+        "faDatabase"
+      ],
+      "liveLink": "https://oper-dashboard-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/oper-dashboard"
+    },
+    {
+      "title": "Private Chat App",
+      "description": "A webapp for users to instantly chat, privately.",
+      "image": "./project-gifs/private-chat-demo.gif",
+      "features": [
+        "Users can register.",
+        "Users can create a room.",
+        "Any user with a room name can join room.",
+        "Users are alerted when others join and/or leave."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact"
+      ],
+      "liveLink": "https://private-chat-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/instantMessaging-client"
+    },
+    {
+      "title": "Covid-19 Tracker",
+      "description": "A webapp for Covid 19 globally.",
+      "image": "covid-19-tracker.png",
+      "features": [
+        "Users can get global statistics.",
+        "Users can get country-specific statistics.",
+        "Users can see the trend of cases over time.",
+        "Users can compare statistics between countries."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact"
+      ],
+      "liveLink": "https://covid-19-tracker-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/covid-19-tracker"
+    }
+  ],
+  "moreProjects": [
+    {
+      "title": "News App",
+      "description": "A webapp that fetches the latest news from Hacker News API.",
+      "image": "news-app.png",
+      "features": [
+        "Users can go to a news story.",
+        "Web app has an infinity scroll."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact"
+      ],
+      "liveLink": "https://my-news-app-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/news-app"
+    },
+    {
+      "title": "PDF Generator",
+      "description": "A webapp that generates a pdf file with user input.",
+      "image": "project-gifs/pdf-gen-demo.gif",
+      "features": [
+        "Users can generator pdf files by providing inputs",
+        "A clean pdf file is generated for users"
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact",
+        "faNode"
+      ],
+      "liveLink": "https://pdf-generator-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/pdf-generator-client"
+    },
+    {
+      "title": "Park Finder WebApp",
+      "description": "An adventure driven web-app that searches for parks.",
+      "image": "parkfinder.png",
+      "features": [
+        "Gets weather at the current location",
+        "Gets parks near user current location",
+        "User can search for parks anywhere",
+        "Results of user search is displayed with the weather"
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faJavaScript"
+      ],
+      "liveLink": "https://michaelanokyej.github.io/parkfinder/",
+      "codeLink": "https://github.com/michaelanokyej/parkfinder"
+    },
+    {
+      "title": "Calorie Counter",
+      "description": "A webapp for users to keep track of calorie intake.",
+      "image": "calorieCounter.png",
+      "features": [
+        "Users can register.",
+        "Users are provided BMI from user info.",
+        "Users are provided a barchart for calories consumed."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact"
+      ],
+      "liveLink": "https://calorie-counter-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/calorie-counter"
+    },
+    {
+      "title": "Chuck Norris Jokes",
+      "description": "A webapp that generates random Chuck Norris Jokes.",
+      "image": "./project-gifs/chuck-norris-demo.gif",
+      "features": [
+        "Users select a category of jokes.",
+        "Users can go to the next random joke.",
+        "Users can view the developer."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faReact"
+      ],
+      "liveLink": "https://chuck-norris-jokes-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/chuck-norris-jokes"
+    },
+    {
+      "title": "Advicely App",
+      "description": "A webapp that generates random advice.",
+      "image": "./project-gifs/advicely-demo.gif",
+      "features": [
+        "Users are provided a random advice when page loads.",
+        "Users can go to the next random advice.",
+        "Users can go to the developers portfolio."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faNode",
+        "faReact"
+      ],
+      "liveLink": "https://advicely-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/advicely"
+    },
+    {
+      "title": "RGB Game",
+      "description": "A game for users to better understand RGB.",
+      "image": "rgb.png",
+      "features": [
+        "Displays a color in RGB",
+        "User clicks on a color to choose",
+        "User is prompted with results after each click",
+        "Game can be restarted by user when ended."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faJavaScript"
+      ],
+      "liveLink": "https://michaelanokyej.github.io/colorGame/",
+      "codeLink": "https://github.com/michaelanokyej/colorGame"
+    },
+    {
+      "title": "Unit Converter",
+      "description": "A react converter that converts temperatures and volumes.",
+      "image": "/project-gifs/react-unit-converter-video-demo.gif",
+      "features": [
+        "Users can choose unit to convert.",
+        "User is provided with options to convert.",
+        "User is provided with the correct answer.",
+        "Student input is verified."
+      ],
+      "stack": [
+        "faHtml5",
+        "faCss3",
+        "faJavaScript"
+      ],
+      "liveLink": "https://react-unit-converter-michael-anokye.netlify.app/",
+      "codeLink": "https://github.com/michaelanokyej/react-unit-converter"
+    }
+  ],
+  "aboutMe": {
+    "title": "About Me",
+    "quote": "As a seasoned Cloud Engineer and Full Stack Developer, I am dedicated to empowering aspiring technologists by creating accessible learning platforms that provide mentorship and guidance for those seeking careers in tech. With extensive experience in building scalable cloud-based applications, API development, and infrastructure automation, I leverage my expertise across AWS, Azure, and GCP to democratize opportunities through mobile and internet-based solutions. As a certified professional with a passion for continuous learning, I thrive in collaborative environments, where I can contribute to impactful projects and uplift others along the way.",
+    "more": [
+      "With a deep passion for cloud engineering and software development, I began my journey by understanding both software and hardware, allowing me to gain a comprehensive view of how systems function holistically. Over the past several years, I’ve built extensive experience in deploying scalable cloud infrastructures and creating secure, data-driven applications.",
+      "I have over 5 years of professional experience, including roles in network engineering, hardware deployments, and software development. This has provided me with a solid foundation in securing connections and deploying code across various platforms. My proficiency spans languages such as Python, JavaScript, SQL, and frameworks like React.js and Node.js, as well as cloud platforms like AWS, Azure, and Google Cloud.",
+      "As a Senior Software Engineer at Data Storage Science, I’m part of the development team building and maintaining big data-driven applications tailored to the needs of the US Patent & Trademark Office (USPTO). My work focuses on architecting and optimizing cloud-based solutions that drive efficiency and scalability while ensuring compliance with FedRAMP standards.",
+      "In addition, as a Full Stack Developer at Ringo Cars, I contributed to creating a new web environment using React.js on the front end and Node.js with a SQL database on the back end. My experience in cloud deployments and data centers made me a valuable collaborator with the DevOps team, where I helped optimize deployments and infrastructure management.",
+      "During my time as a Software Analyst at Legal General America, I was responsible for the deployment and maintenance of internal applications, managing updates to the MySQL database, and developing an error logging system to improve our team's ability to identify and resolve issues efficiently.",
+      "Previously, as the Lead Remote Hands Technician at Digital Realty, I advised high-profile clients such as PNC, Starbucks, and Symantec on hardware deployments and configurations. I ensured that mission-critical infrastructure was implemented and maintained to meet operational demands.",
+      "Beyond my professional life, I’m passionate about creativity and staying active. When I’m not coding, you’ll often find me painting or working out at the gym. I hope you enjoy exploring my portfolio, and feel free to reach out for any inquiries."
+    ]
+  },
+  "resume": {
+    "section1": {
+      "title": "Summary",
+      "text": "Solutions-focused Cloud Engineer and Full Stack Developer with years of experience in building scalable, secure, and efficient cloud-based applications. Proficient in AWS, Azure, and GCP platforms, leveraging Infrastructure as Code (IaC) tools like T erraform, CloudFormation, and Ansible to deploy and maintain cloud infrastructures. Experienced in developing RESTful and SOAP APIs, implementing CI/CD pipelines, and using tools like React.js, Node.js, Python, and MySQL. Skilled in optimizing systems for performance and scalability, ensuring compliance with FedRAMP and NIST standards."
+    },
+    "section2": {
+      "title": "SKILLS",
+      "list1": [
+        "Extensive knowledge in HTML, CSS, Ruby, PHP, JavaScript, React.js, Node.js etc.",
+        "Extensive knowledge in Databases; MongoDB, PostgreSQL, Oracle DB, MySQL etc",
+        "Experience scripting in python, batch and bash"
+      ],
+      "list2": [
+        "Experience working with Git and Github",
+        "Experience with testing technologies such as Mocha, Chai, Jasmine, Karma, Webpack, Browserify, Heroku, Enzyme.",
+        "Hosting, Deployment & Maintenance"
+      ]
+    },
+    "section3": {
+      "title": "Experience",
+      "content": [
+        {
+          "title": "Application Developer | Data Storage Science | December 2020 – Present",
+          "list": [
+            "Building and maintaining big data driven ReactJs applications tailored to the needs of the US Patent & Trademark Office",
+            "Building and maintaining in-house APIs to access database",
+            "Using Tableau to visualize data",
+            "Using AWS EC2 and S2 to create custom solutions for clients"
+          ]
+        },
+        {
+          "title": "Software Engineer (Sup) | Learn Platform | December 2020 – Present",
+          "list": [
+            "Develop features per customer and PM request",
+            "Finding and fixing bugs in the main platform built on React, Ruby and PostgreSQL",
+            "Updating database with client data when manually intervention is required",
+            "Automating redundant support issues",
+            "Monitor resources and errors with New Relic and Roll bar",
+            "Create and troubleshoot scripts to automate redundant tasks."
+          ]
+        },
+        {
+          "title": "Software Analyst | Legal General America | October, 2019 TO December, 2020",
+          "list": [
+            "Deploying in-house applications",
+            "Developing an in-house error logger for all in house applications",
+            "Designing and developing a scalable virtual environment for Operations team.",
+            "Updating and maintaining an SQL database.",
+            "Create and troubleshoot scripts to automate redundant tasks."
+          ]
+        },
+        {
+          "title": "Full Stack Developer - REMOTE | RingoCars & Autoparts | April, 2019 – December, 2020",
+          "list": [
+            "Developing and Designing Solutions using Agile Software Development Methodology (Scrum and Kanban)",
+            "Using React for the front end client",
+            "Building the API/Backend of company website with NODEJS / EXPRESS Building the company database with POSTGRESQL",
+            "Collaborate with the rest of the engineering team using Git to design and launch new features."
+          ]
+        },
+        {
+          "title": "Remote Hands Technician - LEAD | Digital Realty | July, 2017 – October, 2019",
+          "list": [
+            "Assisted customers with the basic-mid level configuration assistance of routers, servers and switches to include naming, IP addressing, service turn ups, vlan creations, etc.",
+            "Monitored the data center's mission critical infrastructure with the use of monitoring systems and inventory databases",
+            "Provided timely customer and internal updates using a computer based ticketing system",
+            "Assist customers with the diagnosis of hardware and software to include but not limited to iLO, iDrac, IOS configurations; server components such as WCM, WCB, motherboards, CPUs, fan modules, heat sinks, etc. on their network equipment"
+          ]
+        }
+      ]
+    },
+    "section4": {
+      "title": "Certifications",
+      "content": [
+        {
+          "title": "CISCO CCNA",
+          "link": "https://www.youracclaim.com/badges/9599f28d-0590-4708-bec9-1fdca5129810/public_url",
+          "verification": "ROUTING AND SWITCHING"
+        },
+        {
+          "title": "AMAZON WEB SERVICES",
+          "link": "https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=Z8VB12F21E141YSM",
+          "verification": "CERTIFIED DEVELOPER(ASSOCIATE DVA)"
+        }
+      ]
+    },
+    "section5": {
+      "title": "Education",
+      "content": [
+        {
+          "name": "GEOGRAPHY",
+          "monthYear": "JUNE 2013",
+          "university": "KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+          "majors": [
+            "Major: Geographic Information Systems",
+            "Minor: Economics"
+          ]
+        },
+        {
+          "name": "THINKFUL | Engineering: Nights and Weekends",
+          "monthYear": "",
+          "university": "",
+          "majors": [
+            "Javascript (React.js, JQuery, NODE.js, EXPRESS.js etc)",
+            "SQL (MySQL and PostgreSQL), MongoDB",
+            "Data Structures and Algorithms",
+            "Testing: Enzyme, Jest etc",
+            "CI/CD"
+          ]
+        }
+      ]
+    },
+    "section6": {
+      "title": "Volunteering / Community Service",
+      "content": [
+        "Vice President of the Groove phi Groove SFI (Garden City Chapter.), Kumasi, Ghana.",
+        "Head of the mentor-ship programs of Groove Phi Groove S.F.I Kumasi , Ashanti.",
+        "Organize Charity events such as book drives, feed the hungry etc.",
+        "Community work; environmental sanitation and public education."
+      ]
+    }
+  },
+  "icons": {
+    "html5": "faHtml5",
+    "css3": "faCss3",
+    "javascript": "faJavaScript",
+    "node": "faNode",
+    "react": "faReact",
+    "db": "faDatabase",
+    "location": "faMapMarkerAlt",
+    "road": "faRoad",
+    "phone": "faMobileAlt",
+    "download": "faDownload",
+    "envelope": "faEnvelope"
+  }
+}
