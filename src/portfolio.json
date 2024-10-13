@@ -9,23 +9,36 @@
   "resumepdf": "my-resume.pdf",
   "skills": [
     {
-      "category": "JavaScript Frameworks",
+      "category": "Programming & Scripting",
       "items": [
-        "ReactJS",
-        "Node.js",
-        "Express.js"
-      ]
-    },
-    {
-      "category": "Scripting Languages",
-      "items": [
+        "JavaScript (ReactJS, Node.js, Express.js)",
         "Python",
-        "Bash",
-        "PHP (Laravel)"
+        "PHP (Laravel)",
+        "Bash"
       ]
     },
     {
-      "category": "Database Management",
+      "category": "Cloud & Infrastructure",
+      "items": [
+        "AWS (EC2, S3, Lambda, CloudFormation)",
+        "Azure",
+        "GCP",
+        "Terraform",
+        "Ansible"
+      ]
+    },
+    {
+      "category": "CI/CD, Automation & DevOps",
+      "items": [
+        "Jenkins",
+        "GitHub Actions",
+        "Docker",
+        "Kubernetes",
+        "Terraform"
+      ]
+    },
+    {
+      "category": "Database & Data Management",
       "items": [
         "MySQL",
         "PostgreSQL",
@@ -34,42 +47,16 @@
       ]
     },
     {
-      "category": "Cloud Technologies",
-      "items": [
-        "AWS (EC2, S3, Lambda)",
-        "Azure",
-        "GCP",
-        "CloudFormation",
-        "Terraform",
-        "Ansible"
-      ]
-    },
-    {
-      "category": "CI/CD & Automation",
-      "items": [
-        "Jenkins",
-        "GitHub Actions",
-        "Docker",
-        "Kubernetes",
-        "Ansible"
-      ]
-    },
-    {
-      "category": "Monitoring & Logging",
-      "items": [
-        "Splunk",
-        "Elasticsearch",
-        "Kibana",
-        "Prometheus",
-        "Nagios"
-      ]
-    },
-    {
-      "category": "Security & Compliance",
+      "category": "Security, Monitoring & Compliance",
       "items": [
         "FedRAMP",
         "NIST",
         "CIS",
+        "Splunk",
+        "Elasticsearch",
+        "Kibana",
+        "Prometheus",
+        "Nagios",
         "VPC",
         "Security Groups",
         "Network ACLs"
