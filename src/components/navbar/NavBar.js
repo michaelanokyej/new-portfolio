@@ -31,9 +31,9 @@ class NavBar extends React.Component {
               <li>
               <NavLink to="/me">About Me</NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/resume">Resume</NavLink>
-              </li>
+              </li> */}
               
             </ul>
           </div>
