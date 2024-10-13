@@ -23,43 +23,25 @@
         "AWS (EC2, S3, Lambda, CloudFormation)",
         "Azure",
         "GCP",
-        "Terraform",
-        "Ansible"
-      ]
-    },
-    {
-      "category": "CI/CD, Automation & DevOps",
-      "items": [
-        "Jenkins",
-        "GitHub Actions",
-        "Docker",
-        "Kubernetes",
         "Terraform"
       ]
     },
     {
-      "category": "Database & Data Management",
+      "category": "CI/CD & Automation",
       "items": [
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "DynamoDB"
+        "Jenkins",
+        "GitHub Actions",
+        "Docker",
+        "Kubernetes"
       ]
     },
     {
-      "category": "Security, Monitoring & Compliance",
+      "category": "Security & Data Management",
       "items": [
         "FedRAMP",
-        "NIST",
-        "CIS",
-        "Splunk",
-        "Elasticsearch",
-        "Kibana",
-        "Prometheus",
-        "Nagios",
-        "VPC",
-        "Security Groups",
-        "Network ACLs"
+        "MySQL",
+        "PostgreSQL",
+        "Splunk"
       ]
     }
   ],
